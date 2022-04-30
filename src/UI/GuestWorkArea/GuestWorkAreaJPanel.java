@@ -36,6 +36,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
+        //this.raise = new RaiseEmergencyServices();
         EmergencyList = new EmergencyRequestDirectory();
     }
 

@@ -6,6 +6,7 @@
 package UI.GuestWorkArea;
 
 import Healthplus.E_System;
+import Healthplus.EmergencyServices.Driver;
 import Healthplus.EmergencyServices.Emergency;
 import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Network.City;
@@ -19,6 +20,14 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.Provider;
 
 /**
  *
@@ -105,9 +114,13 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
         countrybox = new javax.swing.JComboBox();
         statebox = new javax.swing.JComboBox();
         citybox = new javax.swing.JComboBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table_transport = new javax.swing.JTable();
         btn_back = new javax.swing.JButton();
+        label_emailId = new javax.swing.JLabel();
+        text_emailId = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        text_locality = new javax.swing.JTextField();
+        label_apartment = new javax.swing.JLabel();
+        text_apartment = new javax.swing.JTextField();
 
         label_country.setText("Country");
 
@@ -128,27 +141,6 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
 
         citybox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        table_transport.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Country", "State", "City"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(table_transport);
-
         btn_back.setText("Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,17 +148,29 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
             }
         });
 
+        label_emailId.setText("Email:");
+
+        text_emailId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_emailIdActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Locality:");
+
+        label_apartment.setText("Apartment:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(btn_back)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(Btn_RaiseRequest)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_country, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,16 +185,21 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(countrybox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(statebox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(btn_back)))
-                .addGap(0, 82, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Btn_RaiseRequest)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(label_apartment)
+                                    .addComponent(label_emailId))
+                                .addGap(62, 62, 62)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(text_locality)
+                                    .addComponent(text_apartment)
+                                    .addComponent(text_emailId, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 50, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,11 +216,21 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_city)
                     .addComponent(citybox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(text_locality, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_apartment)
+                    .addComponent(text_apartment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_emailId)
+                    .addComponent(text_emailId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
                 .addComponent(Btn_RaiseRequest)
-                .addGap(49, 49, 49)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
                 .addComponent(btn_back)
                 .addGap(18, 18, 18))
         );
@@ -239,14 +258,50 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
         String stateStr = state.toString();
         City city = (City) citybox.getSelectedItem();
         String cityStr = city.toString();
+        String locality = text_locality.getText();
+        String apartmentNo = text_apartment.getText();
         
-        Emergency emer = EmergencyList.AddNewEmergency();
+        
+      Emergency emer = EmergencyList.AddNewEmergency();
       emer.setCity(cityStr);
       emer.setCountry(countryStr);
       emer.setState(stateStr);
+      emer.setDrivername(Driver.setDriver());
       JOptionPane.showMessageDialog(this, "Your emergency request has been sent successfully");
-    
-      populatetransportTable(EmergencyList.getEmergencyList());
+      String Fromemail = "health.plus.help1@gmail.com";
+        String FromemailPass = "qwertyuiop#123";
+        String toEmail = text_emailId.getText();
+        String subject = "your emergency request has been sent successfully.";
+        Properties properties = new Properties();
+        //properties.put("mail.smtp.put","true");
+        properties.put("mail.smtp.starttls.enable","true");
+        //properties.put("mail.smtp.ssl.enable", "false");
+        properties.put("mail.debug", "true");
+        properties.put("mail.smtp.host","smtp.gmail.com");
+        //properties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");
+        //properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.required", "true");
+         Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator(){
+              protected PasswordAuthentication getPasswordAuthentication(){
+                  return new PasswordAuthentication (Fromemail,FromemailPass);
+              }
+        });
+          try{
+            MimeMessage msg = new MimeMessage(session);
+            msg.setFrom(new InternetAddress(Fromemail));
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
+            msg.setSubject(subject);
+            msg.setText( "We will get back to you soon."
+                + "\nHere is your entered address\n" +apartmentNo+", "+locality+", "+cityStr+", "+stateStr);
+            Transport.send(msg);
+        }
+        catch(Exception e){
+            System.out.println(""+e);
+        }
+         
+      //populatetransportTable(EmergencyList.getEmergencyList());
        
         }
         catch(Exception e){
@@ -262,34 +317,42 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btn_backActionPerformed
 
-   public void populatetransportTable( ArrayList<Emergency>emergency){
-       DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
-        model.setRowCount(3);
-        if(emergency.isEmpty())
-        {
-            JOptionPane.showMessageDialog(this,"Person Doesn't exist!");
+    private void text_emailIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_emailIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_emailIdActionPerformed
 
-        }
-         for(Emergency c : emergency){
-            Object row[] = new Object[3];
-            row[0] = c.getCountry();
-            row[1] = c.getState();
-            row[2] = c.getCity();
-            model.addRow(row);
-   }
-   }
+//   public void populatetransportTable( ArrayList<Emergency>emergency){
+//       DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
+//        model.setRowCount(3);
+//        if(emergency.isEmpty())
+//        {
+//            JOptionPane.showMessageDialog(this,"Person Doesn't exist!");
+//
+//        }
+//         for(Emergency c : emergency){
+//            Object row[] = new Object[3];
+//            row[0] = c.getCountry();
+//            row[1] = c.getState();
+//            row[2] = c.getCity();
+//            model.addRow(row);
+//   }
+//   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_RaiseRequest;
     private javax.swing.JButton btn_back;
     private javax.swing.JComboBox citybox;
     private javax.swing.JComboBox countrybox;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel label_apartment;
     private javax.swing.JLabel label_city;
     private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_emailId;
     private javax.swing.JLabel label_state;
     private javax.swing.JComboBox statebox;
-    private javax.swing.JTable table_transport;
+    private javax.swing.JTextField text_apartment;
+    private javax.swing.JTextField text_emailId;
+    private javax.swing.JTextField text_locality;
     // End of variables declaration//GEN-END:variables
 }

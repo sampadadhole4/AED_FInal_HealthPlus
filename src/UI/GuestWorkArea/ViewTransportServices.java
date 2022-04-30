@@ -11,6 +11,7 @@ import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Network.Country;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -32,13 +33,26 @@ public class ViewTransportServices extends javax.swing.JPanel {
         this.emergency = emergency;
         this.EmergencyList=EmergencyList;
         this.raise= raise;
-        populateTransporTable();
+        populatetransportTable();
+        JOptionPane.showMessageDialog(this, EmergencyList.getEmergencyList().size());
     }
-    private void populateTransporTable(){
-       if(raise!=null){
-        raise.populatetransportTable(EmergencyList.getEmergencyList());
-    }
-    }
+  public void populatetransportTable(){
+       DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
+        //model.setRowCount(3);
+//        if(emergency.isEmpty())
+//        {
+//            JOptionPane.showMessageDialog(this,"Person Doesn't exist!");
+//
+//        }
+         for(Emergency c : EmergencyList.getEmergencyList()){
+            Object row[] = new Object[4];
+            row[0] = c.getCountry();
+            row[1] = c.getState();
+            row[2] = c.getCity();
+            row[3] = c.getDrivername();
+            model.addRow(row);
+   }
+   }
     
 
 
@@ -66,7 +80,15 @@ public class ViewTransportServices extends javax.swing.JPanel {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(table_transport);
 
         btn_back.setText("Back");

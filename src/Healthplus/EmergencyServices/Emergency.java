@@ -13,6 +13,15 @@ public class Emergency {
     private String Country;
     private String City;
     private String State;
+    private String drivername;
+
+    public String getDrivername() {
+        return drivername;
+    }
+
+    public void setDrivername(String drivername) {
+        this.drivername = drivername;
+    }
     private int Eid;
     private static int count = 1;
     
