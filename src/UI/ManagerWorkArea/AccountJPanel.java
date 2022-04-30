@@ -43,8 +43,8 @@ public class AccountJPanel extends javax.swing.JPanel {
             }
         String total = String.valueOf(enterprise.getAccountDirectory().getTotal());
         String balance = String.valueOf(enterprise.getAccountDirectory().getBalance());
-        lblTotal.setText(total);
-        lblBalance.setText(balance);
+        label_totalvalue.setText(total);
+        label_balancevalue.setText(balance);
     }
      
     /**
@@ -58,9 +58,9 @@ public class AccountJPanel extends javax.swing.JPanel {
 
         btnBack = new javax.swing.JButton();
         label_total = new javax.swing.JLabel();
-        lblTotal = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        lblBalance = new javax.swing.JLabel();
+        label_totalvalue = new javax.swing.JLabel();
+        label_balance = new javax.swing.JLabel();
+        label_balancevalue = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAccount = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
@@ -82,14 +82,14 @@ public class AccountJPanel extends javax.swing.JPanel {
         label_total.setText("Total : ");
         add(label_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
-        lblTotal.setText("<TotalValue>");
-        add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 111, -1));
+        label_totalvalue.setText("<TotalValue>");
+        add(label_totalvalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 111, -1));
 
-        jLabel2.setText("Balance:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
+        label_balance.setText("Balance:");
+        add(label_balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
 
-        lblBalance.setText("<BalanceValue>");
-        add(lblBalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
+        label_balancevalue.setText("<BalanceValue>");
+        add(label_balancevalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
 
         tblAccount.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,12 +131,12 @@ public class AccountJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel label_balance;
+    private javax.swing.JLabel label_balancevalue;
     private javax.swing.JLabel label_total;
-    private javax.swing.JLabel lblBalance;
+    private javax.swing.JLabel label_totalvalue;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblTotal;
     private javax.swing.JTable tblAccount;
     // End of variables declaration//GEN-END:variables
 }

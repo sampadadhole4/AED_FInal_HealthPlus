@@ -98,7 +98,7 @@ public class ManageCityNetworkJPanel extends javax.swing.JPanel {
         lblState = new javax.swing.JLabel();
         cbCountry = new javax.swing.JComboBox();
         cbState = new javax.swing.JComboBox();
-        lblCountry = new javax.swing.JLabel();
+        labeL_countr = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
@@ -162,8 +162,8 @@ public class ManageCityNetworkJPanel extends javax.swing.JPanel {
         cbState.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 150, -1));
 
-        lblCountry.setText("Select Country:");
-        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, -1, 20));
+        labeL_countr.setText("Select Country:");
+        add(labeL_countr, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, -1, 20));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +236,7 @@ public class ManageCityNetworkJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmit;
     private javax.swing.JComboBox cbCountry;
     private javax.swing.JComboBox cbState;
-    private javax.swing.JLabel lblCountry;
+    private javax.swing.JLabel labeL_countr;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblState;

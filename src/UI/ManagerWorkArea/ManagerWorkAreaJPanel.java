@@ -41,12 +41,12 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnManageFundingAgencies = new javax.swing.JButton();
-        btnPostTasks = new javax.swing.JButton();
-        btnViewIssues = new javax.swing.JButton();
-        btnProjects = new javax.swing.JButton();
-        btnAccount = new javax.swing.JButton();
-        btnViewVolunteers = new javax.swing.JButton();
+        btn_managerfundraisers = new javax.swing.JButton();
+        btn_posttask = new javax.swing.JButton();
+        btn_issues = new javax.swing.JButton();
+        btn_viewprojects = new javax.swing.JButton();
+        btn_acc = new javax.swing.JButton();
+        btn_coord = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -56,59 +56,59 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnManageFundingAgencies.setBackground(new java.awt.Color(113, 160, 160));
-        btnManageFundingAgencies.setText("Manage Funding Agencies");
-        btnManageFundingAgencies.addActionListener(new java.awt.event.ActionListener() {
+        btn_managerfundraisers.setBackground(new java.awt.Color(113, 160, 160));
+        btn_managerfundraisers.setText("Manage Funding companies");
+        btn_managerfundraisers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageFundingAgenciesActionPerformed(evt);
+                btn_managerfundraisersActionPerformed(evt);
             }
         });
-        add(btnManageFundingAgencies, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 220, -1));
+        add(btn_managerfundraisers, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 220, -1));
 
-        btnPostTasks.setBackground(new java.awt.Color(113, 160, 160));
-        btnPostTasks.setText("Post Tasks");
-        btnPostTasks.addActionListener(new java.awt.event.ActionListener() {
+        btn_posttask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_posttask.setText("Post Tasks");
+        btn_posttask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPostTasksActionPerformed(evt);
+                btn_posttaskActionPerformed(evt);
             }
         });
-        add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 217, -1));
+        add(btn_posttask, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 217, -1));
 
-        btnViewIssues.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewIssues.setText("View Issues");
-        btnViewIssues.addActionListener(new java.awt.event.ActionListener() {
+        btn_issues.setBackground(new java.awt.Color(113, 160, 160));
+        btn_issues.setText("View Issues");
+        btn_issues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewIssuesActionPerformed(evt);
+                btn_issuesActionPerformed(evt);
             }
         });
-        add(btnViewIssues, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 217, -1));
+        add(btn_issues, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 217, -1));
 
-        btnProjects.setBackground(new java.awt.Color(113, 160, 160));
-        btnProjects.setText("Projects");
-        btnProjects.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewprojects.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewprojects.setText("Projects");
+        btn_viewprojects.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProjectsActionPerformed(evt);
+                btn_viewprojectsActionPerformed(evt);
             }
         });
-        add(btnProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 217, -1));
+        add(btn_viewprojects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 217, -1));
 
-        btnAccount.setBackground(new java.awt.Color(113, 160, 160));
-        btnAccount.setText("Account");
-        btnAccount.addActionListener(new java.awt.event.ActionListener() {
+        btn_acc.setBackground(new java.awt.Color(113, 160, 160));
+        btn_acc.setText("Account");
+        btn_acc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccountActionPerformed(evt);
+                btn_accActionPerformed(evt);
             }
         });
-        add(btnAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 217, -1));
+        add(btn_acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 217, -1));
 
-        btnViewVolunteers.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewVolunteers.setText("View Coordinators");
-        btnViewVolunteers.addActionListener(new java.awt.event.ActionListener() {
+        btn_coord.setBackground(new java.awt.Color(113, 160, 160));
+        btn_coord.setText("View Coordinators");
+        btn_coord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewVolunteersActionPerformed(evt);
+                btn_coordActionPerformed(evt);
             }
         });
-        add(btnViewVolunteers, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 217, -1));
+        add(btn_coord, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 217, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -119,62 +119,62 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 380, 430));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageFundingAgenciesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFundingAgenciesActionPerformed
+    private void btn_managerfundraisersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_managerfundraisersActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageFundingAgenciesJPanel mfawajp = new ManageFundingAgenciesJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("ManageFundingAgenciesJPanel",mfawajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageFundingAgenciesActionPerformed
+    }//GEN-LAST:event_btn_managerfundraisersActionPerformed
 
-    private void btnPostTasksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostTasksActionPerformed
+    private void btn_posttaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_posttaskActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         PostTasksJPanel ptjp = new PostTasksJPanel(userProcessContainer, userAccount, organization, enterprise);
         userProcessContainer.add("PostTasksJPanel",ptjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnPostTasksActionPerformed
+    }//GEN-LAST:event_btn_posttaskActionPerformed
 
-    private void btnViewIssuesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewIssuesActionPerformed
+    private void btn_issuesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_issuesActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewIssuesJPanel vijp = new ViewIssuesJPanel(userProcessContainer, userAccount, organization, enterprise);
         userProcessContainer.add("ViewIssuesJPanel",vijp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewIssuesActionPerformed
+    }//GEN-LAST:event_btn_issuesActionPerformed
 
-    private void btnProjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProjectsActionPerformed
+    private void btn_viewprojectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewprojectsActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ProjectsJPanel pjp = new ProjectsJPanel(userProcessContainer,userAccount, organization, enterprise);
         userProcessContainer.add("ProjectsJPanel",pjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnProjectsActionPerformed
+    }//GEN-LAST:event_btn_viewprojectsActionPerformed
 
-    private void btnAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountActionPerformed
+    private void btn_accActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_accActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         AccountJPanel ajp = new AccountJPanel(userProcessContainer,userAccount, organization, enterprise);
         userProcessContainer.add("AccountJPanel",ajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnAccountActionPerformed
+    }//GEN-LAST:event_btn_accActionPerformed
 
-    private void btnViewVolunteersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewVolunteersActionPerformed
+    private void btn_coordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_coordActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewCoordinatorJPanel vvjp = new ViewCoordinatorJPanel(userProcessContainer,userAccount, organization, enterprise);
         userProcessContainer.add("ViewVolunteerJPanel",vvjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewVolunteersActionPerformed
+    }//GEN-LAST:event_btn_coordActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccount;
-    private javax.swing.JButton btnManageFundingAgencies;
-    private javax.swing.JButton btnPostTasks;
-    private javax.swing.JButton btnProjects;
-    private javax.swing.JButton btnViewIssues;
-    private javax.swing.JButton btnViewVolunteers;
+    private javax.swing.JButton btn_acc;
+    private javax.swing.JButton btn_coord;
+    private javax.swing.JButton btn_issues;
+    private javax.swing.JButton btn_managerfundraisers;
+    private javax.swing.JButton btn_posttask;
+    private javax.swing.JButton btn_viewprojects;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

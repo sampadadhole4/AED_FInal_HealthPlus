@@ -169,7 +169,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblCountry">
+    <Component class="javax.swing.JLabel" name="labeL_countr">
       <Properties>
         <Property name="text" type="java.lang.String" value="Select Country:"/>
       </Properties>

@@ -77,8 +77,8 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAccept = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
+        btn_add = new javax.swing.JButton();
+        btngoback = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFundingAgency = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
@@ -89,22 +89,22 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAccept.setBackground(new java.awt.Color(113, 160, 160));
-        btnAccept.setText("Accept");
-        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+        btn_add.setBackground(new java.awt.Color(113, 160, 160));
+        btn_add.setText("Accept");
+        btn_add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAcceptActionPerformed(evt);
+                btn_addActionPerformed(evt);
             }
         });
-        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 90, 30));
+        add(btn_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 90, 30));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btngoback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btngoback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btngobackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
+        add(btngoback, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 40, 40));
 
         tblFundingAgency.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -137,7 +137,7 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 300, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+    private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblFundingAgency.getSelectedRow();
 
@@ -164,19 +164,19 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         agencyRequest.setStatus("Accepted");
         populateAgencyTable();
         JOptionPane.showMessageDialog(null, "Accepted");
-    }//GEN-LAST:event_btnAcceptActionPerformed
+    }//GEN-LAST:event_btn_addActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btngobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngobackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btngobackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccept;
-    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btn_add;
+    private javax.swing.JButton btngoback;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblFundingAgency;

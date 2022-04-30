@@ -62,8 +62,8 @@ public class PostTasksJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnPostTasks = new javax.swing.JButton();
-        btnRefresh = new javax.swing.JButton();
+        btn_postTask = new javax.swing.JButton();
+        btn_refreshview = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPostTasks = new javax.swing.JTable();
@@ -75,23 +75,23 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnPostTasks.setBackground(new java.awt.Color(113, 160, 160));
-        btnPostTasks.setText("Post Task");
-        btnPostTasks.addActionListener(new java.awt.event.ActionListener() {
+        btn_postTask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postTask.setText("Post Task");
+        btn_postTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPostTasksActionPerformed(evt);
+                btn_postTaskActionPerformed(evt);
             }
         });
-        add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 140, -1));
+        add(btn_postTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 140, -1));
 
-        btnRefresh.setBackground(new java.awt.Color(113, 160, 160));
-        btnRefresh.setText("Refresh");
-        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
+        btn_refreshview.setBackground(new java.awt.Color(113, 160, 160));
+        btn_refreshview.setText("Refresh");
+        btn_refreshview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshActionPerformed(evt);
+                btn_refreshviewActionPerformed(evt);
             }
         });
-        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
+        add(btn_refreshview, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -134,13 +134,13 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 290, 50));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPostTasksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostTasksActionPerformed
+    private void btn_postTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_postTaskActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         AddPostTasksJPanel aptjp = new AddPostTasksJPanel(userProcessContainer, userAccount, organization,enterprise);
         userProcessContainer.add("AddPostTasksJPanel",aptjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnPostTasksActionPerformed
+    }//GEN-LAST:event_btn_postTaskActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -149,16 +149,16 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+    private void btn_refreshviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refreshviewActionPerformed
         // TODO add your handling code here:
         populateRequestTable();
-    }//GEN-LAST:event_btnRefreshActionPerformed
+    }//GEN-LAST:event_btn_refreshviewActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnPostTasks;
-    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btn_postTask;
+    private javax.swing.JButton btn_refreshview;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblPostTasks;

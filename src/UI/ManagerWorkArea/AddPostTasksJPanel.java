@@ -36,15 +36,15 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
-        valueLabel.setText(enterprise.getName());
+        text_trustvalue.setText(enterprise.getName());
         populateProjectName();
 
     }
 
     public void populateProjectName() {
-        cbProjectName.removeAllItems();
+        combo_project.removeAllItems();
         for (Project p : enterprise.getProjectDirectory().getProjectList()) {
-            cbProjectName.addItem(p);
+            combo_project.addItem(p);
         }
     }
 
@@ -57,14 +57,14 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        cbProjectName = new javax.swing.JComboBox<>();
-        btnPost = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        txtTask = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
+        label_trust = new javax.swing.JLabel();
+        text_trustvalue = new javax.swing.JLabel();
+        label_project = new javax.swing.JLabel();
+        combo_project = new javax.swing.JComboBox<>();
+        btn_posttask = new javax.swing.JButton();
+        label_task = new javax.swing.JLabel();
+        text_task = new javax.swing.JTextField();
+        btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -73,43 +73,43 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Trust:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
+        label_trust.setText("Trust:");
+        add(label_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
 
-        valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+        text_trustvalue.setText("<value>");
+        add(text_trustvalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
 
-        jLabel2.setText("Project:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
+        label_project.setText("Project:");
+        add(label_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
-        cbProjectName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbProjectName.addActionListener(new java.awt.event.ActionListener() {
+        combo_project.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_project.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbProjectNameActionPerformed(evt);
+                combo_projectActionPerformed(evt);
             }
         });
-        add(cbProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
+        add(combo_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
 
-        btnPost.setBackground(new java.awt.Color(113, 160, 160));
-        btnPost.setText("Post");
-        btnPost.addActionListener(new java.awt.event.ActionListener() {
+        btn_posttask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_posttask.setText("Post");
+        btn_posttask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPostActionPerformed(evt);
+                btn_posttaskActionPerformed(evt);
             }
         });
-        add(btnPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 110, -1));
+        add(btn_posttask, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 110, -1));
 
-        jLabel3.setText("Task:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
-        add(txtTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 206, -1));
+        label_task.setText("Task:");
+        add(label_task, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+        add(text_task, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 206, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_gobackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
+        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -117,10 +117,10 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 270, 26));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostActionPerformed
+    private void btn_posttaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_posttaskActionPerformed
         // TODO add your handling code here:
 
-        String task = txtTask.getText();
+        String task = text_task.getText();
         String regex = "^[a-z A-Z .]+$";
         Pattern namePattern = Pattern.compile(regex);
         Matcher nameMatcher = namePattern.matcher(task);
@@ -135,7 +135,7 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
             }
 
         PostTaskWorkRequest taskRequest = new PostTaskWorkRequest();
-        taskRequest.setProject((Project) cbProjectName.getSelectedItem());
+        taskRequest.setProject((Project) combo_project.getSelectedItem());
         taskRequest.setTask(task);
         taskRequest.setSender(userAccount);
         taskRequest.setStatus("Sent");
@@ -152,11 +152,11 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
             org.getWorkQueue().getWorkRequestList().add(taskRequest);
             userAccount.getWorkQueue().getWorkRequestList().add(taskRequest);
             JOptionPane.showMessageDialog(null, "Task posted successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
-            txtTask.setText("");
+            text_task.setText("");
         }
-    }//GEN-LAST:event_btnPostActionPerformed
+    }//GEN-LAST:event_btn_posttaskActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -165,22 +165,22 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         ptjp.populateRequestTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_gobackActionPerformed
 
-    private void cbProjectNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProjectNameActionPerformed
+    private void combo_projectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_projectActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbProjectNameActionPerformed
+    }//GEN-LAST:event_combo_projectActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnPost;
-    private javax.swing.JComboBox<Object> cbProjectName;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JButton btn_posttask;
+    private javax.swing.JComboBox<Object> combo_project;
+    private javax.swing.JLabel label_project;
+    private javax.swing.JLabel label_task;
+    private javax.swing.JLabel label_trust;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JTextField txtTask;
-    private javax.swing.JLabel valueLabel;
+    private javax.swing.JTextField text_task;
+    private javax.swing.JLabel text_trustvalue;
     // End of variables declaration//GEN-END:variables
 }

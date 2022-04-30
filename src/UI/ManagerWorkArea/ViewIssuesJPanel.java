@@ -66,7 +66,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
-        btnResolveIssue = new javax.swing.JButton();
+        btn_resolve = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblViewIssues = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
@@ -86,14 +86,14 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
-        btnResolveIssue.setBackground(new java.awt.Color(113, 160, 160));
-        btnResolveIssue.setText("Resolve Issue");
-        btnResolveIssue.addActionListener(new java.awt.event.ActionListener() {
+        btn_resolve.setBackground(new java.awt.Color(113, 160, 160));
+        btn_resolve.setText("Resolve Issue");
+        btn_resolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResolveIssueActionPerformed(evt);
+                btn_resolveActionPerformed(evt);
             }
         });
-        add(btnResolveIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 120, 30));
+        add(btn_resolve, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 120, 30));
 
         tblViewIssues.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,7 +128,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnResolveIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolveIssueActionPerformed
+    private void btn_resolveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resolveActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblViewIssues.getSelectedRow();
         if (selectedRow >= 0) {
@@ -140,12 +140,12 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnResolveIssueActionPerformed
+    }//GEN-LAST:event_btn_resolveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnResolveIssue;
+    private javax.swing.JButton btn_resolve;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblViewIssues;

@@ -57,17 +57,17 @@ public class ProjectsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnDelete = new javax.swing.JButton();
-        lblProjectName = new javax.swing.JLabel();
-        btnAdd = new javax.swing.JButton();
+        btn_deleteProject = new javax.swing.JButton();
+        label_projectName = new javax.swing.JLabel();
+        btn_addProject = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        lblBudget = new javax.swing.JLabel();
-        txtProjectBudget = new javax.swing.JTextField();
+        label_budget = new javax.swing.JLabel();
+        text_bufget = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblViewProjects = new javax.swing.JTable();
         lblWarning = new javax.swing.JLabel();
         lblHeader = new javax.swing.JLabel();
-        cbName = new javax.swing.JComboBox<>();
+        combo_projectName = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -75,26 +75,26 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnDelete.setBackground(new java.awt.Color(113, 160, 160));
-        btnDelete.setText("Delete Project");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btn_deleteProject.setBackground(new java.awt.Color(113, 160, 160));
+        btn_deleteProject.setText("Delete Project");
+        btn_deleteProject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btn_deleteProjectActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        add(btn_deleteProject, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
-        lblProjectName.setText("Project Name:");
-        add(lblProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
+        label_projectName.setText("Project Name:");
+        add(label_projectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
 
-        btnAdd.setBackground(new java.awt.Color(113, 160, 160));
-        btnAdd.setText("Add");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+        btn_addProject.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addProject.setText("Add");
+        btn_addProject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
+                btn_addProjectActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 123, -1));
+        add(btn_addProject, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 123, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -104,9 +104,9 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 40, 40));
 
-        lblBudget.setText("Budget:");
-        add(lblBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, -1, -1));
-        add(txtProjectBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 180, -1));
+        label_budget.setText("Budget:");
+        add(label_budget, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, -1, -1));
+        add(text_bufget, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 180, -1));
 
         tblViewProjects.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,13 +141,13 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         lblHeader.setText("Projects");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 220, 26));
 
-        cbName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Provide Medication", "Provide Treatment", "Donate Basic Amenities"}));
-        cbName.addActionListener(new java.awt.event.ActionListener() {
+        combo_projectName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Provide Medication", "Provide Treatment", "Donate Basic Amenities"}));
+        combo_projectName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbNameActionPerformed(evt);
+                combo_projectNameActionPerformed(evt);
             }
         });
-        add(cbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 180, -1));
+        add(combo_projectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -157,10 +157,10 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void btn_addProjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addProjectActionPerformed
         // TODO add your handling code here:
-        String projectName = cbName.getSelectedItem().toString();
-        String budgetText = txtProjectBudget.getText();
+        String projectName = combo_projectName.getSelectedItem().toString();
+        String budgetText = text_bufget.getText();
         if (budgetText != "" || projectName != "") {
             
             String regex = "^[a-z A-Z]+$";
@@ -195,7 +195,7 @@ public class ProjectsJPanel extends javax.swing.JPanel {
                 enterprise.getAccountDirectory().setBalance(balance);
 
                 JOptionPane.showMessageDialog(null, "Project added successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
-                txtProjectBudget.setText("");
+                text_bufget.setText("");
                 populateProjectTable();
             }
             else
@@ -206,9 +206,9 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please enter both the fields", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_btnAddActionPerformed
+    }//GEN-LAST:event_btn_addProjectActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btn_deleteProjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteProjectActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblViewProjects.getSelectedRow();
 
@@ -224,24 +224,24 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Project deleted successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
 
         populateProjectTable();
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btn_deleteProjectActionPerformed
 
-    private void cbNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNameActionPerformed
+    private void combo_projectNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_projectNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbNameActionPerformed
+    }//GEN-LAST:event_combo_projectNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JComboBox<String> cbName;
+    private javax.swing.JButton btn_addProject;
+    private javax.swing.JButton btn_deleteProject;
+    private javax.swing.JComboBox<String> combo_projectName;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblBudget;
+    private javax.swing.JLabel label_budget;
+    private javax.swing.JLabel label_projectName;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblProjectName;
     private javax.swing.JLabel lblWarning;
     private javax.swing.JTable tblViewProjects;
-    private javax.swing.JTextField txtProjectBudget;
+    private javax.swing.JTextField text_bufget;
     // End of variables declaration//GEN-END:variables
 }
