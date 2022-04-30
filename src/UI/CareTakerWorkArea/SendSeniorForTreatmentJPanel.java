@@ -61,18 +61,18 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backJButton = new javax.swing.JButton();
+        btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblViewCoordinators = new javax.swing.JTable();
-        submitJButton = new javax.swing.JButton();
+        btn_goTreat = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btn_gobackActionPerformed(evt);
             }
         });
 
@@ -98,11 +98,11 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblViewCoordinators);
 
-        submitJButton.setBackground(new java.awt.Color(113, 160, 160));
-        submitJButton.setText("Send for Treatment");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        btn_goTreat.setBackground(new java.awt.Color(113, 160, 160));
+        btn_goTreat.setText("Send for Treatment");
+        btn_goTreat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                btn_goTreatActionPerformed(evt);
             }
         });
 
@@ -113,41 +113,42 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(161, 161, 161)
+                        .addGap(231, 231, 231)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(112, 112, 112)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(318, 318, 318)
-                        .addComponent(submitJButton)))
+                        .addComponent(btn_goTreat))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(156, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(submitJButton)
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addComponent(btn_goTreat)
+                .addGap(157, 157, 157)
+                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(205, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btn_gobackActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void btn_goTreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_goTreatActionPerformed
         int selectedRow = tblViewCoordinators.getSelectedRow();
         if (selectedRow >= 0) {
             SeniorCare senior = (SeniorCare) tblViewCoordinators.getValueAt(selectedRow, 0);
@@ -179,14 +180,14 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         else{
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_btn_goTreatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton btn_goTreat;
+    private javax.swing.JButton btn_goback;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JButton submitJButton;
     private javax.swing.JTable tblViewCoordinators;
     // End of variables declaration//GEN-END:variables
 }

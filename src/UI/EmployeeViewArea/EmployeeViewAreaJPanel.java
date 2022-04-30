@@ -50,81 +50,71 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnTrustList = new javax.swing.JButton();
-        btnRaiseIssue = new javax.swing.JButton();
+        btn_viewtrusts = new javax.swing.JButton();
+        btn_raiserequest = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        btnProjects = new javax.swing.JButton();
-        btnHelpline = new javax.swing.JButton();
-        btnViewResolved = new javax.swing.JButton();
+        btn_projs = new javax.swing.JButton();
+        btn_viewResolved = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnOldAgeHomeList = new javax.swing.JButton();
+        btn_oldAge = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnTrustList.setBackground(new java.awt.Color(113, 160, 160));
-        btnTrustList.setText("Trust of EcoSystem");
-        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewtrusts.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewtrusts.setText("Trusts");
+        btn_viewtrusts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTrustListActionPerformed(evt);
+                btn_viewtrustsActionPerformed(evt);
             }
         });
-        jPanel1.add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
+        jPanel1.add(btn_viewtrusts, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
 
-        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
-        btnRaiseIssue.setText("Raise Issue");
-        btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
+        btn_raiserequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_raiserequest.setText("Raise Issue");
+        btn_raiserequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRaiseIssueActionPerformed(evt);
+                btn_raiserequestActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 251, -1));
+        jPanel1.add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 251, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Area");
         jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
 
-        btnProjects.setBackground(new java.awt.Color(113, 160, 160));
-        btnProjects.setText("Projects");
-        btnProjects.addActionListener(new java.awt.event.ActionListener() {
+        btn_projs.setBackground(new java.awt.Color(113, 160, 160));
+        btn_projs.setText("Projects");
+        btn_projs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProjectsActionPerformed(evt);
+                btn_projsActionPerformed(evt);
             }
         });
-        jPanel1.add(btnProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 250, -1));
+        jPanel1.add(btn_projs, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 250, -1));
 
-        btnHelpline.setBackground(new java.awt.Color(113, 160, 160));
-        btnHelpline.setText("Helpline");
-        btnHelpline.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewResolved.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewResolved.setText("View Resolved Issue Statistics");
+        btn_viewResolved.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelplineActionPerformed(evt);
+                btn_viewResolvedActionPerformed(evt);
             }
         });
-        jPanel1.add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 251, -1));
-
-        btnViewResolved.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewResolved.setText("View Resolved Issue Statistics");
-        btnViewResolved.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewResolvedActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnViewResolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 251, -1));
+        jPanel1.add(btn_viewResolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 251, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/view.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 330, 400));
 
-        btnOldAgeHomeList.setBackground(new java.awt.Color(113, 160, 160));
-        btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
-        btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
+        btn_oldAge.setBackground(new java.awt.Color(113, 160, 160));
+        btn_oldAge.setText("Old Age Home");
+        btn_oldAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOldAgeHomeListActionPerformed(evt);
+                btn_oldAgeActionPerformed(evt);
             }
         });
-        jPanel1.add(btnOldAgeHomeList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 251, -1));
+        jPanel1.add(btn_oldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 251, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -140,64 +130,55 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
+    private void btn_viewtrustsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewtrustsActionPerformed
         // TODO add your handling code here:
        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
         userProcessContainer.add("vnjp",vnjp);
         cardLayout.next(userProcessContainer); 
-    }//GEN-LAST:event_btnTrustListActionPerformed
+    }//GEN-LAST:event_btn_viewtrustsActionPerformed
 
-    private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
+    private void btn_raiserequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_raiserequestActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();      
         RaiseIssueJPanel rijp = new RaiseIssueJPanel(userProcessContainer, userAccount, system); 
         userProcessContainer.add("rijp",rijp);
         cardLayout.next(userProcessContainer);
        
-    }//GEN-LAST:event_btnRaiseIssueActionPerformed
+    }//GEN-LAST:event_btn_raiserequestActionPerformed
 
-    private void btnProjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProjectsActionPerformed
+    private void btn_projsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_projsActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ProjectViewJPanel pvjp = new ProjectViewJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("pvjp",pvjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnProjectsActionPerformed
+    }//GEN-LAST:event_btn_projsActionPerformed
 
-    private void btnViewResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewResolvedActionPerformed
+    private void btn_viewResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewResolvedActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewResolvedIssuesStatisticsJPanel vrisjp = new ViewResolvedIssuesStatisticsJPanel(userProcessContainer, system, userAccount, enterprise);
         userProcessContainer.add("vrisjp",vrisjp);
         cardLayout.next(userProcessContainer);
         
-    }//GEN-LAST:event_btnViewResolvedActionPerformed
+    }//GEN-LAST:event_btn_viewResolvedActionPerformed
 
-    private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
+    private void btn_oldAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_oldAgeActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewOldAgeHomeJPanel oahj = new ViewOldAgeHomeJPanel(userProcessContainer, system);
         userProcessContainer.add("oahj",oahj);
         cardLayout.next(userProcessContainer); 
-    }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
-
-    private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
-        // TODO add your handling code here:
-      CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
-        userProcessContainer.add("hjp",hjp);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnHelplineActionPerformed
+    }//GEN-LAST:event_btn_oldAgeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHelpline;
-    private javax.swing.JButton btnOldAgeHomeList;
-    private javax.swing.JButton btnProjects;
-    private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JButton btnTrustList;
-    private javax.swing.JButton btnViewResolved;
+    private javax.swing.JButton btn_oldAge;
+    private javax.swing.JButton btn_projs;
+    private javax.swing.JButton btn_raiserequest;
+    private javax.swing.JButton btn_viewResolved;
+    private javax.swing.JButton btn_viewtrusts;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;

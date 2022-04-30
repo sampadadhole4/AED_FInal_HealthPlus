@@ -69,25 +69,25 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobWorkRequest = new javax.swing.JTable();
-        btnAccept = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
+        btn_acceptApplication = new javax.swing.JButton();
+        btn_rejectAppln = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 241, 223));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.setMaximumSize(new java.awt.Dimension(200, 212));
-        btnBack.setMinimumSize(new java.awt.Dimension(200, 212));
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.setMaximumSize(new java.awt.Dimension(200, 212));
+        btn_backpage.setMinimumSize(new java.awt.Dimension(200, 212));
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 110, 80));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 110, 80));
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -116,37 +116,37 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 480, 178));
 
-        btnAccept.setBackground(new java.awt.Color(255, 255, 255));
-        btnAccept.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnAccept.setText("Accept");
-        btnAccept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+        btn_acceptApplication.setBackground(new java.awt.Color(255, 255, 255));
+        btn_acceptApplication.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_acceptApplication.setText("Accept");
+        btn_acceptApplication.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_acceptApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAcceptActionPerformed(evt);
+                btn_acceptApplicationActionPerformed(evt);
             }
         });
-        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 100, 30));
+        add(btn_acceptApplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 100, 30));
 
-        btnDelete.setBackground(new java.awt.Color(255, 255, 255));
-        btnDelete.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDelete.setText("Reject");
-        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btn_rejectAppln.setBackground(new java.awt.Color(255, 255, 255));
+        btn_rejectAppln.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_rejectAppln.setText("Reject");
+        btn_rejectAppln.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_rejectAppln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btn_rejectApplnActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 100, 30));
+        add(btn_rejectAppln, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 100, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+    private void btn_acceptApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_acceptApplicationActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblJobWorkRequest.getSelectedRow();
@@ -193,9 +193,9 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAcceptActionPerformed
+    }//GEN-LAST:event_btn_acceptApplicationActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btn_rejectApplnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rejectApplnActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblJobWorkRequest.getSelectedRow();
         if (selectedRow >= 0) {
@@ -210,13 +210,13 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btn_rejectApplnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccept;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btn_acceptApplication;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_rejectAppln;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobWorkRequest;
     private javax.swing.JScrollPane tblScrollPane;

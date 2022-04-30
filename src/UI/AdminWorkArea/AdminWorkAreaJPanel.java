@@ -41,55 +41,55 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnManageOrganization = new javax.swing.JButton();
-        btnPublishJobs = new javax.swing.JButton();
-        btnManageJobApplications = new javax.swing.JButton();
-        btnManageEmpUserAcc = new javax.swing.JButton();
+        btn_manageorg = new javax.swing.JButton();
+        btn_publishjobs = new javax.swing.JButton();
+        btn_managejobappln = new javax.swing.JButton();
+        btn_manageemployeeAcc = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 240, 255));
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Admin Work Area ");
+        lblHeader.setText("Admin page");
 
-        btnManageOrganization.setBackground(new java.awt.Color(255, 255, 255));
-        btnManageOrganization.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnManageOrganization.setText("Manage Organization");
-        btnManageOrganization.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
+        btn_manageorg.setBackground(new java.awt.Color(255, 255, 255));
+        btn_manageorg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_manageorg.setText("Manage Organization");
+        btn_manageorg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_manageorg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageOrganizationActionPerformed(evt);
+                btn_manageorgActionPerformed(evt);
             }
         });
 
-        btnPublishJobs.setBackground(new java.awt.Color(255, 255, 255));
-        btnPublishJobs.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnPublishJobs.setText("Publish Jobs");
-        btnPublishJobs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnPublishJobs.addActionListener(new java.awt.event.ActionListener() {
+        btn_publishjobs.setBackground(new java.awt.Color(255, 255, 255));
+        btn_publishjobs.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_publishjobs.setText("Publish Jobs");
+        btn_publishjobs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_publishjobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPublishJobsActionPerformed(evt);
+                btn_publishjobsActionPerformed(evt);
             }
         });
 
-        btnManageJobApplications.setBackground(new java.awt.Color(255, 255, 255));
-        btnManageJobApplications.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnManageJobApplications.setText("Manage Job Applications");
-        btnManageJobApplications.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnManageJobApplications.addActionListener(new java.awt.event.ActionListener() {
+        btn_managejobappln.setBackground(new java.awt.Color(255, 255, 255));
+        btn_managejobappln.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_managejobappln.setText("Manage Job Applications");
+        btn_managejobappln.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_managejobappln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageJobApplicationsActionPerformed(evt);
+                btn_managejobapplnActionPerformed(evt);
             }
         });
 
-        btnManageEmpUserAcc.setBackground(new java.awt.Color(255, 255, 255));
-        btnManageEmpUserAcc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnManageEmpUserAcc.setText("Manage Employee User Account");
-        btnManageEmpUserAcc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnManageEmpUserAcc.addActionListener(new java.awt.event.ActionListener() {
+        btn_manageemployeeAcc.setBackground(new java.awt.Color(255, 255, 255));
+        btn_manageemployeeAcc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_manageemployeeAcc.setText("Manage Employee User Account");
+        btn_manageemployeeAcc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_manageemployeeAcc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEmpUserAccActionPerformed(evt);
+                btn_manageemployeeAccActionPerformed(evt);
             }
         });
 
@@ -102,17 +102,17 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnManageJobApplications, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_manageorg, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_managejobappln, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnPublishJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnManageEmpUserAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btn_publishjobs, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_manageemployeeAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
                 .addContainerGap())
@@ -126,12 +126,12 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPublishJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_manageorg, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_publishjobs, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(127, 127, 127)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnManageJobApplications, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnManageEmpUserAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btn_managejobappln, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_manageemployeeAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -139,44 +139,44 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
+    private void btn_manageorgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_manageorgActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageOrganizationJPanel mojp = new ManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("mojp", mojp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageOrganizationActionPerformed
+    }//GEN-LAST:event_btn_manageorgActionPerformed
 
-    private void btnPublishJobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPublishJobsActionPerformed
+    private void btn_publishjobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_publishjobsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         PublishJobsJPanel pjjp = new PublishJobsJPanel(userProcessContainer, system.getJobDirectory(), userAccount, system);
         userProcessContainer.add("pjjp", pjjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnPublishJobsActionPerformed
+    }//GEN-LAST:event_btn_publishjobsActionPerformed
 
-    private void btnManageJobApplicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageJobApplicationsActionPerformed
+    private void btn_managejobapplnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_managejobapplnActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageJobApplicationsJPanel mjajp = new ManageJobApplicationsJPanel(userProcessContainer, enterprise, system, userAccount);
         userProcessContainer.add("mjajp", mjajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageJobApplicationsActionPerformed
+    }//GEN-LAST:event_btn_managejobapplnActionPerformed
 
-    private void btnManageEmpUserAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmpUserAccActionPerformed
+    private void btn_manageemployeeAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_manageemployeeAccActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageEmployeeUserAccountJPanel meuajp = new ManageEmployeeUserAccountJPanel(userProcessContainer, enterprise, system);
         userProcessContainer.add("meuajp", meuajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEmpUserAccActionPerformed
+    }//GEN-LAST:event_btn_manageemployeeAccActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageEmpUserAcc;
-    private javax.swing.JButton btnManageJobApplications;
-    private javax.swing.JButton btnManageOrganization;
-    private javax.swing.JButton btnPublishJobs;
+    private javax.swing.JButton btn_manageemployeeAcc;
+    private javax.swing.JButton btn_managejobappln;
+    private javax.swing.JButton btn_manageorg;
+    private javax.swing.JButton btn_publishjobs;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

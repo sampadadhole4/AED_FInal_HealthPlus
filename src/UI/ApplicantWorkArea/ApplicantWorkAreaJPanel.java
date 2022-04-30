@@ -49,9 +49,9 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         lblHi = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
-        btnViewJobs = new javax.swing.JButton();
-        btnRaiseIssue = new javax.swing.JButton();
-        btnViewApplications = new javax.swing.JButton();
+        btn_viewpostedjobs = new javax.swing.JButton();
+        btn_raiserequest = new javax.swing.JButton();
+        btn_viewApplStatus = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -67,69 +67,69 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         add(lblHi, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 77, 22, 30));
 
         lblName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblName.setText("Appl");
+        lblName.setText("Applicant");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 150, 22));
 
-        btnViewJobs.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewJobs.setText("View Jobs");
-        btnViewJobs.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewpostedjobs.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewpostedjobs.setText("View Jobs");
+        btn_viewpostedjobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewJobsActionPerformed(evt);
+                btn_viewpostedjobsActionPerformed(evt);
             }
         });
-        add(btnViewJobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 125, 217, -1));
+        add(btn_viewpostedjobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 125, 217, -1));
 
-        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
-        btnRaiseIssue.setText("Raise A Request");
-        btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
+        btn_raiserequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_raiserequest.setText("Raise A Request");
+        btn_raiserequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRaiseIssueActionPerformed(evt);
+                btn_raiserequestActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 224, 217, -1));
+        add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 224, 217, -1));
 
-        btnViewApplications.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewApplications.setText("View Application Status");
-        btnViewApplications.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewApplStatus.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewApplStatus.setText("View Application Status");
+        btn_viewApplStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewApplicationsActionPerformed(evt);
+                btn_viewApplStatusActionPerformed(evt);
             }
         });
-        add(btnViewApplications, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 175, 217, -1));
+        add(btn_viewApplStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 175, 217, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/people.gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 730, 360));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewJobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewJobsActionPerformed
+    private void btn_viewpostedjobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewpostedjobsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ApplyForJobJPanel afjp = new ApplyForJobJPanel(userProcessContainer, system, dB4OUtil, userAccount, "A");
         userProcessContainer.add("afjp", afjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewJobsActionPerformed
+    }//GEN-LAST:event_btn_viewpostedjobsActionPerformed
 
-    private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
+    private void btn_raiserequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_raiserequestActionPerformed
 //        // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         RaiseIssueJPanel rijp = new RaiseIssueJPanel(userProcessContainer, userAccount, system);
         userProcessContainer.add("rijp", rijp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnRaiseIssueActionPerformed
+    }//GEN-LAST:event_btn_raiserequestActionPerformed
 
-    private void btnViewApplicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewApplicationsActionPerformed
+    private void btn_viewApplStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewApplStatusActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ApplicationStatusJPanel asjp = new ApplicationStatusJPanel(userProcessContainer, system, userAccount);
         userProcessContainer.add("asjp", asjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewApplicationsActionPerformed
+    }//GEN-LAST:event_btn_viewApplStatusActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JButton btnViewApplications;
-    private javax.swing.JButton btnViewJobs;
+    private javax.swing.JButton btn_raiserequest;
+    private javax.swing.JButton btn_viewApplStatus;
+    private javax.swing.JButton btn_viewpostedjobs;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblHi;

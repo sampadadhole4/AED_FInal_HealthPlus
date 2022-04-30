@@ -41,32 +41,32 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
     }
 
     private void populateOrganization() {
-        cbOrg.removeAllItems();
+        combo_organozation.removeAllItems();
 
         for (Org organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             if (!(organization instanceof AdminOrg)) {
-                cbOrg.addItem(organization);
+                combo_organozation.addItem(organization);
             }
         }
     }
 
     private void populateEmployee() {
-        cbEmp.removeAllItems();
-        Org org = (Org) cbOrg.getSelectedItem();
+        combo_employee.removeAllItems();
+        Org org = (Org) combo_organozation.getSelectedItem();
         if (org != null) {
             for (Worker employee : org.getEmployeeDirectory().getEmployeeList()) {
-                cbEmp.addItem(employee);
+                combo_employee.addItem(employee);
             }
         }
     }
 
     private void populateRole() {
-        cbRole.removeAllItems();
-        Org org = (Org) cbOrg.getSelectedItem();
+        combo_role.removeAllItems();
+        Org org = (Org) combo_organozation.getSelectedItem();
         if (org != null) {
             for (Roles role : org.getSupportedRole()) {
                 if (!(role instanceof Admin)) {
-                    cbRole.addItem(role);
+                    combo_role.addItem(role);
                 }
             }
         }
@@ -96,39 +96,39 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblUserAcc = new javax.swing.JTable();
-        btnDeleteAcc = new javax.swing.JButton();
-        cbOrg = new javax.swing.JComboBox();
-        lblOrg = new javax.swing.JLabel();
-        lblEmp = new javax.swing.JLabel();
-        cbEmp = new javax.swing.JComboBox();
-        cbRole = new javax.swing.JComboBox();
-        lblRole = new javax.swing.JLabel();
-        lblUserName = new javax.swing.JLabel();
-        txtFldUserName = new javax.swing.JTextField();
-        txtFldPassword = new javax.swing.JTextField();
-        lblPassword = new javax.swing.JLabel();
-        btnAddAccount = new javax.swing.JButton();
+        btn_deleteEmployee = new javax.swing.JButton();
+        combo_organozation = new javax.swing.JComboBox();
+        label_organization = new javax.swing.JLabel();
+        label_emp = new javax.swing.JLabel();
+        combo_employee = new javax.swing.JComboBox();
+        combo_role = new javax.swing.JComboBox();
+        label_role = new javax.swing.JLabel();
+        label_username = new javax.swing.JLabel();
+        text_username = new javax.swing.JTextField();
+        text_password = new javax.swing.JTextField();
+        label_password = new javax.swing.JLabel();
+        btn_addacoount = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 242, 225));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.setMaximumSize(new java.awt.Dimension(200, 212));
-        btnBack.setMinimumSize(new java.awt.Dimension(2200, 212));
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.setMaximumSize(new java.awt.Dimension(200, 212));
+        btn_backpage.setMinimumSize(new java.awt.Dimension(2200, 212));
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 110, 90));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 110, 90));
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Manage User Account");
+        lblHeader.setText("Manage Employee Account");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 270, 26));
 
         tblUserAcc.setModel(new javax.swing.table.DefaultTableModel(
@@ -152,79 +152,79 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 500, 170));
 
-        btnDeleteAcc.setBackground(new java.awt.Color(113, 160, 160));
-        btnDeleteAcc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDeleteAcc.setText("Delete Account");
-        btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
+        btn_deleteEmployee.setBackground(new java.awt.Color(113, 160, 160));
+        btn_deleteEmployee.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_deleteEmployee.setText("Delete Account");
+        btn_deleteEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteAccActionPerformed(evt);
+                btn_deleteEmployeeActionPerformed(evt);
             }
         });
-        add(btnDeleteAcc, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
+        add(btn_deleteEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
 
-        cbOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbOrg.addActionListener(new java.awt.event.ActionListener() {
+        combo_organozation.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_organozation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_organozation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbOrgActionPerformed(evt);
+                combo_organozationActionPerformed(evt);
             }
         });
-        add(cbOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 146, -1));
+        add(combo_organozation, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 146, -1));
 
-        lblOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblOrg.setText("Organization");
-        add(lblOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
+        label_organization.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_organization.setText("Organization");
+        add(label_organization, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
 
-        lblEmp.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblEmp.setText("Employee");
-        add(lblEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 80, -1));
+        label_emp.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_emp.setText("Employee");
+        add(label_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 80, -1));
 
-        cbEmp.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbEmp.addActionListener(new java.awt.event.ActionListener() {
+        combo_employee.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_employee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbEmpActionPerformed(evt);
+                combo_employeeActionPerformed(evt);
             }
         });
-        add(cbEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 146, -1));
+        add(combo_employee, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 146, -1));
 
-        cbRole.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 146, -1));
+        combo_role.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 146, -1));
 
-        lblRole.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblRole.setText("Role");
-        add(lblRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 61, -1));
+        label_role.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_role.setText("Role");
+        add(label_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 61, -1));
 
-        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblUserName.setText("User Name");
-        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, -1, -1));
-        add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 146, -1));
-        add(txtFldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 146, -1));
+        label_username.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_username.setText("User Name");
+        add(label_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, -1, -1));
+        add(text_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 146, -1));
+        add(text_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 146, -1));
 
-        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblPassword.setText("Password");
-        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 70, -1));
+        label_password.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_password.setText("Password");
+        add(label_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 70, -1));
 
-        btnAddAccount.setBackground(new java.awt.Color(113, 160, 160));
-        btnAddAccount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnAddAccount.setText("Add Account");
-        btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
+        btn_addacoount.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addacoount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_addacoount.setText("Add Account");
+        btn_addacoount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddAccountActionPerformed(evt);
+                btn_addacoountActionPerformed(evt);
             }
         });
-        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, -1, -1));
+        add(btn_addacoount, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnDeleteAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccActionPerformed
+    private void btn_deleteEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteEmployeeActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblUserAcc.getSelectedRow();
@@ -256,27 +256,27 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteAccActionPerformed
+    }//GEN-LAST:event_btn_deleteEmployeeActionPerformed
 
-    private void cbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbOrgActionPerformed
+    private void combo_organozationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organozationActionPerformed
 
         populateEmployee();
         populateRole();
-    }//GEN-LAST:event_cbOrgActionPerformed
+    }//GEN-LAST:event_combo_organozationActionPerformed
 
-    private void cbEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEmpActionPerformed
+    private void combo_employeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_employeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbEmpActionPerformed
+    }//GEN-LAST:event_combo_employeeActionPerformed
 
-    private void btnAddAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAccountActionPerformed
+    private void btn_addacoountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addacoountActionPerformed
         // TODO add your handling code here:
 
         try {
-            String userName = txtFldUserName.getText();
-            String password = txtFldPassword.getText();
-            Org organization = (Org) cbOrg.getSelectedItem();
-            Worker employee = (Worker) cbEmp.getSelectedItem();
-            Roles role = (Roles) cbRole.getSelectedItem();
+            String userName = text_username.getText();
+            String password = text_password.getText();
+            Org organization = (Org) combo_organozation.getSelectedItem();
+            Worker employee = (Worker) combo_employee.getSelectedItem();
+            Roles role = (Roles) combo_role.getSelectedItem();
 
             if (!userName.equals("") && !password.equals("")) {
 
@@ -322,8 +322,8 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
                 }
 
                 populateTable();
-                txtFldPassword.setText("");
-                txtFldUserName.setText("");
+                text_password.setText("");
+                text_username.setText("");
             } else {
                 JOptionPane.showMessageDialog(null, "Enter values for all field", "Warning", JOptionPane.WARNING_MESSAGE);
 
@@ -331,25 +331,25 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Enter values for all field", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAddAccountActionPerformed
+    }//GEN-LAST:event_btn_addacoountActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddAccount;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDeleteAcc;
-    private javax.swing.JComboBox cbEmp;
-    private javax.swing.JComboBox cbOrg;
-    private javax.swing.JComboBox cbRole;
-    private javax.swing.JLabel lblEmp;
+    private javax.swing.JButton btn_addacoount;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_deleteEmployee;
+    private javax.swing.JComboBox combo_employee;
+    private javax.swing.JComboBox combo_organozation;
+    private javax.swing.JComboBox combo_role;
+    private javax.swing.JLabel label_emp;
+    private javax.swing.JLabel label_organization;
+    private javax.swing.JLabel label_password;
+    private javax.swing.JLabel label_role;
+    private javax.swing.JLabel label_username;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblOrg;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblRole;
-    private javax.swing.JLabel lblUserName;
     private javax.swing.JScrollPane tblScrollPane;
     private javax.swing.JTable tblUserAcc;
-    private javax.swing.JTextField txtFldPassword;
-    private javax.swing.JTextField txtFldUserName;
+    private javax.swing.JTextField text_password;
+    private javax.swing.JTextField text_username;
     // End of variables declaration//GEN-END:variables
 }

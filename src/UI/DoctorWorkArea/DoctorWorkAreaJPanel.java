@@ -42,9 +42,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnManageChildren = new javax.swing.JButton();
+        btn_manageSeniorPatients = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        btnViewChildren = new javax.swing.JButton();
+        btn_viewSeniorPatients = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -52,53 +52,53 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnManageChildren.setBackground(new java.awt.Color(113, 160, 160));
-        btnManageChildren.setText("Manage Senior Patients");
-        btnManageChildren.addActionListener(new java.awt.event.ActionListener() {
+        btn_manageSeniorPatients.setBackground(new java.awt.Color(113, 160, 160));
+        btn_manageSeniorPatients.setText("Manage Senior Patients");
+        btn_manageSeniorPatients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageChildrenActionPerformed(evt);
+                btn_manageSeniorPatientsActionPerformed(evt);
             }
         });
-        add(btnManageChildren, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 200, 30));
+        add(btn_manageSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 200, 30));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Doctor Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
 
-        btnViewChildren.setBackground(new java.awt.Color(113, 160, 160));
-        btnViewChildren.setText("View Senior Patients");
-        btnViewChildren.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewSeniorPatients.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewSeniorPatients.setText("View Senior Patients");
+        btn_viewSeniorPatients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewChildrenActionPerformed(evt);
+                btn_viewSeniorPatientsActionPerformed(evt);
             }
         });
-        add(btnViewChildren, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 200, 30));
+        add(btn_viewSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 200, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 280, 490));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageChildrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageChildrenActionPerformed
+    private void btn_manageSeniorPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_manageSeniorPatientsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageTreatmentSeniorJPanel mtsj = new ManageTreatmentSeniorJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("OngoingProjectsJPanel", mtsj);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageChildrenActionPerformed
+    }//GEN-LAST:event_btn_manageSeniorPatientsActionPerformed
 
-    private void btnViewChildrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewChildrenActionPerformed
+    private void btn_viewSeniorPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewSeniorPatientsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewTreatmentSeniorJPanel vtsj = new ViewTreatmentSeniorJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("OngoingProjectsJPanel", vtsj);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewChildrenActionPerformed
+    }//GEN-LAST:event_btn_viewSeniorPatientsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageChildren;
-    private javax.swing.JButton btnViewChildren;
+    private javax.swing.JButton btn_manageSeniorPatients;
+    private javax.swing.JButton btn_viewSeniorPatients;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

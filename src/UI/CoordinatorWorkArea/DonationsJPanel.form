@@ -33,11 +33,11 @@
                       <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="txtWorkDone" min="-2" pref="337" max="-2" attributes="0"/>
+                      <Component id="text_amenitiesprovided" min="-2" pref="337" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
-                      <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_submitworkrequest" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="141" max="32767" attributes="0"/>
@@ -55,10 +55,10 @@
               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtWorkDone" min="-2" pref="136" max="-2" attributes="0"/>
+                  <Component id="text_amenitiesprovided" min="-2" pref="136" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="submitJButton" min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="btn_submitworkrequest" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace pref="447" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -84,14 +84,14 @@
         <Property name="text" type="java.lang.String" value="Basic Amenities Work Request"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtWorkDone">
+    <Component class="javax.swing.JTextField" name="text_amenitiesprovided">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Amenities provided : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="submitJButton">
+    <Component class="javax.swing.JButton" name="btn_submitworkrequest">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="a0" green="a0" red="71" type="rgb"/>
@@ -99,7 +99,7 @@
         <Property name="text" type="java.lang.String" value="Submit Result"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_submitworkrequestActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

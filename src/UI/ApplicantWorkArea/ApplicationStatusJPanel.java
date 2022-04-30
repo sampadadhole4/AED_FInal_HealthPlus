@@ -64,7 +64,7 @@ public class ApplicationStatusJPanel extends javax.swing.JPanel {
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobWorkRequest = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
-        btnBack2 = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,25 +96,25 @@ public class ApplicationStatusJPanel extends javax.swing.JPanel {
         lblHeader.setText("View Application Status");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 250, 27));
 
-        btnBack2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack2.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBack2ActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
-        add(btnBack2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, 40));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 40, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBack2ActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack2;
+    private javax.swing.JButton btn_backpage;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobWorkRequest;
     private javax.swing.JScrollPane tblScrollPane;

@@ -88,8 +88,8 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobs = new javax.swing.JTable();
-        btnApply = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
+        btn_applyforJob = new javax.swing.JButton();
+        btn_back = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -132,28 +132,28 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 140));
 
-        btnApply.setBackground(new java.awt.Color(113, 160, 160));
-        btnApply.setText("Apply");
-        btnApply.addActionListener(new java.awt.event.ActionListener() {
+        btn_applyforJob.setBackground(new java.awt.Color(113, 160, 160));
+        btn_applyforJob.setText("Apply");
+        btn_applyforJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApplyActionPerformed(evt);
+                btn_applyforJobActionPerformed(evt);
             }
         });
-        add(btnApply, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 250, 80, -1));
+        add(btn_applyforJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 250, 80, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
+        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 40, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/job-apply.gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-300, 160, 1740, 750));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApplyActionPerformed
+    private void btn_applyforJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_applyforJobActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblJobs.getSelectedRow();
@@ -194,14 +194,14 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row to continue", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_btnApplyActionPerformed
+    }//GEN-LAST:event_btn_applyforJobActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backActionPerformed
 
     public void sendWorkRequest(UserAccount userAccount, Job job, Enterprise enterprise) {
 
@@ -235,8 +235,8 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnApply;
-    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btn_applyforJob;
+    private javax.swing.JButton btn_back;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobs;

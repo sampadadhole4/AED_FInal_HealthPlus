@@ -38,8 +38,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnTrustList = new javax.swing.JButton();
-        btnHelpline = new javax.swing.JButton();
+        btn_showtrustlist = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 255, 255));
@@ -50,50 +49,31 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Applicant view Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 250, 27));
 
-        btnTrustList.setBackground(new java.awt.Color(255, 255, 255));
-        btnTrustList.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnTrustList.setText("Trusts of EcoSystem");
-        btnTrustList.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
+        btn_showtrustlist.setBackground(new java.awt.Color(255, 255, 255));
+        btn_showtrustlist.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_showtrustlist.setText("Trusts");
+        btn_showtrustlist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_showtrustlist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTrustListActionPerformed(evt);
+                btn_showtrustlistActionPerformed(evt);
             }
         });
-        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 251, 30));
-
-        btnHelpline.setBackground(new java.awt.Color(255, 255, 255));
-        btnHelpline.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnHelpline.setText("Helpline");
-        btnHelpline.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnHelpline.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelplineActionPerformed(evt);
-            }
-        });
-        add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 251, 30));
+        add(btn_showtrustlist, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 251, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Applicantworkarea.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 500, 270));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
+    private void btn_showtrustlistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_showtrustlistActionPerformed
       CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
         userProcessContainer.add("vnjp", vnjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnTrustListActionPerformed
-
-    private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
-        userProcessContainer.add("hjp", hjp);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnHelplineActionPerformed
+    }//GEN-LAST:event_btn_showtrustlistActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHelpline;
-    private javax.swing.JButton btnTrustList;
+    private javax.swing.JButton btn_showtrustlist;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

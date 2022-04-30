@@ -81,21 +81,21 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobs = new javax.swing.JTable();
-        btnDeleteJob = new javax.swing.JButton();
-        lblName = new javax.swing.JLabel();
-        txtFldName = new javax.swing.JTextField();
-        btnSubmit = new javax.swing.JButton();
+        btn_removejob = new javax.swing.JButton();
+        label_jobTitle = new javax.swing.JLabel();
+        text_jobtitle = new javax.swing.JTextField();
+        btn_postJob = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 243, 218));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
 
@@ -122,26 +122,26 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
         tblJobs.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblJobs);
 
-        btnDeleteJob.setBackground(new java.awt.Color(255, 255, 255));
-        btnDeleteJob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDeleteJob.setText("Delete Job");
-        btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
+        btn_removejob.setBackground(new java.awt.Color(255, 255, 255));
+        btn_removejob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_removejob.setText("Delete Job");
+        btn_removejob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteJobActionPerformed(evt);
+                btn_removejobActionPerformed(evt);
             }
         });
 
-        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblName.setText("Job Title:");
+        label_jobTitle.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_jobTitle.setText("Job Title:");
 
-        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        text_jobtitle.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
-        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btn_postJob.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postJob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_postJob.setText("Submit");
+        btn_postJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btn_postJobActionPerformed(evt);
             }
         });
 
@@ -155,20 +155,20 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(57, 57, 57)
-                            .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(506, 506, 506)
-                            .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_removejob, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(269, 269, 269)
-                            .addComponent(lblName)
+                            .addComponent(label_jobTitle)
                             .addGap(37, 37, 37)
-                            .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(text_jobtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(329, 329, 329)
-                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btn_postJob, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -180,29 +180,29 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(37, 37, 37)
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnDeleteJob)
+                .addComponent(btn_removejob)
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblName)
-                    .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_jobTitle)
+                    .addComponent(text_jobtitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(btnSubmit)
+                .addComponent(btn_postJob)
                 .addContainerGap(305, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnDeleteJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteJobActionPerformed
+    private void btn_removejobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_removejobActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblJobs.getSelectedRow();
@@ -220,11 +220,11 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteJobActionPerformed
+    }//GEN-LAST:event_btn_removejobActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btn_postJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_postJobActionPerformed
         // TODO add your handling code here:
-        String name = txtFldName.getText();
+        String name = text_jobtitle.getText();
         if (!name.equals("")) {
 
             // validate name
@@ -258,22 +258,22 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
             }
 
             populateTable();
-            txtFldName.setText("");
+            text_jobtitle.setText("");
             JOptionPane.showMessageDialog(null, "Job posted successfully", "Info", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Please enter text", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_btn_postJobActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDeleteJob;
-    private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_postJob;
+    private javax.swing.JButton btn_removejob;
+    private javax.swing.JLabel label_jobTitle;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblName;
     private javax.swing.JTable tblJobs;
     private javax.swing.JScrollPane tblScrollPane;
-    private javax.swing.JTextField txtFldName;
+    private javax.swing.JTextField text_jobtitle;
     // End of variables declaration//GEN-END:variables
 }

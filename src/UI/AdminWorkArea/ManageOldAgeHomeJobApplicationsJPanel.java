@@ -72,19 +72,19 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobWorkRequest = new javax.swing.JTable();
-        btnAccept = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
+        btn_accpetAppln = new javax.swing.JButton();
+        btn_rejectAppl = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 240, 219));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
 
@@ -113,23 +113,23 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
         tblJobWorkRequest.getTableHeader().setReorderingAllowed(false);
         tblScrollPane.setViewportView(tblJobWorkRequest);
 
-        btnAccept.setBackground(new java.awt.Color(255, 255, 255));
-        btnAccept.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        btnAccept.setText("Accept");
-        btnAccept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+        btn_accpetAppln.setBackground(new java.awt.Color(255, 255, 255));
+        btn_accpetAppln.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_accpetAppln.setText("Accept");
+        btn_accpetAppln.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_accpetAppln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAcceptActionPerformed(evt);
+                btn_accpetApplnActionPerformed(evt);
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(255, 255, 255));
-        btnDelete.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        btnDelete.setText("Reject");
-        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btn_rejectAppl.setBackground(new java.awt.Color(255, 255, 255));
+        btn_rejectAppl.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_rejectAppl.setText("Reject");
+        btn_rejectAppl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_rejectAppl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btn_rejectApplActionPerformed(evt);
             }
         });
 
@@ -141,7 +141,7 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(78, 78, 78)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -149,9 +149,9 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
                         .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(406, 406, 406)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_accpetAppln, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_rejectAppl, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(168, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -163,25 +163,25 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_rejectAppl, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_accpetAppln, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(486, 486, 486))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+    private void btn_accpetApplnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_accpetApplnActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblJobWorkRequest.getSelectedRow();
@@ -240,9 +240,9 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAcceptActionPerformed
+    }//GEN-LAST:event_btn_accpetApplnActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btn_rejectApplActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rejectApplActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblJobWorkRequest.getSelectedRow();
         if (selectedRow >= 0) {
@@ -257,13 +257,13 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btn_rejectApplActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccept;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btn_accpetAppln;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_rejectAppl;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobWorkRequest;
     private javax.swing.JScrollPane tblScrollPane;

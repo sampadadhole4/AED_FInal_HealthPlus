@@ -44,32 +44,32 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
     }
     
     private void populateOrganization() {
-        cbOrg.removeAllItems();
+        combo_organization.removeAllItems();
 
         for (Org organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             if ((organization instanceof Senior_Care_Org) || (organization instanceof MedicalOrg)) {
-                cbOrg.addItem(organization);
+                combo_organization.addItem(organization);
             }
         }
     }
 
     private void populateEmployee() {
-        cbEmp.removeAllItems();
-        Org org = (Org) cbOrg.getSelectedItem();
+        combo_employee.removeAllItems();
+        Org org = (Org) combo_organization.getSelectedItem();
         if (org != null) {
             for (Worker employee : org.getEmployeeDirectory().getEmployeeList()) {
-                cbEmp.addItem(employee);
+                combo_employee.addItem(employee);
             }
         }
     }
 
     private void populateRole() {
-        cbRole.removeAllItems();
-        Org org = (Org) cbOrg.getSelectedItem();
+        combo_role.removeAllItems();
+        Org org = (Org) combo_organization.getSelectedItem();
         if (org != null) {
             for (Roles role : org.getSupportedRole()) {
                 if (!(role instanceof Admin)) {
-                    cbRole.addItem(role);
+                    combo_role.addItem(role);
                 }
             }
         }
@@ -100,29 +100,29 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblUserAcc = new javax.swing.JTable();
-        btnDeleteAcc = new javax.swing.JButton();
-        lblOrg = new javax.swing.JLabel();
-        cbOrg = new javax.swing.JComboBox();
-        lblEmp = new javax.swing.JLabel();
-        cbEmp = new javax.swing.JComboBox();
-        cbRole = new javax.swing.JComboBox();
-        lblRole = new javax.swing.JLabel();
-        lblUserName = new javax.swing.JLabel();
-        txtFldUserName = new javax.swing.JTextField();
-        lblPassword = new javax.swing.JLabel();
-        txtFldPassword = new javax.swing.JTextField();
-        btnAddAccount = new javax.swing.JButton();
+        btn_deleteaccount = new javax.swing.JButton();
+        label_organization = new javax.swing.JLabel();
+        combo_organization = new javax.swing.JComboBox();
+        label_employee = new javax.swing.JLabel();
+        combo_employee = new javax.swing.JComboBox();
+        combo_role = new javax.swing.JComboBox();
+        label_role = new javax.swing.JLabel();
+        label_username = new javax.swing.JLabel();
+        text_username = new javax.swing.JTextField();
+        label_password = new javax.swing.JLabel();
+        text_password = new javax.swing.JTextField();
+        btn_addacc = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 243, 226));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
 
@@ -149,61 +149,61 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
         tblUserAcc.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblUserAcc);
 
-        btnDeleteAcc.setBackground(new java.awt.Color(255, 255, 255));
-        btnDeleteAcc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDeleteAcc.setText("Delete Account");
-        btnDeleteAcc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
+        btn_deleteaccount.setBackground(new java.awt.Color(255, 255, 255));
+        btn_deleteaccount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_deleteaccount.setText("Delete Account");
+        btn_deleteaccount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_deleteaccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteAccActionPerformed(evt);
+                btn_deleteaccountActionPerformed(evt);
             }
         });
 
-        lblOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblOrg.setText("Organization");
+        label_organization.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_organization.setText("Organization");
 
-        cbOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbOrg.addActionListener(new java.awt.event.ActionListener() {
+        combo_organization.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_organization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_organization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbOrgActionPerformed(evt);
+                combo_organizationActionPerformed(evt);
             }
         });
 
-        lblEmp.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblEmp.setText("Employee");
+        label_employee.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_employee.setText("Employee");
 
-        cbEmp.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbEmp.addActionListener(new java.awt.event.ActionListener() {
+        combo_employee.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_employee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbEmpActionPerformed(evt);
+                combo_employeeActionPerformed(evt);
             }
         });
 
-        cbRole.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_role.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lblRole.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblRole.setText("Role");
+        label_role.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_role.setText("Role");
 
-        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblUserName.setText("User Name");
+        label_username.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_username.setText("User Name");
 
-        txtFldUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        text_username.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
-        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblPassword.setText("Password");
+        label_password.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_password.setText("Password");
 
-        txtFldPassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        text_password.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
-        btnAddAccount.setBackground(new java.awt.Color(255, 255, 255));
-        btnAddAccount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnAddAccount.setText("Add Account");
-        btnAddAccount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
+        btn_addacc.setBackground(new java.awt.Color(255, 255, 255));
+        btn_addacc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_addacc.setText("Add Account");
+        btn_addacc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_addacc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddAccountActionPerformed(evt);
+                btn_addaccActionPerformed(evt);
             }
         });
 
@@ -215,17 +215,14 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(109, 109, 109))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tblScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnDeleteAcc, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                            .addComponent(tblScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_deleteaccount, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -233,25 +230,25 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblOrg)
-                                            .addComponent(lblEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(label_organization)
+                                            .addComponent(label_employee, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(79, 79, 79)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(combo_employee, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(combo_organization, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblUserName)
-                                            .addComponent(lblRole, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(label_username)
+                                            .addComponent(label_role, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(label_password, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(89, 89, 89)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtFldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtFldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(text_password, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(combo_role, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(text_username, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(93, 93, 93))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAddAccount)
+                                .addComponent(btn_addacc)
                                 .addGap(212, 212, 212)))))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
@@ -266,52 +263,52 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
                         .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30)
-                .addComponent(btnDeleteAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_deleteaccount, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOrg)
-                    .addComponent(cbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_organization)
+                    .addComponent(combo_organization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(lblEmp))
+                        .addComponent(label_employee))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(combo_employee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(lblRole))
+                        .addComponent(label_role))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cbRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(combo_role, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUserName)
-                    .addComponent(txtFldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_username)
+                    .addComponent(text_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(lblPassword))
+                        .addComponent(label_password))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtFldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(34, 34, 34)
-                .addComponent(btnAddAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_addacc, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(234, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnDeleteAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccActionPerformed
+    private void btn_deleteaccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteaccountActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblUserAcc.getSelectedRow();
@@ -343,27 +340,27 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteAccActionPerformed
+    }//GEN-LAST:event_btn_deleteaccountActionPerformed
 
-    private void cbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbOrgActionPerformed
+    private void combo_organizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organizationActionPerformed
 
         populateEmployee();
         populateRole();
-    }//GEN-LAST:event_cbOrgActionPerformed
+    }//GEN-LAST:event_combo_organizationActionPerformed
 
-    private void cbEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEmpActionPerformed
+    private void combo_employeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_employeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbEmpActionPerformed
+    }//GEN-LAST:event_combo_employeeActionPerformed
 
-    private void btnAddAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAccountActionPerformed
+    private void btn_addaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addaccActionPerformed
         // TODO add your handling code here:
 
         try {
-            String userName = txtFldUserName.getText();
-            String password = txtFldPassword.getText();
-            Org organization = (Org) cbOrg.getSelectedItem();
-            Worker employee = (Worker) cbEmp.getSelectedItem();
-            Roles role = (Roles) cbRole.getSelectedItem();
+            String userName = text_username.getText();
+            String password = text_password.getText();
+            Org organization = (Org) combo_organization.getSelectedItem();
+            Worker employee = (Worker) combo_employee.getSelectedItem();
+            Roles role = (Roles) combo_role.getSelectedItem();
 
             if (!userName.equals("") && !password.equals("")) {
 
@@ -412,8 +409,8 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
                 }
 
                 populateTable();
-                txtFldPassword.setText("");
-                txtFldUserName.setText("");
+                text_password.setText("");
+                text_username.setText("");
             } else {
                 JOptionPane.showMessageDialog(null, "Enter values for all field", "Warning", JOptionPane.WARNING_MESSAGE);
 
@@ -421,25 +418,25 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Enter values for all field", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAddAccountActionPerformed
+    }//GEN-LAST:event_btn_addaccActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddAccount;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDeleteAcc;
-    private javax.swing.JComboBox cbEmp;
-    private javax.swing.JComboBox cbOrg;
-    private javax.swing.JComboBox cbRole;
-    private javax.swing.JLabel lblEmp;
+    private javax.swing.JButton btn_addacc;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_deleteaccount;
+    private javax.swing.JComboBox combo_employee;
+    private javax.swing.JComboBox combo_organization;
+    private javax.swing.JComboBox combo_role;
+    private javax.swing.JLabel label_employee;
+    private javax.swing.JLabel label_organization;
+    private javax.swing.JLabel label_password;
+    private javax.swing.JLabel label_role;
+    private javax.swing.JLabel label_username;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblOrg;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblRole;
-    private javax.swing.JLabel lblUserName;
     private javax.swing.JScrollPane tblScrollPane;
     private javax.swing.JTable tblUserAcc;
-    private javax.swing.JTextField txtFldPassword;
-    private javax.swing.JTextField txtFldUserName;
+    private javax.swing.JTextField text_password;
+    private javax.swing.JTextField text_username;
     // End of variables declaration//GEN-END:variables
 }

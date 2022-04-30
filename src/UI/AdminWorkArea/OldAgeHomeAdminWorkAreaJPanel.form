@@ -33,18 +33,18 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="btnManageOrganization" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_ManageOrg" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnManageJobApplications" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_manageJobAppl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnPublishJobs" min="-2" pref="209" max="-2" attributes="0"/>
-                          <Component id="btnManageEmpUserAcc" min="-2" pref="231" max="-2" attributes="0"/>
+                          <Component id="btn_publishJobs" min="-2" pref="209" max="-2" attributes="0"/>
+                          <Component id="btn_manageUserAcc" min="-2" pref="231" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -61,13 +61,13 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnManageOrganization" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="btnPublishJobs" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="btn_ManageOrg" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="btn_publishJobs" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnManageJobApplications" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="btnManageEmpUserAcc" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="btn_manageJobAppl" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="btn_manageUserAcc" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -87,10 +87,10 @@
           <Font name="Comic Sans MS" size="18" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Admin Work Area "/>
+        <Property name="text" type="java.lang.String" value="Admin Page"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageOrganization">
+    <Component class="javax.swing.JButton" name="btn_ManageOrg">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -106,10 +106,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrganizationActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ManageOrgActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnPublishJobs">
+    <Component class="javax.swing.JButton" name="btn_publishJobs">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -125,10 +125,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPublishJobsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_publishJobsActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageJobApplications">
+    <Component class="javax.swing.JButton" name="btn_manageJobAppl">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -144,10 +144,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageJobApplicationsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageJobApplActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageEmpUserAcc">
+    <Component class="javax.swing.JButton" name="btn_manageUserAcc">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -163,7 +163,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmpUserAccActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageUserAccActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

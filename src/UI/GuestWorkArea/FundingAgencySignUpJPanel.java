@@ -107,18 +107,18 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        lblBudget = new javax.swing.JLabel();
-        lblAgencyName = new javax.swing.JLabel();
-        lblCountry = new javax.swing.JLabel();
-        lblState = new javax.swing.JLabel();
+        label_budget = new javax.swing.JLabel();
+        label_fundraisername = new javax.swing.JLabel();
+        label_country = new javax.swing.JLabel();
+        label_state = new javax.swing.JLabel();
         btn_Submit = new javax.swing.JButton();
-        lblCity = new javax.swing.JLabel();
+        label_city = new javax.swing.JLabel();
         text_fundraisername = new javax.swing.JTextField();
         text_fundraisersBudget = new javax.swing.JTextField();
         combo_country = new javax.swing.JComboBox<>();
         combo_state = new javax.swing.JComboBox<>();
         combo_city = new javax.swing.JComboBox<>();
-        lblEnterpriseType = new javax.swing.JLabel();
+        label_trustname = new javax.swing.JLabel();
         combo_trust = new javax.swing.JComboBox();
         btn_Back = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
@@ -135,21 +135,21 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblHeader.setText("Sign Up As Funding Agency");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 250, 24));
 
-        lblBudget.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblBudget.setText("Budget:");
-        add(lblBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 96, 20));
+        label_budget.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_budget.setText("Budget:");
+        add(label_budget, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 96, 20));
 
-        lblAgencyName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblAgencyName.setText("Agency Name:");
-        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 96, 20));
+        label_fundraisername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_fundraisername.setText("Agency Name:");
+        add(label_fundraisername, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 96, 20));
 
-        lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblCountry.setText("Country:");
-        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 96, 27));
+        label_country.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_country.setText("Country:");
+        add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 96, 27));
 
-        lblState.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblState.setText("State:");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
+        label_state.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_state.setText("State:");
+        add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
 
         btn_Submit.setBackground(new java.awt.Color(113, 160, 160));
         btn_Submit.setText("Submit");
@@ -160,9 +160,9 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         });
         add(btn_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
 
-        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblCity.setText("City:");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 96, 27));
+        label_city.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_city.setText("City:");
+        add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 96, 27));
 
         text_fundraisername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,9 +193,9 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         });
         add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 150, -1));
 
-        lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblEnterpriseType.setText("Trust Name:");
-        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 80, 20));
+        label_trustname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_trustname.setText("Trust Name:");
+        add(label_trustname, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 80, 20));
         add(combo_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
 
         btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
@@ -301,13 +301,13 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<Object> combo_state;
     private javax.swing.JComboBox combo_trust;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel lblAgencyName;
-    private javax.swing.JLabel lblBudget;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCountry;
-    private javax.swing.JLabel lblEnterpriseType;
+    private javax.swing.JLabel label_budget;
+    private javax.swing.JLabel label_city;
+    private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_fundraisername;
+    private javax.swing.JLabel label_state;
+    private javax.swing.JLabel label_trustname;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblState;
     private javax.swing.JLabel lblWarning;
     private javax.swing.JTextField text_fundraisername;
     private javax.swing.JTextField text_fundraisersBudget;

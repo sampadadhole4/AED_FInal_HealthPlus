@@ -53,9 +53,9 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        btnLogout = new javax.swing.JButton();
-        btnWorkArea = new javax.swing.JButton();
-        btnViewArea = new javax.swing.JButton();
+        btn_logoutuser = new javax.swing.JButton();
+        btn_workpanel = new javax.swing.JButton();
+        btn_viewpanel = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
@@ -65,27 +65,27 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(113, 160, 160));
 
-        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btn_logoutuser.setBackground(new java.awt.Color(255, 255, 255));
+        btn_logoutuser.setText("Logout");
+        btn_logoutuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btn_logoutuserActionPerformed(evt);
             }
         });
 
-        btnWorkArea.setBackground(new java.awt.Color(255, 255, 255));
-        btnWorkArea.setText("Work Area");
-        btnWorkArea.addActionListener(new java.awt.event.ActionListener() {
+        btn_workpanel.setBackground(new java.awt.Color(255, 255, 255));
+        btn_workpanel.setText("Work Area");
+        btn_workpanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnWorkAreaActionPerformed(evt);
+                btn_workpanelActionPerformed(evt);
             }
         });
 
-        btnViewArea.setBackground(new java.awt.Color(255, 255, 255));
-        btnViewArea.setText("View Area");
-        btnViewArea.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewpanel.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewpanel.setText("View Area");
+        btn_viewpanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewAreaActionPerformed(evt);
+                btn_viewpanelActionPerformed(evt);
             }
         });
 
@@ -97,13 +97,13 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogout)
+                .addComponent(btn_logoutuser)
                 .addGap(18, 18, 18))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnViewArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnWorkArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_viewpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_workpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -114,13 +114,13 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(btnLogout)
+                .addComponent(btn_logoutuser)
                 .addGap(45, 45, 45)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
-                .addComponent(btnWorkArea)
+                .addComponent(btn_workpanel)
                 .addGap(18, 18, 18)
-                .addComponent(btnViewArea)
+                .addComponent(btn_viewpanel)
                 .addContainerGap(523, Short.MAX_VALUE))
         );
 
@@ -142,36 +142,36 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+    private void btn_logoutuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutuserActionPerformed
         // TODO add your handling code here:
 
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
         mainContainer.remove(this);
         cardLayout.previous(mainContainer);
         dB4OUtil.storeSystem(system);
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_btn_logoutuserActionPerformed
 
-    private void btnWorkAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWorkAreaActionPerformed
+    private void btn_workpanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_workpanelActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         CareTakerWorkAreaJPanel cwajp = new CareTakerWorkAreaJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("CoordinatorWorkAreaJPanel", cwajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnWorkAreaActionPerformed
+    }//GEN-LAST:event_btn_workpanelActionPerformed
 
-    private void btnViewAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAreaActionPerformed
+    private void btn_viewpanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewpanelActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         EmployeeViewAreaJPanel evajp = new EmployeeViewAreaJPanel(userProcessContainer, system, dB4OUtil, userAccount, organization, enterprise);
         userProcessContainer.add("evajp", evajp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewAreaActionPerformed
+    }//GEN-LAST:event_btn_viewpanelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnViewArea;
-    private javax.swing.JButton btnWorkArea;
+    private javax.swing.JButton btn_logoutuser;
+    private javax.swing.JButton btn_viewpanel;
+    private javax.swing.JButton btn_workpanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;

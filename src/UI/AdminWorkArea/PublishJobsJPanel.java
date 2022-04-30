@@ -80,25 +80,25 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobs = new javax.swing.JTable();
-        btnDeleteJob = new javax.swing.JButton();
-        lblName = new javax.swing.JLabel();
-        txtFldName = new javax.swing.JTextField();
-        btnSubmit = new javax.swing.JButton();
+        btn_deletejobs = new javax.swing.JButton();
+        label_jobtitle = new javax.swing.JLabel();
+        text_jobtitle = new javax.swing.JTextField();
+        btn_postApplication = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 243, 221));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 90));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 90));
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,47 +126,47 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 500, 190));
 
-        btnDeleteJob.setBackground(new java.awt.Color(255, 255, 255));
-        btnDeleteJob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDeleteJob.setText("Delete Job");
-        btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
+        btn_deletejobs.setBackground(new java.awt.Color(255, 255, 255));
+        btn_deletejobs.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_deletejobs.setText("Delete Job");
+        btn_deletejobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteJobActionPerformed(evt);
+                btn_deletejobsActionPerformed(evt);
             }
         });
-        add(btnDeleteJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 120, 30));
+        add(btn_deletejobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 120, 30));
 
-        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblName.setText("Job Title:");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+        label_jobtitle.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_jobtitle.setText("Job Title:");
+        add(label_jobtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
 
-        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        txtFldName.addActionListener(new java.awt.event.ActionListener() {
+        text_jobtitle.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        text_jobtitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFldNameActionPerformed(evt);
+                text_jobtitleActionPerformed(evt);
             }
         });
-        add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
+        add(text_jobtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
-        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btn_postApplication.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postApplication.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_postApplication.setText("Submit");
+        btn_postApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btn_postApplicationActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 90, 30));
+        add(btn_postApplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 90, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnDeleteJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteJobActionPerformed
+    private void btn_deletejobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deletejobsActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = tblJobs.getSelectedRow();
@@ -184,11 +184,11 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteJobActionPerformed
+    }//GEN-LAST:event_btn_deletejobsActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btn_postApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_postApplicationActionPerformed
         // TODO add your handling code here:
-        String name = txtFldName.getText();
+        String name = text_jobtitle.getText();
         if (!name.equals("")) {
 
             // validate name
@@ -222,26 +222,26 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
             }
 
             populateTable();
-            txtFldName.setText("");
+            text_jobtitle.setText("");
             JOptionPane.showMessageDialog(null, "Job posted successfully", "Info", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Please enter text", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_btn_postApplicationActionPerformed
 
-    private void txtFldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFldNameActionPerformed
+    private void text_jobtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_jobtitleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFldNameActionPerformed
+    }//GEN-LAST:event_text_jobtitleActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDeleteJob;
-    private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_deletejobs;
+    private javax.swing.JButton btn_postApplication;
+    private javax.swing.JLabel label_jobtitle;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblName;
     private javax.swing.JTable tblJobs;
     private javax.swing.JScrollPane tblScrollPane;
-    private javax.swing.JTextField txtFldName;
+    private javax.swing.JTextField text_jobtitle;
     // End of variables declaration//GEN-END:variables
 }

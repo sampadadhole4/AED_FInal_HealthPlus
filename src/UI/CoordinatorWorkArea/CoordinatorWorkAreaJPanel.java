@@ -43,7 +43,7 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnOngoingProjects = new javax.swing.JButton();
+        btn_ongoingporj = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -54,30 +54,30 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Coordinator Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 270, 26));
 
-        btnOngoingProjects.setBackground(new java.awt.Color(113, 160, 160));
-        btnOngoingProjects.setText("Ongoing Projects");
-        btnOngoingProjects.addActionListener(new java.awt.event.ActionListener() {
+        btn_ongoingporj.setBackground(new java.awt.Color(113, 160, 160));
+        btn_ongoingporj.setText("Ongoing Projects");
+        btn_ongoingporj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOngoingProjectsActionPerformed(evt);
+                btn_ongoingporjActionPerformed(evt);
             }
         });
-        add(btnOngoingProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 180, 150, 40));
+        add(btn_ongoingporj, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 180, 150, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/coordinators.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 730, 550));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOngoingProjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOngoingProjectsActionPerformed
+    private void btn_ongoingporjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ongoingporjActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         OngoingProjectsJPanel opjp = new OngoingProjectsJPanel(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("OngoingProjectsJPanel", opjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnOngoingProjectsActionPerformed
+    }//GEN-LAST:event_btn_ongoingporjActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOngoingProjects;
+    private javax.swing.JButton btn_ongoingporj;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

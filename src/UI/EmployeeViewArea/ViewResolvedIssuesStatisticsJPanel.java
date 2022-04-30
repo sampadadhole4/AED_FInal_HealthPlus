@@ -342,8 +342,8 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         scrollPane = new javax.swing.JScrollPane();
-        btnSaveImage = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
+        btn_imgsave = new javax.swing.JButton();
+        btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -355,27 +355,27 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         scrollPane.setMinimumSize(new java.awt.Dimension(700, 700));
         jPanel1.add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 700, 577));
 
-        btnSaveImage.setBackground(new java.awt.Color(113, 160, 160));
-        btnSaveImage.setText("Save as Image");
-        btnSaveImage.addActionListener(new java.awt.event.ActionListener() {
+        btn_imgsave.setBackground(new java.awt.Color(113, 160, 160));
+        btn_imgsave.setText("Save as Image");
+        btn_imgsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveImageActionPerformed(evt);
+                btn_imgsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSaveImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 670, -1, -1));
+        jPanel1.add(btn_imgsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 670, -1, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_gobackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 40));
+        jPanel1.add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Enterprise Level");
-        jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 370, 26));
+        jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 370, 26));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -395,7 +395,7 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSaveImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveImageActionPerformed
+    private void btn_imgsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_imgsaveActionPerformed
         // TODO add your handling code here:
         // JFreeChart pieChart = createPieChart(createPieDataset());
         try {
@@ -408,19 +408,19 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-    }//GEN-LAST:event_btnSaveImageActionPerformed
+    }//GEN-LAST:event_btn_imgsaveActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_gobackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnSaveImage;
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JButton btn_imgsave;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JScrollPane scrollPane;

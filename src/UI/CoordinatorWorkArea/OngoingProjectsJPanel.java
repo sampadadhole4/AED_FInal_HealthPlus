@@ -63,23 +63,23 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblOngoingProjects = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        btnProcess = new javax.swing.JButton();
+        btn_assigntome = new javax.swing.JButton();
+        btn_processapplication = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_gobackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
+        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,33 +106,33 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 580, 230));
 
-        btnAssign.setBackground(new java.awt.Color(113, 160, 160));
-        btnAssign.setText("Assign to me");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        btn_assigntome.setBackground(new java.awt.Color(113, 160, 160));
+        btn_assigntome.setText("Assign to me");
+        btn_assigntome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                btn_assigntomeActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
+        add(btn_assigntome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
 
-        btnProcess.setBackground(new java.awt.Color(113, 160, 160));
-        btnProcess.setText("Process");
-        btnProcess.addActionListener(new java.awt.event.ActionListener() {
+        btn_processapplication.setBackground(new java.awt.Color(113, 160, 160));
+        btn_processapplication.setText("Process");
+        btn_processapplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessActionPerformed(evt);
+                btn_processapplicationActionPerformed(evt);
             }
         });
-        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 90, -1));
+        add(btn_processapplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_gobackActionPerformed
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void btn_assigntomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_assigntomeActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblOngoingProjects.getSelectedRow();
 
@@ -152,9 +152,9 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Select Pending Projects","Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_btn_assigntomeActionPerformed
 
-    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+    private void btn_processapplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_processapplicationActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblOngoingProjects.getSelectedRow();
         if (selectedRow < 0){
@@ -188,13 +188,13 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
         else {
             JOptionPane.showMessageDialog(null, "Please assign a task to yourself and then process","Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnProcessActionPerformed
+    }//GEN-LAST:event_btn_processapplicationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnProcess;
+    private javax.swing.JButton btn_assigntome;
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JButton btn_processapplication;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblOngoingProjects;

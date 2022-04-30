@@ -52,19 +52,19 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     }
     
     private void populateCountry() {
-        cbCountry.removeAllItems();
+        combo_country.removeAllItems();
         for (Country c : system.getNetworkList()) {
-            cbCountry.addItem(c);
+            combo_country.addItem(c);
         }
     }
 
     private void populateState() {
-        cbState.removeAllItems();
-        if (cbCountry.getSelectedItem() != null) {
+        combo_state.removeAllItems();
+        if (combo_country.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
-                if (c.equals(cbCountry.getSelectedItem())) {
+                if (c.equals(combo_country.getSelectedItem())) {
                     for (State s : c.getStateList()) {
-                        cbState.addItem(s);
+                        combo_state.addItem(s);
                     }
                 }
             }
@@ -72,13 +72,13 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     }
 
     private void populateCity() {
-        cbCity.removeAllItems();
-        if (cbState.getSelectedItem() != null) {
+        combo_city.removeAllItems();
+        if (combo_state.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
-                    if (s.equals(cbState.getSelectedItem())) {
+                    if (s.equals(combo_state.getSelectedItem())) {
                         for (City city : s.getCityList()) {
-                            cbCity.addItem(city);
+                            combo_city.addItem(city);
                         }
                     }
                 }
@@ -87,15 +87,15 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     }
 
     public void populateEnterpriseType() {
-        cbTrustName.removeAllItems();
-        if (cbCity.getSelectedItem() != null) {
+        combo_trustname.removeAllItems();
+        if (combo_city.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
                     for (City city : s.getCityList()) {
-                        if (city.equals(cbCity.getSelectedItem())) {
+                        if (city.equals(combo_city.getSelectedItem())) {
                             for (Enterprise e : city.getEnterpriseDirectory().getEnterpriseList()) {
                                 if(e.getEnterpriseType().getValue().equals("OldAgeHome")){
-                                    cbTrustName.addItem(e);
+                                    combo_trustname.addItem(e);
                                 }
                             }
                         }
@@ -114,31 +114,31 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backJButton = new javax.swing.JButton();
+        btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        lblCountry = new javax.swing.JLabel();
-        cbCountry = new javax.swing.JComboBox<>();
-        lblState = new javax.swing.JLabel();
-        cbState = new javax.swing.JComboBox<>();
-        lblCity = new javax.swing.JLabel();
-        cbCity = new javax.swing.JComboBox<>();
-        lblEnterpriseType = new javax.swing.JLabel();
-        cbTrustName = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        submitJButton = new javax.swing.JButton();
-        jCheckBoxIllness = new javax.swing.JCheckBox();
+        label_country = new javax.swing.JLabel();
+        combo_country = new javax.swing.JComboBox<>();
+        label_state = new javax.swing.JLabel();
+        combo_state = new javax.swing.JComboBox<>();
+        label_city = new javax.swing.JLabel();
+        combo_city = new javax.swing.JComboBox<>();
+        label_trustName = new javax.swing.JLabel();
+        combo_trustname = new javax.swing.JComboBox();
+        label_NameOfPatient = new javax.swing.JLabel();
+        text_nameofPatient = new javax.swing.JTextField();
+        label_patientillness = new javax.swing.JLabel();
+        btn_snedtoseniorcare = new javax.swing.JButton();
+        checkbox_illiness = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDescription = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btn_gobackActionPerformed(evt);
             }
         });
 
@@ -146,45 +146,45 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Process Treatment Work Request");
 
-        lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblCountry.setText("Country:");
+        label_country.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_country.setText("Country:");
 
-        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+        combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCountryActionPerformed(evt);
+                combo_countryActionPerformed(evt);
             }
         });
 
-        lblState.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblState.setText("State:");
+        label_state.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_state.setText("State:");
 
-        cbState.addActionListener(new java.awt.event.ActionListener() {
+        combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbStateActionPerformed(evt);
+                combo_stateActionPerformed(evt);
             }
         });
 
-        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblCity.setText("City:");
+        label_city.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_city.setText("City:");
 
-        cbCity.addActionListener(new java.awt.event.ActionListener() {
+        combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCityActionPerformed(evt);
+                combo_cityActionPerformed(evt);
             }
         });
 
-        lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblEnterpriseType.setText("Trust Name:");
+        label_trustName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_trustName.setText("Trust Name:");
 
-        jLabel1.setText("Name of the Patient:");
+        label_NameOfPatient.setText("Name of the Patient:");
 
-        jLabel2.setText("Does the patient have illness ? :");
+        label_patientillness.setText("Does the patient have illness ? :");
 
-        submitJButton.setBackground(new java.awt.Color(113, 160, 160));
-        submitJButton.setText("Send to Senior Care");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        btn_snedtoseniorcare.setBackground(new java.awt.Color(113, 160, 160));
+        btn_snedtoseniorcare.setText("Send to Senior Care");
+        btn_snedtoseniorcare.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                btn_snedtoseniorcareActionPerformed(evt);
             }
         });
 
@@ -199,99 +199,108 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(334, 334, 334)
-                .addComponent(submitJButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(224, 224, 224)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBoxIllness))
-                                    .addGap(80, 80, 80))
-                                .addComponent(jScrollPane1)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(265, 265, 265)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(14, 14, 14)
-                                    .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(14, 14, 14)
-                                    .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(14, 14, 14)
-                                    .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(243, 243, 243)
-                            .addComponent(lblEnterpriseType, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(cbTrustName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(76, 76, 76))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(224, 224, 224)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(label_patientillness)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(label_NameOfPatient)
+                                                .addGap(29, 29, 29)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(text_nameofPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(checkbox_illiness)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(265, 265, 265)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(label_country, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(14, 14, 14)
+                                                .addComponent(combo_country, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(label_state, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(14, 14, 14)
+                                                .addComponent(combo_state, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(label_city, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(14, 14, 14)
+                                                .addComponent(combo_city, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(243, 243, 243)
+                                        .addComponent(label_trustName, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(combo_trustname, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(300, 300, 300)
+                                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)))
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(334, 334, 334)
+                                .addComponent(btn_snedtoseniorcare))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(label_country, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo_country, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(label_state, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo_state, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(label_city, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo_city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblEnterpriseType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbTrustName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(label_trustName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo_trustname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(text_nameofPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_NameOfPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBoxIllness))
+                            .addComponent(label_patientillness, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(checkbox_illiness))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel3)))
                 .addGap(9, 9, 9)
-                .addComponent(submitJButton)
-                .addContainerGap(375, Short.MAX_VALUE))
+                .addComponent(btn_snedtoseniorcare)
+                .addGap(46, 46, 46)
+                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(291, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -300,27 +309,27 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         opjp.populateOngoingProjectsTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btn_gobackActionPerformed
 
-    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+    private void combo_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_countryActionPerformed
         // TODO add your handling code here:
         populateState();
-    }//GEN-LAST:event_cbCountryActionPerformed
+    }//GEN-LAST:event_combo_countryActionPerformed
 
-    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+    private void combo_stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_stateActionPerformed
         // TODO add your handling code here:
         populateCity();
-    }//GEN-LAST:event_cbStateActionPerformed
+    }//GEN-LAST:event_combo_stateActionPerformed
 
-    private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
+    private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed
         // TODO add your handling code here:
         populateEnterpriseType();
-    }//GEN-LAST:event_cbCityActionPerformed
+    }//GEN-LAST:event_combo_cityActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        enterprise = (Enterprise) cbTrustName.getSelectedItem();
-        String name = txtName.getText();
-        if(jCheckBoxIllness.isSelected()){
+    private void btn_snedtoseniorcareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_snedtoseniorcareActionPerformed
+        enterprise = (Enterprise) combo_trustname.getSelectedItem();
+        String name = text_nameofPatient.getText();
+        if(checkbox_illiness.isSelected()){
             illness = true;
         }
         
@@ -348,9 +357,9 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         SeniorCare senior = new SeniorCare();
         senior.setName(name);
         senior.setIllness(illness);
-        senior.setCountry(cbCountry.getSelectedItem().toString());
-        senior.setState(cbState.getSelectedItem().toString());
-        senior.setCity(cbCity.getSelectedItem().toString());
+        senior.setCountry(combo_country.getSelectedItem().toString());
+        senior.setState(combo_state.getSelectedItem().toString());
+        senior.setCity(combo_city.getSelectedItem().toString());
         senior.setStatus(true);
         req.setSenior(senior);
 
@@ -361,29 +370,29 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         }
 
         JOptionPane.showMessageDialog(null, "Request successfully sent to SeniorCare", "Information", JOptionPane.INFORMATION_MESSAGE);
-        txtName.setText("");
+        text_nameofPatient.setText("");
         
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_btn_snedtoseniorcareActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox<Object> cbCity;
-    private javax.swing.JComboBox<Object> cbCountry;
-    private javax.swing.JComboBox<Object> cbState;
-    private javax.swing.JComboBox cbTrustName;
-    private javax.swing.JCheckBox jCheckBoxIllness;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JButton btn_snedtoseniorcare;
+    private javax.swing.JCheckBox checkbox_illiness;
+    private javax.swing.JComboBox<Object> combo_city;
+    private javax.swing.JComboBox<Object> combo_country;
+    private javax.swing.JComboBox<Object> combo_state;
+    private javax.swing.JComboBox combo_trustname;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCountry;
-    private javax.swing.JLabel lblEnterpriseType;
+    private javax.swing.JLabel label_NameOfPatient;
+    private javax.swing.JLabel label_city;
+    private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_patientillness;
+    private javax.swing.JLabel label_state;
+    private javax.swing.JLabel label_trustName;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblState;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField text_nameofPatient;
     private javax.swing.JTextArea txtDescription;
-    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

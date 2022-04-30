@@ -57,7 +57,7 @@ public class AccountJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        label_total = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblBalance = new javax.swing.JLabel();
@@ -79,8 +79,8 @@ public class AccountJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
-        jLabel1.setText("Total : ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+        label_total.setText("Total : ");
+        add(label_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
         lblTotal.setText("<TotalValue>");
         add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 111, -1));
@@ -131,9 +131,9 @@ public class AccountJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel label_total;
     private javax.swing.JLabel lblBalance;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblTotal;

@@ -23,21 +23,21 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                      <Component id="lblHeader" min="-2" pref="270" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnManageOrganization" min="-2" pref="270" max="-2" attributes="0"/>
-                          <Component id="btnManageJobApplications" alignment="1" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="btn_manageorg" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="btn_managejobappln" alignment="1" min="-2" pref="270" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnPublishJobs" min="-2" pref="270" max="-2" attributes="0"/>
-                          <Component id="btnManageEmpUserAcc" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="btn_publishjobs" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="btn_manageemployeeAcc" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+                      <Component id="lblHeader" min="-2" pref="270" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -55,13 +55,13 @@
                       <Component id="lblHeader" min="-2" pref="26" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnManageOrganization" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btnPublishJobs" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btn_manageorg" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btn_publishjobs" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnManageJobApplications" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="btnManageEmpUserAcc" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btn_managejobappln" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btn_manageemployeeAcc" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -81,10 +81,10 @@
           <Font name="Comic Sans MS" size="24" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Admin Work Area "/>
+        <Property name="text" type="java.lang.String" value="Admin page"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageOrganization">
+    <Component class="javax.swing.JButton" name="btn_manageorg">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -100,10 +100,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrganizationActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageorgActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnPublishJobs">
+    <Component class="javax.swing.JButton" name="btn_publishjobs">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -119,10 +119,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPublishJobsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_publishjobsActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageJobApplications">
+    <Component class="javax.swing.JButton" name="btn_managejobappln">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -138,10 +138,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageJobApplicationsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_managejobapplnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnManageEmpUserAcc">
+    <Component class="javax.swing.JButton" name="btn_manageemployeeAcc">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -157,7 +157,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmpUserAccActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageemployeeAccActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

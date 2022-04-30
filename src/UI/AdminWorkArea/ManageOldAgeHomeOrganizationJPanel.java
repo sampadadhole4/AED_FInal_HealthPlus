@@ -30,10 +30,10 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
     }
     
     private void populateCombo() {
-        cbOrgType.removeAllItems();
+        combo_organizationtype.removeAllItems();
         for (Org.OrgType type : Org.OrgType.values()) {
             if (type.getValue().equals(Org.OrgType.SeniorCare.getValue()) || type.getValue().equals(Org.OrgType.Medical.getValue())) {
-                cbOrgType.addItem(type);
+                combo_organizationtype.addItem(type);
             }
         }
     }
@@ -59,21 +59,21 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblOrg = new javax.swing.JTable();
-        btnDeleteOrganization = new javax.swing.JButton();
-        lblOrgType = new javax.swing.JLabel();
-        cbOrgType = new javax.swing.JComboBox();
-        btnAddOrganization1 = new javax.swing.JButton();
+        btn_deleteorg = new javax.swing.JButton();
+        label_organizationtype = new javax.swing.JLabel();
+        combo_organizationtype = new javax.swing.JComboBox();
+        btn_addOrg = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 249, 227));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
 
@@ -100,34 +100,34 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
         tblOrg.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblOrg);
 
-        btnDeleteOrganization.setBackground(new java.awt.Color(255, 255, 255));
-        btnDeleteOrganization.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnDeleteOrganization.setText("Delete Organization");
-        btnDeleteOrganization.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
+        btn_deleteorg.setBackground(new java.awt.Color(255, 255, 255));
+        btn_deleteorg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_deleteorg.setText("Delete Organization");
+        btn_deleteorg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_deleteorg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteOrganizationActionPerformed(evt);
+                btn_deleteorgActionPerformed(evt);
             }
         });
 
-        lblOrgType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        lblOrgType.setText("Organization Type:");
+        label_organizationtype.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        label_organizationtype.setText("Organization Type:");
 
-        cbOrgType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        cbOrgType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbOrgType.addActionListener(new java.awt.event.ActionListener() {
+        combo_organizationtype.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        combo_organizationtype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_organizationtype.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbOrgTypeActionPerformed(evt);
+                combo_organizationtypeActionPerformed(evt);
             }
         });
 
-        btnAddOrganization1.setBackground(new java.awt.Color(255, 255, 255));
-        btnAddOrganization1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btnAddOrganization1.setText("Add Organization");
-        btnAddOrganization1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAddOrganization1.addActionListener(new java.awt.event.ActionListener() {
+        btn_addOrg.setBackground(new java.awt.Color(255, 255, 255));
+        btn_addOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        btn_addOrg.setText("Add Organization");
+        btn_addOrg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_addOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddOrganization1ActionPerformed(evt);
+                btn_addOrgActionPerformed(evt);
             }
         });
 
@@ -139,7 +139,7 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(66, 66, 66)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -147,15 +147,15 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
                         .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(449, 449, 449)
-                        .addComponent(btnDeleteOrganization))
+                        .addComponent(btn_deleteorg))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(219, 219, 219)
-                        .addComponent(lblOrgType)
+                        .addComponent(label_organizationtype)
                         .addGap(71, 71, 71)
-                        .addComponent(cbOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(combo_organizationtype, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(309, 309, 309)
-                        .addComponent(btnAddOrganization1)))
+                        .addComponent(btn_addOrg)))
                 .addContainerGap(179, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -168,29 +168,29 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
                         .addGap(51, 51, 51))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_backpage, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(btnDeleteOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_deleteorg, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_organizationtype, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combo_organizationtype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
-                .addComponent(btnAddOrganization1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_addOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(334, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
-    private void btnDeleteOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteOrganizationActionPerformed
+    private void btn_deleteorgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteorgActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblOrg.getSelectedRow();
         if (selectedRow >= 0) {
@@ -204,15 +204,15 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnDeleteOrganizationActionPerformed
+    }//GEN-LAST:event_btn_deleteorgActionPerformed
 
-    private void cbOrgTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbOrgTypeActionPerformed
+    private void combo_organizationtypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organizationtypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbOrgTypeActionPerformed
+    }//GEN-LAST:event_combo_organizationtypeActionPerformed
 
-    private void btnAddOrganization1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrganization1ActionPerformed
+    private void btn_addOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addOrgActionPerformed
         // TODO add your handling code here:
-        OrgType type = (OrgType) cbOrgType.getSelectedItem();
+        OrgType type = (OrgType) combo_organizationtype.getSelectedItem();
         for (Org organization : organizationDirectory.getOrganizationList()) {
             if(organization.getName().equals(type.name()+" Organization")){
                 JOptionPane.showMessageDialog(null, "Organization already exists", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -221,16 +221,16 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
         }
         organizationDirectory.createOrganization(type);
         populateTable();
-    }//GEN-LAST:event_btnAddOrganization1ActionPerformed
+    }//GEN-LAST:event_btn_addOrgActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddOrganization1;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDeleteOrganization;
-    private javax.swing.JComboBox cbOrgType;
+    private javax.swing.JButton btn_addOrg;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_deleteorg;
+    private javax.swing.JComboBox combo_organizationtype;
+    private javax.swing.JLabel label_organizationtype;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblOrgType;
     private javax.swing.JTable tblOrg;
     private javax.swing.JScrollPane tblScrollPane;
     // End of variables declaration//GEN-END:variables

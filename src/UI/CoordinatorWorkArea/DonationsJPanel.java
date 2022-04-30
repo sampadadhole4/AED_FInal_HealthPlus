@@ -38,9 +38,9 @@ public class DonationsJPanel extends javax.swing.JPanel {
 
         backJButton1 = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        txtWorkDone = new javax.swing.JTextField();
+        text_amenitiesprovided = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        submitJButton = new javax.swing.JButton();
+        btn_submitworkrequest = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -57,11 +57,11 @@ public class DonationsJPanel extends javax.swing.JPanel {
 
         jLabel1.setText("Amenities provided : ");
 
-        submitJButton.setBackground(new java.awt.Color(113, 160, 160));
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        btn_submitworkrequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_submitworkrequest.setText("Submit Result");
+        btn_submitworkrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                btn_submitworkrequestActionPerformed(evt);
             }
         });
 
@@ -80,10 +80,10 @@ public class DonationsJPanel extends javax.swing.JPanel {
                         .addGap(202, 202, 202)
                         .addComponent(jLabel1)
                         .addGap(19, 19, 19)
-                        .addComponent(txtWorkDone, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_amenitiesprovided, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(322, 322, 322)
-                        .addComponent(submitJButton)))
+                        .addComponent(btn_submitworkrequest)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -96,9 +96,9 @@ public class DonationsJPanel extends javax.swing.JPanel {
                 .addGap(102, 102, 102)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(txtWorkDone, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_amenitiesprovided, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_submitworkrequest, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(447, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -114,8 +114,8 @@ public class DonationsJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButton1ActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        String workDone = txtWorkDone.getText();
+    private void btn_submitworkrequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitworkrequestActionPerformed
+        String workDone = text_amenitiesprovided.getText();
         if(workDone.equals("")){
             JOptionPane.showMessageDialog(null, "Please enter value for work done", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
@@ -133,16 +133,16 @@ public class DonationsJPanel extends javax.swing.JPanel {
 
         request.setWorkDone(workDone);
         request.setStatus("Completed");
-        txtWorkDone.setText("");
+        text_amenitiesprovided.setText("");
         JOptionPane.showMessageDialog(null, "Task completed successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_btn_submitworkrequestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton1;
+    private javax.swing.JButton btn_submitworkrequest;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JButton submitJButton;
-    private javax.swing.JTextField txtWorkDone;
+    private javax.swing.JTextField text_amenitiesprovided;
     // End of variables declaration//GEN-END:variables
 }
