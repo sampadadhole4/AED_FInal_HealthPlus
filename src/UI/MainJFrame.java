@@ -9,10 +9,7 @@ import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
 import java.awt.CardLayout;
 
-/**
- *
- * @author shalini
- */
+
 public class MainJFrame extends javax.swing.JFrame {
 
     /**

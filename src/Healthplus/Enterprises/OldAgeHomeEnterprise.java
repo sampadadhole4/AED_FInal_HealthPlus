@@ -6,10 +6,7 @@
 package Healthplus.Enterprises;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
-/**
- *
- * @author Karishma Murde
- */
+
 public class OldAgeHomeEnterprise extends Enterprise {
     
     public OldAgeHomeEnterprise(String name) {

@@ -6,10 +6,7 @@
 package Healthplus.Org;
 import Healthplus.Org.Org.OrgType;
 import java.util.ArrayList;
-/**
- *
- * @author Karishma Murde
- */
+
 public class OrgDirectory {
     private ArrayList<Org> organizationList;
 

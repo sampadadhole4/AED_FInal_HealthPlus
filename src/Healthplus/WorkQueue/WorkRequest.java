@@ -7,10 +7,7 @@ package Healthplus.WorkQueue;
 
 import Healthplus.UserAccount.UserAccount;
 import java.util.Date;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public abstract class WorkRequest {
     private UserAccount sender;
     private UserAccount receiver;

@@ -5,10 +5,7 @@
  */
 package Healthplus.SeniorCare;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class SeniorCare {
     private int id;
     private boolean status;

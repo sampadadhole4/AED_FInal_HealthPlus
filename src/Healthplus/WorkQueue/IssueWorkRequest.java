@@ -5,10 +5,7 @@
  */
 package Healthplus.WorkQueue;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class IssueWorkRequest extends WorkRequest{
     private String type;
     private String country;

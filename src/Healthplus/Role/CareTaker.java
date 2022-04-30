@@ -12,10 +12,6 @@ import Healthplus.UserAccount.UserAccount;
 import UI.CareTakerWorkArea.CareTakerHomeJPanel;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
 public class CareTaker extends Roles {
      public CareTaker(){
         super(Roles.RoleType.CareTaker.getValue());

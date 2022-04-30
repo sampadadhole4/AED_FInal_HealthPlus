@@ -34,7 +34,7 @@ public class ViewTransportServices extends javax.swing.JPanel {
         this.EmergencyList=EmergencyList;
         this.raise= raise;
         populatetransportTable();
-        JOptionPane.showMessageDialog(this, EmergencyList.getEmergencyList().size());
+        //JOptionPane.showMessageDialog(this, EmergencyList.getEmergencyList().size());
     }
   public void populatetransportTable(){
        DefaultTableModel model = (DefaultTableModel) table_transport.getModel();

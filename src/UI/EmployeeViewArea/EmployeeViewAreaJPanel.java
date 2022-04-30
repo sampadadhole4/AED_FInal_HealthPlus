@@ -18,10 +18,7 @@ import java.awt.CardLayout;
 import static java.time.Clock.system;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
 
     /**

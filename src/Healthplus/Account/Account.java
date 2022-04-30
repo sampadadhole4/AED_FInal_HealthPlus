@@ -7,10 +7,6 @@ package Healthplus.Account;
 
 import Healthplus.Agency.Agency;
 
-/**
- *
- * @author shalini
- */
 public class Account {
         private Agency agency;
 

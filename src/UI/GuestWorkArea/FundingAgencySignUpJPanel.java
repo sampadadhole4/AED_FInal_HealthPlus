@@ -21,10 +21,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -47,19 +44,19 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     }
 
     private void populateCountry() {
-        cbCountry.removeAllItems();
+        combo_country.removeAllItems();
         for (Country c : system.getNetworkList()) {
-            cbCountry.addItem(c);
+            combo_country.addItem(c);
         }
     }
 
     private void populateState() {
-        cbState.removeAllItems();
-        if (cbCountry.getSelectedItem() != null) {
+        combo_state.removeAllItems();
+        if (combo_country.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
-                if (c.equals(cbCountry.getSelectedItem())) {
+                if (c.equals(combo_country.getSelectedItem())) {
                     for (State s : c.getStateList()) {
-                        cbState.addItem(s);
+                        combo_state.addItem(s);
                     }
                 }
             }
@@ -67,13 +64,13 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     }
 
     private void populateCity() {
-        cbCity.removeAllItems();
-        if (cbState.getSelectedItem() != null) {
+        combo_city.removeAllItems();
+        if (combo_state.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
-                    if (s.equals(cbState.getSelectedItem())) {
+                    if (s.equals(combo_state.getSelectedItem())) {
                         for (City city : s.getCityList()) {
-                            cbCity.addItem(city);
+                            combo_city.addItem(city);
                         }
                     }
                 }
@@ -82,15 +79,15 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     }
 
     public void populateEnterpriseType() {
-        cbTrustName.removeAllItems();
-        if (cbCity.getSelectedItem() != null) {
+        combo_trust.removeAllItems();
+        if (combo_city.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
                     for (City city : s.getCityList()) {
-                        if (city.equals(cbCity.getSelectedItem())) {
+                        if (city.equals(combo_city.getSelectedItem())) {
                             for (Enterprise e : city.getEnterpriseDirectory().getEnterpriseList()) {
                                 if(e.getEnterpriseType().getValue().equals("Trust")){
-                                    cbTrustName.addItem(e);
+                                    combo_trust.addItem(e);
                                 }
                             }
                         }
@@ -114,16 +111,16 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblAgencyName = new javax.swing.JLabel();
         lblCountry = new javax.swing.JLabel();
         lblState = new javax.swing.JLabel();
-        btnSubmit = new javax.swing.JButton();
+        btn_Submit = new javax.swing.JButton();
         lblCity = new javax.swing.JLabel();
-        txtAgencyName = new javax.swing.JTextField();
-        txtBudget = new javax.swing.JTextField();
-        cbCountry = new javax.swing.JComboBox<>();
-        cbState = new javax.swing.JComboBox<>();
-        cbCity = new javax.swing.JComboBox<>();
+        text_fundraisername = new javax.swing.JTextField();
+        text_fundraisersBudget = new javax.swing.JTextField();
+        combo_country = new javax.swing.JComboBox<>();
+        combo_state = new javax.swing.JComboBox<>();
+        combo_city = new javax.swing.JComboBox<>();
         lblEnterpriseType = new javax.swing.JLabel();
-        cbTrustName = new javax.swing.JComboBox();
-        btnBack = new javax.swing.JButton();
+        combo_trust = new javax.swing.JComboBox();
+        btn_Back = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -136,7 +133,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Sign Up As Funding Agency");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 24));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 250, 24));
 
         lblBudget.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblBudget.setText("Budget:");
@@ -154,54 +151,60 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblState.setText("State:");
         add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btn_Submit.setBackground(new java.awt.Color(113, 160, 160));
+        btn_Submit.setText("Submit");
+        btn_Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btn_SubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        add(btn_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
 
         lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCity.setText("City:");
         add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 96, 27));
-        add(txtAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 150, -1));
-        add(txtBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 150, -1));
 
-        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+        text_fundraisername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCountryActionPerformed(evt);
+                text_fundraisernameActionPerformed(evt);
             }
         });
-        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 150, -1));
+        add(text_fundraisername, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 150, -1));
+        add(text_fundraisersBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 150, -1));
 
-        cbState.addActionListener(new java.awt.event.ActionListener() {
+        combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbStateActionPerformed(evt);
+                combo_countryActionPerformed(evt);
             }
         });
-        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 150, -1));
+        add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 150, -1));
 
-        cbCity.addActionListener(new java.awt.event.ActionListener() {
+        combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCityActionPerformed(evt);
+                combo_stateActionPerformed(evt);
             }
         });
-        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 150, -1));
+        add(combo_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 150, -1));
+
+        combo_city.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combo_cityActionPerformed(evt);
+            }
+        });
+        add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 150, -1));
 
         lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnterpriseType.setText("Trust Name:");
         add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 80, 20));
-        add(cbTrustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
+        add(combo_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_BackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
+        add(btn_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 40, 40));
 
         lblWarning.setForeground(new java.awt.Color(255, 0, 51));
         lblWarning.setText("* Budget currency is considered to be in US Dollar");
@@ -211,13 +214,13 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 370, 400));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
         // TODO add your handling code here:
 
-        enterprise = (Enterprise) cbTrustName.getSelectedItem();
+        enterprise = (Enterprise) combo_trust.getSelectedItem();
         AgencyWorkRequest request = new AgencyWorkRequest();
-        String agencyName = txtAgencyName.getText();
-        String budgetStr = txtBudget.getText();
+        String agencyName = text_fundraisername.getText();
+        String budgetStr = text_fundraisersBudget.getText();
 
         if (agencyName.equals("") || budgetStr.equals("")) {
             JOptionPane.showMessageDialog(null, "Please enter values for both agency name and budget", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -245,9 +248,9 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         Agency agency = new Agency();
         agency.setName(agencyName);
         agency.setAmount(budget);
-        agency.setCountry(cbCountry.getSelectedItem().toString());
-        agency.setState(cbState.getSelectedItem().toString());
-        agency.setCity(cbCity.getSelectedItem().toString());
+        agency.setCountry(combo_country.getSelectedItem().toString());
+        agency.setState(combo_state.getSelectedItem().toString());
+        agency.setCity(combo_city.getSelectedItem().toString());
         agency.setStatus(true);
 
         request.setAgency(agency);
@@ -259,40 +262,44 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         }
 
         JOptionPane.showMessageDialog(null, "Sign up request successfully submitted", "Information", JOptionPane.INFORMATION_MESSAGE);
-        txtAgencyName.setText("");
-        txtBudget.setText("");
-    }//GEN-LAST:event_btnSubmitActionPerformed
+        text_fundraisername.setText("");
+        text_fundraisersBudget.setText("");
+    }//GEN-LAST:event_btn_SubmitActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_BackActionPerformed
 
-    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+    private void combo_stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_stateActionPerformed
         // TODO add your handling code here:
         populateCity();
-    }//GEN-LAST:event_cbStateActionPerformed
+    }//GEN-LAST:event_combo_stateActionPerformed
 
-    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+    private void combo_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_countryActionPerformed
         // TODO add your handling code here:
         populateState();
-    }//GEN-LAST:event_cbCountryActionPerformed
+    }//GEN-LAST:event_combo_countryActionPerformed
 
-    private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
+    private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed
         // TODO add your handling code here:
         populateEnterpriseType();
-    }//GEN-LAST:event_cbCityActionPerformed
+    }//GEN-LAST:event_combo_cityActionPerformed
+
+    private void text_fundraisernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_fundraisernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_fundraisernameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnSubmit;
-    private javax.swing.JComboBox<Object> cbCity;
-    private javax.swing.JComboBox<Object> cbCountry;
-    private javax.swing.JComboBox<Object> cbState;
-    private javax.swing.JComboBox cbTrustName;
+    private javax.swing.JButton btn_Back;
+    private javax.swing.JButton btn_Submit;
+    private javax.swing.JComboBox<Object> combo_city;
+    private javax.swing.JComboBox<Object> combo_country;
+    private javax.swing.JComboBox<Object> combo_state;
+    private javax.swing.JComboBox combo_trust;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAgencyName;
     private javax.swing.JLabel lblBudget;
@@ -302,7 +309,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblState;
     private javax.swing.JLabel lblWarning;
-    private javax.swing.JTextField txtAgencyName;
-    private javax.swing.JTextField txtBudget;
+    private javax.swing.JTextField text_fundraisername;
+    private javax.swing.JTextField text_fundraisersBudget;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,10 +7,7 @@ package Healthplus.Project;
 
 import Healthplus.Worker.Worker;
 import java.util.ArrayList;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class Project {
     private String name;
     private int id;

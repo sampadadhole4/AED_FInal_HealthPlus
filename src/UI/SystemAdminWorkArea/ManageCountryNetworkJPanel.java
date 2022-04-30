@@ -16,10 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Karishma
- */
+
 public class ManageCountryNetworkJPanel extends javax.swing.JPanel {
 
     /**

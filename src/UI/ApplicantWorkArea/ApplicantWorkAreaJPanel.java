@@ -13,10 +13,7 @@ import UI.GuestWorkArea.RaiseIssueJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
 
     /**

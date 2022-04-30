@@ -9,10 +9,7 @@ import Healthplus.Applicant.Candidate;
 import Healthplus.Worker.Worker;
 import Healthplus.Role.Roles;
 import Healthplus.WorkQueue.WorkQueue;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class UserAccount {
     private String username;
     private String password;

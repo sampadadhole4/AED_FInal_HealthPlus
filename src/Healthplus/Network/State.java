@@ -6,10 +6,7 @@
 package Healthplus.Network;
 
 import java.util.ArrayList;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class State extends Network{
     private ArrayList<City> cityList;
 

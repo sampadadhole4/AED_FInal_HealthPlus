@@ -17,10 +17,7 @@ import Healthplus.UserAccount.UserAccountDirectory;
 import Healthplus.WorkQueue.WorkQueue;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public abstract class Org {
     
    private String name;

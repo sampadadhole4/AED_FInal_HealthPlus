@@ -9,10 +9,7 @@ import Healthplus.Worker.Worker;
 import Healthplus.Role.SysAdmin;
 import Healthplus.UserAccount.UserAccount;
 
-/**
- *
- * @author shalini
- */
+
 public class ConfigSystem {
   
     public static E_System configure(){

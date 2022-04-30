@@ -14,10 +14,7 @@ import UI.LoginJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class ApplicantHomeJPanel extends javax.swing.JPanel {
 
     /**

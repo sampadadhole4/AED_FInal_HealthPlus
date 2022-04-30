@@ -21,10 +21,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -49,22 +46,22 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
      private void populateCountry(){
         
-         cbCountry.removeAllItems();
+         combo_country.removeAllItems();
         
         for (Country c : system.getNetworkList()){
-            cbCountry.addItem(c);
+            combo_country.addItem(c);
         }
         
     }
      
     private void populateState(){
         
-        cbState.removeAllItems();
-        if(cbCountry.getSelectedItem() != null){
+        combo_state.removeAllItems();
+        if(combo_country.getSelectedItem() != null){
            for (Country c : system.getNetworkList()){
-            if(c.equals(cbCountry.getSelectedItem())){
+            if(c.equals(combo_country.getSelectedItem())){
                   for(State s: c.getStateList()){
-                        cbState.addItem(s);
+                        combo_state.addItem(s);
                     }
             }
                   
@@ -76,14 +73,14 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
     
     private void populateCity(){
         
-         cbCity.removeAllItems();
+         combo_city.removeAllItems();
          
-       if (cbState.getSelectedItem() != null){
+       if (combo_state.getSelectedItem() != null){
         for (Country c : system.getNetworkList()){
             for(State s: c.getStateList()){
-                if(s.equals(cbState.getSelectedItem())){
+                if(s.equals(combo_state.getSelectedItem())){
                     for(City city :  s.getCityList()){
-                    cbCity.addItem(city);
+                    combo_city.addItem(city);
                      }
                 }    
             }
@@ -93,16 +90,16 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
     
      private void populateTrust(){
         
-         cbTrust.removeAllItems();
+         combo_trust.removeAllItems();
          
-        if (cbCity.getSelectedItem() != null){
+        if (combo_city.getSelectedItem() != null){
         for (Country c : system.getNetworkList()){
             for(State s: c.getStateList()){
                 for(City city :  s.getCityList()){
-                     if(city.equals(cbCity.getSelectedItem())){
+                     if(city.equals(combo_city.getSelectedItem())){
                           for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
                               if(e.getEnterpriseType().getValue().equals("Trust")){
-                                cbTrust.addItem(e);
+                                combo_trust.addItem(e);
                               }
                              }
                      }
@@ -123,49 +120,49 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        lblIssue = new javax.swing.JLabel();
+        label_description = new javax.swing.JLabel();
         jScrollPane = new javax.swing.JScrollPane();
-        txtAreaIssue = new javax.swing.JTextArea();
-        btnRaiseIssue = new javax.swing.JButton();
+        text_description = new javax.swing.JTextArea();
+        btn_sendrequest = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        cbTrust = new javax.swing.JComboBox();
-        cbCountry = new javax.swing.JComboBox();
-        cbCity = new javax.swing.JComboBox();
-        cbState = new javax.swing.JComboBox();
-        lblCountry = new javax.swing.JLabel();
-        lblState = new javax.swing.JLabel();
-        lblCity = new javax.swing.JLabel();
-        lblNGO = new javax.swing.JLabel();
+        combo_trust = new javax.swing.JComboBox();
+        combo_country = new javax.swing.JComboBox();
+        combo_city = new javax.swing.JComboBox();
+        combo_state = new javax.swing.JComboBox();
+        label_country = new javax.swing.JLabel();
+        label_state = new javax.swing.JLabel();
+        label_city = new javax.swing.JLabel();
+        label_trust = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Issue Request");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 460, 26));
+        lblHeader.setText("Raise Issue");
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 370, 26));
 
-        lblIssue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblIssue.setText("Description:");
-        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 109, 30));
+        label_description.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_description.setText("Description:");
+        add(label_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 109, 30));
 
-        txtAreaIssue.setColumns(20);
-        txtAreaIssue.setLineWrap(true);
-        txtAreaIssue.setRows(5);
-        txtAreaIssue.setToolTipText("");
-        txtAreaIssue.setWrapStyleWord(true);
-        jScrollPane.setViewportView(txtAreaIssue);
+        text_description.setColumns(20);
+        text_description.setLineWrap(true);
+        text_description.setRows(5);
+        text_description.setToolTipText("");
+        text_description.setWrapStyleWord(true);
+        jScrollPane.setViewportView(text_description);
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 419, -1));
 
-        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
-        btnRaiseIssue.setText("Request");
-        btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
+        btn_sendrequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_sendrequest.setText("Request");
+        btn_sendrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRaiseIssueActionPerformed(evt);
+                btn_sendrequestActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 95, -1));
+        add(btn_sendrequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 95, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -173,61 +170,61 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 40, 40));
 
-        cbTrust.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbTrust, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 150, -1));
+        combo_trust.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 150, -1));
 
-        cbCountry.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+        combo_country.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCountryActionPerformed(evt);
+                combo_countryActionPerformed(evt);
             }
         });
-        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 150, -1));
+        add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 150, -1));
 
-        cbCity.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbCity.addActionListener(new java.awt.event.ActionListener() {
+        combo_city.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCityActionPerformed(evt);
+                combo_cityActionPerformed(evt);
             }
         });
-        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 150, -1));
+        add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 150, -1));
 
-        cbState.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbState.addActionListener(new java.awt.event.ActionListener() {
+        combo_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbStateActionPerformed(evt);
+                combo_stateActionPerformed(evt);
             }
         });
-        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 150, -1));
+        add(combo_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 150, -1));
 
-        lblCountry.setText("Select Country:");
-        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, 20));
+        label_country.setText("Country:");
+        add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, 20));
 
-        lblState.setText("Select State:");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, 20));
+        label_state.setText("State:");
+        add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, 20));
 
-        lblCity.setText("Select City:");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 20));
+        label_city.setText("City:");
+        add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 20));
 
-        lblNGO.setText("Select Trust:");
-        add(lblNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
+        label_trust.setText("Trust:");
+        add(label_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
+    private void btn_sendrequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sendrequestActionPerformed
         // TODO add your handling code here:
      
        // String country="", state="", city="";
-        Enterprise enterprise = (Enterprise) cbTrust.getSelectedItem();
+        Enterprise enterprise = (Enterprise) combo_trust.getSelectedItem();
                 
-        Country country= (Country) cbCountry.getSelectedItem();
+        Country country= (Country) combo_country.getSelectedItem();
         String countryStr = country.toString();
-        State state = (State) cbState.getSelectedItem();
+        State state = (State) combo_state.getSelectedItem();
         String stateStr = state.toString();
-        City city = (City) cbCity.getSelectedItem();
+        City city = (City) combo_city.getSelectedItem();
         String cityStr = city.toString();
-        String desc = txtAreaIssue.getText();
+        String desc = text_description.getText();
         
         if(desc.equals("")){
             JOptionPane.showMessageDialog(null, "Please enter description", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -264,10 +261,10 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
             org.getWorkQueue().getWorkRequestList().add(request);
             userAccount.getWorkQueue().getWorkRequestList().add(request);
         }
-        txtAreaIssue.setText("");
+        text_description.setText("");
         JOptionPane.showMessageDialog(null, "Request submitted successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
 
-    }//GEN-LAST:event_btnRaiseIssueActionPerformed
+    }//GEN-LAST:event_btn_sendrequestActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -276,36 +273,36 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+    private void combo_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_countryActionPerformed
         // TODO add your handling code here:
         populateState();
-    }//GEN-LAST:event_cbCountryActionPerformed
+    }//GEN-LAST:event_combo_countryActionPerformed
 
-    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+    private void combo_stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_stateActionPerformed
         // TODO add your handling code here:
          populateCity();
-    }//GEN-LAST:event_cbStateActionPerformed
+    }//GEN-LAST:event_combo_stateActionPerformed
 
-    private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
+    private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed
         // TODO add your handling code here:
          populateTrust();
-    }//GEN-LAST:event_cbCityActionPerformed
+    }//GEN-LAST:event_combo_cityActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JComboBox cbCity;
-    private javax.swing.JComboBox cbCountry;
-    private javax.swing.JComboBox cbState;
-    private javax.swing.JComboBox cbTrust;
+    private javax.swing.JButton btn_sendrequest;
+    private javax.swing.JComboBox combo_city;
+    private javax.swing.JComboBox combo_country;
+    private javax.swing.JComboBox combo_state;
+    private javax.swing.JComboBox combo_trust;
     private javax.swing.JScrollPane jScrollPane;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCountry;
+    private javax.swing.JLabel label_city;
+    private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_description;
+    private javax.swing.JLabel label_state;
+    private javax.swing.JLabel label_trust;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblIssue;
-    private javax.swing.JLabel lblNGO;
-    private javax.swing.JLabel lblState;
-    private javax.swing.JTextArea txtAreaIssue;
+    private javax.swing.JTextArea text_description;
     // End of variables declaration//GEN-END:variables
 }

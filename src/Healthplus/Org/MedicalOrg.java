@@ -7,10 +7,7 @@ package Healthplus.Org;
 import Healthplus.Role.Doctor;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
-/**
- *
- * @author Karishma Murde
- */
+
 public class MedicalOrg extends Org {
      public MedicalOrg() {
        super(OrgType.Medical.getValue());

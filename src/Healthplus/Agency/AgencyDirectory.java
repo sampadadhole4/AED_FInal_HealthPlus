@@ -6,10 +6,7 @@
 package Healthplus.Agency;
 import java.util.ArrayList;
 
-/**
- *
- * @author shalini
- */
+
 public class AgencyDirectory {
     private ArrayList <Agency> agencyList;
     

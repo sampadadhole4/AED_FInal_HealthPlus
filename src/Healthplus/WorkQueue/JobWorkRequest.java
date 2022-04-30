@@ -6,10 +6,7 @@
 package Healthplus.WorkQueue;
 
 import Healthplus.Job.Job;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class JobWorkRequest extends WorkRequest{
     private Job job;
 

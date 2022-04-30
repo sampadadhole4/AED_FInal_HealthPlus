@@ -14,10 +14,7 @@ import UI.EmployeeViewArea.EmployeeViewAreaJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Karishma
- */
+
 public class DoctorHomeJPanel extends javax.swing.JPanel {
 
     /**

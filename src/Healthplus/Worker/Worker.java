@@ -5,10 +5,7 @@
  */
 package Healthplus.Worker;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class Worker {
     private String name;
     private int id;

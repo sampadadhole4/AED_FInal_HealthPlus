@@ -12,10 +12,6 @@ import UI.GuestWorkArea.ViewTrustJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
 public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

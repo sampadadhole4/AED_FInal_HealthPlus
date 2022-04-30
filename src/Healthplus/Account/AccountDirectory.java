@@ -7,10 +7,6 @@ package Healthplus.Account;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author shalini
- */
 public class AccountDirectory {
     private int total;
     private int balance;

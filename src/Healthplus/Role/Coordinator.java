@@ -12,10 +12,7 @@ import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import UI.CoordinatorWorkArea.CoordinatorHomeJPanel;
-/**
- *
- * @author shalini
- */
+
 public class Coordinator extends Roles {
     public Coordinator(){
         super(Roles.RoleType.Coordinator.getValue());

@@ -12,10 +12,7 @@ import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 
-/**
- *
- * @author shalini
- */
+
 public class Guest  extends Roles{
     public Guest(){
         super(Roles.RoleType.Guest.getValue());

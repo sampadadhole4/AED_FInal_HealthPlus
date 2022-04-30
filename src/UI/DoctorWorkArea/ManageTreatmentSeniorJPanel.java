@@ -17,10 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author shalini
- */
+
 public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
 
     /**

@@ -6,10 +6,7 @@
 package Healthplus.WorkQueue;
 
 import java.util.ArrayList;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class WorkQueue {
     private ArrayList<WorkRequest> workRequestList;
     

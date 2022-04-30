@@ -13,10 +13,7 @@ import Healthplus.Role.Admin;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class UserAccountDirectory {
     private ArrayList<UserAccount> userAccountList;
 

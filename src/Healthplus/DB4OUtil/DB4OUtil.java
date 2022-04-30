@@ -8,10 +8,7 @@ import com.db4o.ObjectSet;
 import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.ta.TransparentPersistenceSupport;
 
-/**
- *
- * @author shalini
- */
+
 public class DB4OUtil {
 
     static String workingDir = System.getProperty("user.dir");

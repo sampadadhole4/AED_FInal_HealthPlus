@@ -12,10 +12,7 @@ import Healthplus.UserAccount.UserAccount;
 import UI.ManagerWorkArea.ManagerHomeJPanel;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shali
- */
+
 public class Manager extends Roles{
      public Manager(){
         super(Roles.RoleType.Manager.getValue());

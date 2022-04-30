@@ -20,10 +20,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
 
     /**

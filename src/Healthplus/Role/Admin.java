@@ -12,10 +12,7 @@ import Healthplus.UserAccount.UserAccount;
 import UI.AdminWorkArea.AdminHomeJPanel;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class Admin extends Roles{
     public Admin(){
         super(Roles.RoleType.Admin.getValue());

@@ -6,10 +6,7 @@
 package Healthplus.WorkQueue;
 
 import Healthplus.Project.Project;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class PostTaskWorkRequest extends WorkRequest{
     private Project project;
     private String task;

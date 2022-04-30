@@ -6,10 +6,7 @@
 package Healthplus.SeniorCare;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class SeniorCareDirectory {
     private ArrayList<SeniorCare> seniorCareList;
     

@@ -8,10 +8,7 @@ import Healthplus.Role.CareTaker;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class Senior_Care_Org extends Org  {
     
 public Senior_Care_Org() {

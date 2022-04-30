@@ -6,10 +6,7 @@
 package Healthplus.Network;
 
 import Healthplus.Enterprises.EnterpriseDirectory;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class City extends Network{
     private EnterpriseDirectory enterpriseDirectory;
     

@@ -14,10 +14,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Karishma
- */
+
 public class PostTasksJPanel extends javax.swing.JPanel {
 
     /**

@@ -17,10 +17,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author shalini
- */
+
 public class ProjectViewJPanel extends javax.swing.JPanel {
 
     /**

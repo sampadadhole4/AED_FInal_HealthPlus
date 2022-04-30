@@ -10,10 +10,6 @@ import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
 public class RaiseIssueJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -40,10 +36,10 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnMedications = new javax.swing.JButton();
-        btnTreatmentOldAgeHome = new javax.swing.JButton();
-        btnDonation = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
+        btn_provideMedications = new javax.swing.JButton();
+        btn_treatment = new javax.swing.JButton();
+        btn_basicamenities = new javax.swing.JButton();
+        btn_backpage = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -55,84 +51,87 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Raise A Request");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 180, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 180, 26));
 
-        btnMedications.setBackground(new java.awt.Color(113, 160, 160));
-        btnMedications.setText("Provide Medications");
-        btnMedications.addActionListener(new java.awt.event.ActionListener() {
+        btn_provideMedications.setBackground(new java.awt.Color(113, 160, 160));
+        btn_provideMedications.setForeground(new java.awt.Color(0, 0, 0));
+        btn_provideMedications.setText("Provide Medications");
+        btn_provideMedications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMedicationsActionPerformed(evt);
+                btn_provideMedicationsActionPerformed(evt);
             }
         });
-        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
+        add(btn_provideMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 182, -1));
 
-        btnTreatmentOldAgeHome.setBackground(new java.awt.Color(113, 160, 160));
-        btnTreatmentOldAgeHome.setText("Provide Treatment");
-        btnTreatmentOldAgeHome.addActionListener(new java.awt.event.ActionListener() {
+        btn_treatment.setBackground(new java.awt.Color(113, 160, 160));
+        btn_treatment.setForeground(new java.awt.Color(0, 0, 0));
+        btn_treatment.setText("Provide Treatment");
+        btn_treatment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTreatmentOldAgeHomeActionPerformed(evt);
+                btn_treatmentActionPerformed(evt);
             }
         });
-        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 182, -1));
+        add(btn_treatment, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 182, -1));
 
-        btnDonation.setBackground(new java.awt.Color(113, 160, 160));
-        btnDonation.setText("Donation of Basic Amenities");
-        btnDonation.addActionListener(new java.awt.event.ActionListener() {
+        btn_basicamenities.setBackground(new java.awt.Color(113, 160, 160));
+        btn_basicamenities.setForeground(new java.awt.Color(0, 0, 0));
+        btn_basicamenities.setText("Donation of Basic Amenities");
+        btn_basicamenities.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDonationActionPerformed(evt);
+                btn_basicamenitiesActionPerformed(evt);
             }
         });
-        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 182, -1));
+        add(btn_basicamenities, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 182, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn_backpageActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, 40));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 40, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/request.jpg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 560, 310));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMedicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicationsActionPerformed
+    private void btn_provideMedicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_provideMedicationsActionPerformed
 
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Medications", system);
         userProcessContainer.add("rirwjp", rirwjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnMedicationsActionPerformed
+    }//GEN-LAST:event_btn_provideMedicationsActionPerformed
 
-    private void btnTreatmentOldAgeHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreatmentOldAgeHomeActionPerformed
+    private void btn_treatmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_treatmentActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Treatment Senior", system);
         userProcessContainer.add("rirwjp", rirwjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnTreatmentOldAgeHomeActionPerformed
+    }//GEN-LAST:event_btn_treatmentActionPerformed
 
-    private void btnDonationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonationActionPerformed
+    private void btn_basicamenitiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_basicamenitiesActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Donation of Basic Amenities", system);
         userProcessContainer.add("rirwjp", rirwjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnDonationActionPerformed
+    }//GEN-LAST:event_btn_basicamenitiesActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btn_backpageActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDonation;
-    private javax.swing.JButton btnMedications;
-    private javax.swing.JButton btnTreatmentOldAgeHome;
+    private javax.swing.JButton btn_backpage;
+    private javax.swing.JButton btn_basicamenities;
+    private javax.swing.JButton btn_provideMedications;
+    private javax.swing.JButton btn_treatment;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

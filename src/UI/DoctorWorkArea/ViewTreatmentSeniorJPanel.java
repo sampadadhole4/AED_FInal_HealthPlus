@@ -15,10 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import Healthplus.Worker.Worker;
 import Healthplus.SeniorMedical.SeniorMedical;
 
-/**
- *
- * @author shalini
- */
+
 public class ViewTreatmentSeniorJPanel extends javax.swing.JPanel {
 
     /**

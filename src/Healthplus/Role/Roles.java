@@ -11,10 +11,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public abstract class Roles {
     private String name;
     public enum RoleType{

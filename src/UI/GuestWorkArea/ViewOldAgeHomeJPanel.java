@@ -14,10 +14,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author shalini
- */
+
 public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
     
      private JPanel userProcessContainer;
@@ -37,31 +34,31 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
 
     }
     private void populateCountry() {
-        cbCountry.removeAllItems();
+        combo_country.removeAllItems();
         for (Country c : system.getNetworkList()) {
-            cbCountry.addItem(c);
+            combo_country.addItem(c);
         }
     }
     private void populateState() {
-        cbState.removeAllItems();
-        if (cbCountry.getSelectedItem() != null) {
+        combo_satet.removeAllItems();
+        if (combo_country.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
-                if (c.equals(cbCountry.getSelectedItem())) {
+                if (c.equals(combo_country.getSelectedItem())) {
                     for (State s : c.getStateList()) {
-                        cbState.addItem(s);
+                        combo_satet.addItem(s);
                     }
                 }
             }
         }
     }
     private void populateCity() {
-        cbCity.removeAllItems();
-        if (cbState.getSelectedItem() != null) {
+        tcombo_city.removeAllItems();
+        if (combo_satet.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
-                    if (s.equals(cbState.getSelectedItem())) {
+                    if (s.equals(combo_satet.getSelectedItem())) {
                         for (City city : s.getCityList()) {
-                            cbCity.addItem(city);
+                            tcombo_city.addItem(city);
                         }
                     }
                 }
@@ -80,24 +77,24 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack1 = new javax.swing.JButton();
+        btn_back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        lblCountry = new javax.swing.JLabel();
-        cbCountry = new javax.swing.JComboBox();
-        cbState = new javax.swing.JComboBox();
-        lblState1 = new javax.swing.JLabel();
-        lblCity = new javax.swing.JLabel();
-        cbCity = new javax.swing.JComboBox();
-        btnSubmit = new javax.swing.JButton();
+        label_country = new javax.swing.JLabel();
+        combo_country = new javax.swing.JComboBox();
+        combo_satet = new javax.swing.JComboBox();
+        label_state = new javax.swing.JLabel();
+        label_city = new javax.swing.JLabel();
+        tcombo_city = new javax.swing.JComboBox();
+        btn_submit = new javax.swing.JButton();
         tblScrollPane = new javax.swing.JScrollPane();
         tbloldAgeHome = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack1.addActionListener(new java.awt.event.ActionListener() {
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBack1ActionPerformed(evt);
+                btn_backActionPerformed(evt);
             }
         });
 
@@ -105,29 +102,29 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Old Age Home");
 
-        lblCountry.setText("Select Country:");
+        label_country.setText("Country:");
 
-        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+        combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCountryActionPerformed(evt);
+                combo_countryActionPerformed(evt);
             }
         });
 
-        cbState.addActionListener(new java.awt.event.ActionListener() {
+        combo_satet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbStateActionPerformed(evt);
+                combo_satetActionPerformed(evt);
             }
         });
 
-        lblState1.setText("Select State:");
+        label_state.setText("State:");
 
-        lblCity.setText("Select City:");
+        label_city.setText("City:");
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btn_submit.setBackground(new java.awt.Color(113, 160, 160));
+        btn_submit.setText("Submit");
+        btn_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btn_submitActionPerformed(evt);
             }
         });
 
@@ -158,86 +155,88 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(108, 108, 108))
-                    .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(307, 307, 307)
-                            .addComponent(lblCity)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(95, 95, 95)
-                            .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(173, 173, 173)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblCountry)
-                                    .addGap(35, 35, 35)
-                                    .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(108, 108, 108))
+                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(307, 307, 307)
+                                .addComponent(label_city)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tcombo_city, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(307, 307, 307)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblState1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(233, Short.MAX_VALUE))
+                                        .addComponent(label_country)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(combo_country, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(label_state)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(combo_satet, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(274, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCountry))
+                    .addComponent(combo_country, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_country))
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblState1)
-                    .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_state)
+                    .addComponent(combo_satet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity)
-                    .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_city)
+                    .addComponent(tcombo_city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(btnSubmit)
+                .addComponent(btn_submit)
                 .addGap(50, 50, 50)
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(308, Short.MAX_VALUE))
+                .addGap(65, 65, 65)
+                .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(204, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBack1ActionPerformed
+    }//GEN-LAST:event_btn_backActionPerformed
 
-    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+    private void combo_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_countryActionPerformed
         // TODO add your handling code here:
         populateState();
-    }//GEN-LAST:event_cbCountryActionPerformed
+    }//GEN-LAST:event_combo_countryActionPerformed
 
-    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+    private void combo_satetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_satetActionPerformed
         // TODO add your handling code here:
         populateCity();
-    }//GEN-LAST:event_cbStateActionPerformed
+    }//GEN-LAST:event_combo_satetActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
         // TODO add your handling code here:
         DefaultTableModel dtm = (DefaultTableModel) tbloldAgeHome.getModel();
         dtm.setRowCount(0);
 
-        Country country = (Country) cbCountry.getSelectedItem();
-        State state = (State) cbState.getSelectedItem();
-        City city = (City) cbCity.getSelectedItem();
+        Country country = (Country) combo_country.getSelectedItem();
+        State state = (State) combo_satet.getSelectedItem();
+        City city = (City) tcombo_city.getSelectedItem();
 
         for (Country c : system.getNetworkList()) {
             if (c.equals(country)) {
@@ -260,20 +259,20 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_btn_submitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack1;
-    private javax.swing.JButton btnSubmit;
-    private javax.swing.JComboBox cbCity;
-    private javax.swing.JComboBox cbCountry;
-    private javax.swing.JComboBox cbState;
+    private javax.swing.JButton btn_back;
+    private javax.swing.JButton btn_submit;
+    private javax.swing.JComboBox combo_country;
+    private javax.swing.JComboBox combo_satet;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCountry;
-    private javax.swing.JLabel lblState1;
+    private javax.swing.JLabel label_city;
+    private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_state;
     private javax.swing.JScrollPane tblScrollPane;
     private javax.swing.JTable tbloldAgeHome;
+    private javax.swing.JComboBox tcombo_city;
     // End of variables declaration//GEN-END:variables
 }

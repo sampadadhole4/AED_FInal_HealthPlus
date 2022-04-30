@@ -6,10 +6,7 @@
 package Healthplus.Job;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class JobDirectory {
      private ArrayList<Job> jobList;
 

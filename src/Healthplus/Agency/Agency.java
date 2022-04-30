@@ -5,10 +5,6 @@
  */
 package Healthplus.Agency;
 
-/**
- *
- * @author shalini
- */
 public class Agency {
     
    

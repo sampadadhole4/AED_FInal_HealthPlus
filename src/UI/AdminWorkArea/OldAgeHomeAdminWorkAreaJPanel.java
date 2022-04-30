@@ -11,10 +11,6 @@ import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Vardhana Bhatt
- */
 public class OldAgeHomeAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     /**

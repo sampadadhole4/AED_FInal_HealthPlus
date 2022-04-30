@@ -19,10 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Karishma
- */
+
 public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
 
     /**

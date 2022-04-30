@@ -6,10 +6,7 @@
 package Healthplus.WorkQueue;
 
 import Healthplus.Agency.Agency;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class AgencyWorkRequest extends WorkRequest{
     private Agency agency;
 

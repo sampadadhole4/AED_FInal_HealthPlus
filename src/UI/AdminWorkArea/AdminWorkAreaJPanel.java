@@ -10,10 +10,7 @@ import Healthplus.Enterprises.Enterprise;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     /**

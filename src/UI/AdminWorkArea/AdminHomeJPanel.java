@@ -13,10 +13,7 @@ import Healthplus.UserAccount.UserAccount;
 import UI.EmployeeViewArea.EmployeeViewAreaJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class AdminHomeJPanel extends javax.swing.JPanel {
 
     /**

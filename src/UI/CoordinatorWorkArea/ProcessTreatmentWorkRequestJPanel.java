@@ -24,10 +24,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
 
     /**

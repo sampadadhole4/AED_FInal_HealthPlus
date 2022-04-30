@@ -8,16 +8,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import UI.DoctorWorkArea.DoctorHomeJPanel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author shalini
- */
 public class Doctor extends Roles {
     public Doctor(){
         super(Roles.RoleType.Doctor.getValue());

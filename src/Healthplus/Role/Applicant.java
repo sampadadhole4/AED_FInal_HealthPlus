@@ -13,10 +13,7 @@ import Healthplus.UserAccount.UserAccount;
 import UI.ApplicantWorkArea.ApplicantHomeJPanel;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class Applicant extends Roles{
     public Applicant(){
         super(Roles.RoleType.Applicant.getValue());

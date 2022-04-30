@@ -42,10 +42,7 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.chart.axis.CategoryAxis;
 
-/**
- *
- * @author shali
- */
+
 public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
 
     /**

@@ -6,10 +6,7 @@
 package Healthplus.WorkQueue;
 
 import Healthplus.SeniorMedical.SeniorMedical;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class SeniorMedicalWorkRequest extends WorkRequest{
     private SeniorMedical senior;
     

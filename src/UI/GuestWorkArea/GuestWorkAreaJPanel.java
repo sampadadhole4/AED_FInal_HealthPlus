@@ -15,10 +15,6 @@ import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
 public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -50,13 +46,12 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnTrustList = new javax.swing.JButton();
-        btnJobApplication = new javax.swing.JButton();
-        btnAgencySignup = new javax.swing.JButton();
-        btnRaiseIssue = new javax.swing.JButton();
-        btnHelpline = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
-        btnOldAgeHomeList = new javax.swing.JButton();
+        btn_trusts = new javax.swing.JButton();
+        btn_viewjobs = new javax.swing.JButton();
+        btn_addfundraisers = new javax.swing.JButton();
+        btn_raiserequest = new javax.swing.JButton();
+        btn_logout = new javax.swing.JButton();
+        btn_oldagehome = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Btn_emergencyServ = new javax.swing.JButton();
         Btn_transportFacilities = new javax.swing.JButton();
@@ -69,149 +64,140 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Guest Area");
+        lblHeader.setText("Facilities for Guest");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 250, 27));
 
-        btnTrustList.setBackground(new java.awt.Color(113, 160, 160));
-        btnTrustList.setText("Trust of EcoSystem");
-        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
+        btn_trusts.setBackground(new java.awt.Color(113, 160, 160));
+        btn_trusts.setForeground(new java.awt.Color(0, 0, 0));
+        btn_trusts.setText("Trusts");
+        btn_trusts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTrustListActionPerformed(evt);
+                btn_trustsActionPerformed(evt);
             }
         });
-        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
+        add(btn_trusts, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
 
-        btnJobApplication.setBackground(new java.awt.Color(113, 160, 160));
-        btnJobApplication.setText("View Jobs");
-        btnJobApplication.addActionListener(new java.awt.event.ActionListener() {
+        btn_viewjobs.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewjobs.setForeground(new java.awt.Color(0, 0, 0));
+        btn_viewjobs.setText("Jobs");
+        btn_viewjobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnJobApplicationActionPerformed(evt);
+                btn_viewjobsActionPerformed(evt);
             }
         });
-        add(btnJobApplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 251, -1));
+        add(btn_viewjobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 251, -1));
 
-        btnAgencySignup.setBackground(new java.awt.Color(113, 160, 160));
-        btnAgencySignup.setText("Sign Up as Funding Agency");
-        btnAgencySignup.addActionListener(new java.awt.event.ActionListener() {
+        btn_addfundraisers.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addfundraisers.setForeground(new java.awt.Color(0, 0, 0));
+        btn_addfundraisers.setText("Sign up as fundraising company");
+        btn_addfundraisers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgencySignupActionPerformed(evt);
+                btn_addfundraisersActionPerformed(evt);
             }
         });
-        add(btnAgencySignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
+        add(btn_addfundraisers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
 
-        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
-        btnRaiseIssue.setText("Raise A Request");
-        btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
+        btn_raiserequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_raiserequest.setForeground(new java.awt.Color(0, 0, 0));
+        btn_raiserequest.setText("Raise A Request");
+        btn_raiserequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRaiseIssueActionPerformed(evt);
+                btn_raiserequestActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 251, -1));
+        add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 251, -1));
 
-        btnHelpline.setBackground(new java.awt.Color(113, 160, 160));
-        btnHelpline.setText("Helpline");
-        btnHelpline.addActionListener(new java.awt.event.ActionListener() {
+        btn_logout.setBackground(new java.awt.Color(113, 160, 160));
+        btn_logout.setForeground(new java.awt.Color(0, 0, 0));
+        btn_logout.setText("Logout");
+        btn_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelplineActionPerformed(evt);
+                btn_logoutActionPerformed(evt);
             }
         });
-        add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 251, -1));
+        add(btn_logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
 
-        btnLogout.setBackground(new java.awt.Color(113, 160, 160));
-        btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btn_oldagehome.setBackground(new java.awt.Color(113, 160, 160));
+        btn_oldagehome.setForeground(new java.awt.Color(0, 0, 0));
+        btn_oldagehome.setText("Old Age Home");
+        btn_oldagehome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btn_oldagehomeActionPerformed(evt);
             }
         });
-        add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
-
-        btnOldAgeHomeList.setBackground(new java.awt.Color(113, 160, 160));
-        btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
-        btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOldAgeHomeListActionPerformed(evt);
-            }
-        });
-        add(btnOldAgeHomeList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 251, -1));
+        add(btn_oldagehome, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 251, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/guest_new.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 800, 630));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 800, 630));
 
+        Btn_emergencyServ.setBackground(new java.awt.Color(113, 160, 160));
+        Btn_emergencyServ.setForeground(new java.awt.Color(0, 0, 0));
         Btn_emergencyServ.setText("Raise Emergency Services");
         Btn_emergencyServ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_emergencyServActionPerformed(evt);
             }
         });
-        add(Btn_emergencyServ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 250, -1));
+        add(Btn_emergencyServ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 250, -1));
 
+        Btn_transportFacilities.setBackground(new java.awt.Color(113, 160, 160));
+        Btn_transportFacilities.setForeground(new java.awt.Color(0, 0, 0));
         Btn_transportFacilities.setText("Transport Facilities");
         Btn_transportFacilities.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_transportFacilitiesActionPerformed(evt);
             }
         });
-        add(Btn_transportFacilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, 250, -1));
+        add(Btn_transportFacilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 250, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
+    private void btn_trustsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_trustsActionPerformed
         // TODO add your handling code here:
       CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
         userProcessContainer.add("vnjp", vnjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnTrustListActionPerformed
+    }//GEN-LAST:event_btn_trustsActionPerformed
 
-    private void btnJobApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJobApplicationActionPerformed
+    private void btn_viewjobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewjobsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ApplyForJobJPanel afjp = new ApplyForJobJPanel(userProcessContainer, system, dB4OUtil, null, "G");
         userProcessContainer.add("afjp", afjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnJobApplicationActionPerformed
+    }//GEN-LAST:event_btn_viewjobsActionPerformed
 
-    private void btnAgencySignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgencySignupActionPerformed
+    private void btn_addfundraisersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addfundraisersActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         FundingAgencySignUpJPanel fasujp = new FundingAgencySignUpJPanel(userProcessContainer, system, dB4OUtil);
         userProcessContainer.add("fasujp", fasujp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnAgencySignupActionPerformed
+    }//GEN-LAST:event_btn_addfundraisersActionPerformed
 
-    private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
+    private void btn_raiserequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_raiserequestActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         IssueSignUpJPanel isjp = new IssueSignUpJPanel(userProcessContainer, system, dB4OUtil);
         userProcessContainer.add("IssueSignUpJPanel", isjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnRaiseIssueActionPerformed
+    }//GEN-LAST:event_btn_raiserequestActionPerformed
 
-    private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
-        // TODO add your handling code here:
-         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
-        userProcessContainer.add("hjp", hjp);
-        cardLayout.next(userProcessContainer);
-        
-        
-    }//GEN-LAST:event_btnHelplineActionPerformed
-
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+    private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.remove(this);
         cardLayout.previous(userProcessContainer);
         dB4OUtil.storeSystem(system);
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_btn_logoutActionPerformed
 
-    private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
+    private void btn_oldagehomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_oldagehomeActionPerformed
         // TODO add your handling code here:
    CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewOldAgeHomeJPanel oahj = new ViewOldAgeHomeJPanel(userProcessContainer, system);
         userProcessContainer.add("oahj",oahj);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
+    }//GEN-LAST:event_btn_oldagehomeActionPerformed
 
     private void Btn_emergencyServActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_emergencyServActionPerformed
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
@@ -231,13 +217,12 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_emergencyServ;
     private javax.swing.JButton Btn_transportFacilities;
-    private javax.swing.JButton btnAgencySignup;
-    private javax.swing.JButton btnHelpline;
-    private javax.swing.JButton btnJobApplication;
-    private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnOldAgeHomeList;
-    private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JButton btnTrustList;
+    private javax.swing.JButton btn_addfundraisers;
+    private javax.swing.JButton btn_logout;
+    private javax.swing.JButton btn_oldagehome;
+    private javax.swing.JButton btn_raiserequest;
+    private javax.swing.JButton btn_trusts;
+    private javax.swing.JButton btn_viewjobs;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

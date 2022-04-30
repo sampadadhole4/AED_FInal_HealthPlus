@@ -8,10 +8,7 @@ import Healthplus.Role.Admin;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class AdminOrg extends Org {
     public AdminOrg() {
         super(OrgType.Admin.getValue());

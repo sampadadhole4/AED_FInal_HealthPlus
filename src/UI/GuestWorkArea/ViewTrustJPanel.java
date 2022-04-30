@@ -14,10 +14,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author shali
- */
+
 public class ViewTrustJPanel extends javax.swing.JPanel {
 
     /**
@@ -37,19 +34,19 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
     }
     
     private void populateCountry() {
-        cbCountry.removeAllItems();
+        combo_country.removeAllItems();
         for (Country c : system.getNetworkList()) {
-            cbCountry.addItem(c);
+            combo_country.addItem(c);
         }
     }
     
     private void populateState() {
-        cbState.removeAllItems();
-        if (cbCountry.getSelectedItem() != null) {
+        combo_state.removeAllItems();
+        if (combo_country.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
-                if (c.equals(cbCountry.getSelectedItem())) {
+                if (c.equals(combo_country.getSelectedItem())) {
                     for (State s : c.getStateList()) {
-                        cbState.addItem(s);
+                        combo_state.addItem(s);
                     }
                 }
             }
@@ -57,13 +54,13 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
     }
     
     private void populateCity() {
-        cbCity.removeAllItems();
-        if (cbState.getSelectedItem() != null) {
+        combo_city.removeAllItems();
+        if (combo_state.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
-                    if (s.equals(cbState.getSelectedItem())) {
+                    if (s.equals(combo_state.getSelectedItem())) {
                         for (City city : s.getCityList()) {
-                            cbCity.addItem(city);
+                            combo_city.addItem(city);
                         }
                     }
                 }
@@ -82,17 +79,17 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnSubmit = new javax.swing.JButton();
-        lblCountry = new javax.swing.JLabel();
-        cbCountry = new javax.swing.JComboBox();
-        cbCity = new javax.swing.JComboBox();
-        lblCity = new javax.swing.JLabel();
-        lblState1 = new javax.swing.JLabel();
-        cbState = new javax.swing.JComboBox();
+        btn_submit = new javax.swing.JButton();
+        label_country = new javax.swing.JLabel();
+        combo_country = new javax.swing.JComboBox();
+        combo_city = new javax.swing.JComboBox();
+        label_city = new javax.swing.JLabel();
+        label_state = new javax.swing.JLabel();
+        combo_state = new javax.swing.JComboBox();
         tblScrollPane = new javax.swing.JScrollPane();
         tblTrust = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        btnBack1 = new javax.swing.JButton();
+        btn_back = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -104,39 +101,39 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 700));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btn_submit.setBackground(new java.awt.Color(113, 160, 160));
+        btn_submit.setText("Submit");
+        btn_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btn_submitActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, -1));
+        jPanel1.add(btn_submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, -1));
 
-        lblCountry.setText("Select Country:");
-        jPanel1.add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 20));
+        label_country.setText("Country:");
+        jPanel1.add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 20));
 
-        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+        combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCountryActionPerformed(evt);
+                combo_countryActionPerformed(evt);
             }
         });
-        jPanel1.add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 150, -1));
+        jPanel1.add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 150, -1));
 
-        jPanel1.add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 150, -1));
+        jPanel1.add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 150, -1));
 
-        lblCity.setText("Select City:");
-        jPanel1.add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, 20));
+        label_city.setText("City:");
+        jPanel1.add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, 20));
 
-        lblState1.setText("Select State:");
-        jPanel1.add(lblState1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, 20));
+        label_state.setText("State:");
+        jPanel1.add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, 20));
 
-        cbState.addActionListener(new java.awt.event.ActionListener() {
+        combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbStateActionPerformed(evt);
+                combo_stateActionPerformed(evt);
             }
         });
-        jPanel1.add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 150, -1));
+        jPanel1.add(combo_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 150, -1));
 
         tblTrust.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,15 +162,15 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Trust");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 250, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 250, -1));
 
-        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
-        btnBack1.addActionListener(new java.awt.event.ActionListener() {
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBack1ActionPerformed(evt);
+                btn_backActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
+        jPanel1.add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -191,14 +188,14 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btn_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_submitActionPerformed
         // TODO add your handling code here:
         DefaultTableModel dtm = (DefaultTableModel) tblTrust.getModel();
         dtm.setRowCount(0);
 
-        Country country = (Country) cbCountry.getSelectedItem();
-        State state = (State) cbState.getSelectedItem();
-        City city = (City) cbCity.getSelectedItem();
+        Country country = (Country) combo_country.getSelectedItem();
+        State state = (State) combo_state.getSelectedItem();
+        City city = (City) combo_city.getSelectedItem();
 
         for (Country c : system.getNetworkList()) {
             if (c.equals(country)) {
@@ -221,37 +218,37 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_btn_submitActionPerformed
 
-    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+    private void combo_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_countryActionPerformed
         // TODO add your handling code here:
         populateState();
-    }//GEN-LAST:event_cbCountryActionPerformed
+    }//GEN-LAST:event_combo_countryActionPerformed
 
-    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+    private void combo_stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_stateActionPerformed
         // TODO add your handling code here:
         populateCity();
-    }//GEN-LAST:event_cbStateActionPerformed
+    }//GEN-LAST:event_combo_stateActionPerformed
 
-    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBack1ActionPerformed
+    }//GEN-LAST:event_btn_backActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack1;
-    private javax.swing.JButton btnSubmit;
-    private javax.swing.JComboBox cbCity;
-    private javax.swing.JComboBox cbCountry;
-    private javax.swing.JComboBox cbState;
+    private javax.swing.JButton btn_back;
+    private javax.swing.JButton btn_submit;
+    private javax.swing.JComboBox combo_city;
+    private javax.swing.JComboBox combo_country;
+    private javax.swing.JComboBox combo_state;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCountry;
-    private javax.swing.JLabel lblState1;
+    private javax.swing.JLabel label_city;
+    private javax.swing.JLabel label_country;
+    private javax.swing.JLabel label_state;
     private javax.swing.JScrollPane tblScrollPane;
     private javax.swing.JTable tblTrust;
     // End of variables declaration//GEN-END:variables

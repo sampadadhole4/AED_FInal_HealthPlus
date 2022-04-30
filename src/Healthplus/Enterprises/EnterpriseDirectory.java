@@ -6,10 +6,7 @@
 package Healthplus.Enterprises;
 import java.util.ArrayList;
 import javax.swing.text.html.HTML;
-/**
- *
- * @author Karishma Murde
- */
+
 public class EnterpriseDirectory {
     private ArrayList<Enterprise> enterpriseList;
     

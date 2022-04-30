@@ -19,10 +19,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class PublishJobsJPanel extends javax.swing.JPanel {
 
     /**

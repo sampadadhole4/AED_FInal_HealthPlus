@@ -11,10 +11,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
 
     /**

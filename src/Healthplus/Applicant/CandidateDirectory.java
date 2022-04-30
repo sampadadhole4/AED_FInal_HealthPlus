@@ -7,10 +7,6 @@ package Healthplus.Applicant;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author shalini
- */
 public class CandidateDirectory {
     private ArrayList <Candidate> applicantList;
     

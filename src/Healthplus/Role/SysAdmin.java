@@ -11,10 +11,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import UI.SystemAdminWorkArea.SystemAdminHomeJPanel;
 import javax.swing.JPanel;
-/**
- *
- * @author shali
- */
+
 public class SysAdmin extends Roles{
     public SysAdmin(){
         super(Roles.RoleType.System.getValue());

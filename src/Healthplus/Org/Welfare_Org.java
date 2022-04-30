@@ -8,10 +8,7 @@ import Healthplus.Role.Guest;
 import Healthplus.Role.Roles;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class Welfare_Org extends Org{
     public Welfare_Org() {
        super(OrgType.Welfare.getValue());

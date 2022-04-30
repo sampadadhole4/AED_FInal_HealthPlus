@@ -23,10 +23,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class SignUpJPanel extends javax.swing.JPanel {
 
     /**

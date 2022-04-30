@@ -17,10 +17,6 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Vardhana Bhatt
- */
 public class ViewSeniorCareJPanel extends javax.swing.JPanel {
 
     /**

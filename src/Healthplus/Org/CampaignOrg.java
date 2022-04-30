@@ -8,10 +8,7 @@ import Healthplus.Role.Roles;
 import Healthplus.Role.Coordinator;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class CampaignOrg extends Org {
     public CampaignOrg() {
         super(OrgType.Campaign.getValue());

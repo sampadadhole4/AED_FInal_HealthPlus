@@ -6,10 +6,7 @@
 package Healthplus.Job;
 import Healthplus.Enterprises.Enterprise;
 
-/**
- *
- * @author Karishma Murde
- */
+
 public class Job {
     private String name;
     private int id;

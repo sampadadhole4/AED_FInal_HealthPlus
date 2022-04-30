@@ -8,10 +8,6 @@ import Healthplus.Org.Org;
 import Healthplus.Org.OrgDirectory;
 import Healthplus.Enterprises.EmergencyServices;
 
-/**
- *
- * @author Karishma Murde
- */
 public abstract class Enterprise extends Org {
     private EnterpriseType enterpriseType;
     private OrgDirectory organizationDirectory;

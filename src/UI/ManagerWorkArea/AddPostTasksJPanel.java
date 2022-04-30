@@ -19,10 +19,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Karishma
- */
+
 public class AddPostTasksJPanel extends javax.swing.JPanel {
 
     /**

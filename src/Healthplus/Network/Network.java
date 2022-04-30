@@ -5,10 +5,7 @@
  */
 package Healthplus.Network;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public abstract class Network {
    private String name;
    private String networkName;

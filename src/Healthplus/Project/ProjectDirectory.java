@@ -7,10 +7,7 @@ package Healthplus.Project;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class ProjectDirectory {
     private ArrayList<Project> projectList;
     

@@ -9,10 +9,6 @@ import Healthplus.E_System;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
 public class HelplineJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;

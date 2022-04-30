@@ -22,10 +22,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class LoginJPanel extends javax.swing.JPanel {
 
     /**
@@ -75,7 +72,7 @@ public class LoginJPanel extends javax.swing.JPanel {
         add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, -1, -1));
 
         lblTitel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        lblTitel.setText("MediCare System");
+        lblTitel.setText("Health Plus");
         add(lblTitel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 280, 50));
 
         txtFldUserName.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +94,7 @@ public class LoginJPanel extends javax.swing.JPanel {
         add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, 150, 30));
 
         btnGuestLogin.setBackground(new java.awt.Color(255, 255, 255));
-        btnGuestLogin.setText("Sign in as Guest");
+        btnGuestLogin.setText("Guest Login");
         btnGuestLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

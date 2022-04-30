@@ -19,10 +19,7 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author shalini
- */
+
 public class IssueSignUpJPanel extends javax.swing.JPanel {
 
     /**
@@ -48,36 +45,36 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
-        btnAddAccount = new javax.swing.JButton();
+        label_title = new javax.swing.JLabel();
+        btn_createnewacc = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        txtUserName = new javax.swing.JTextField();
-        lblUserName = new javax.swing.JLabel();
-        lblConfirmPassword = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        confirmPassFld = new javax.swing.JPasswordField();
-        passFld = new javax.swing.JPasswordField();
-        lblName = new javax.swing.JLabel();
-        lblPassword = new javax.swing.JLabel();
+        text_username = new javax.swing.JTextField();
+        label_username = new javax.swing.JLabel();
+        label_confirmpswd = new javax.swing.JLabel();
+        text_personname = new javax.swing.JTextField();
+        text_confirmpswd = new javax.swing.JPasswordField();
+        text_userpassword = new javax.swing.JPasswordField();
+        label_personname = new javax.swing.JLabel();
+        label_userpassword = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Sign Up");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 310, 50));
+        label_title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        label_title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_title.setText("Create new account");
+        add(label_title, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 310, 50));
 
-        btnAddAccount.setBackground(new java.awt.Color(113, 160, 160));
-        btnAddAccount.setText("Add Account");
-        btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
+        btn_createnewacc.setBackground(new java.awt.Color(113, 160, 160));
+        btn_createnewacc.setText("Add Account");
+        btn_createnewacc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddAccountActionPerformed(evt);
+                btn_createnewaccActionPerformed(evt);
             }
         });
-        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
+        add(btn_createnewacc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -85,46 +82,46 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 40, 40));
-        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 150, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 40, 40));
+        add(text_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 150, -1));
 
-        lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblUserName.setText("User Name");
-        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 90, -1));
+        label_username.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_username.setText("User Name");
+        add(label_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 90, -1));
 
-        lblConfirmPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmPassword.setText("Confirm Password");
-        add(lblConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 140, -1));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 150, -1));
-        add(confirmPassFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 150, -1));
-        add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 150, -1));
+        label_confirmpswd.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_confirmpswd.setText("Confirm Password");
+        add(label_confirmpswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 140, -1));
+        add(text_personname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 150, -1));
+        add(text_confirmpswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 150, -1));
+        add(text_userpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, -1));
 
-        lblName.setText("Name");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, -1, -1));
+        label_personname.setText("Name");
+        add(label_personname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
 
-        lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblPassword.setText("Password");
-        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 90, -1));
+        label_userpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        label_userpassword.setText("Password");
+        add(label_userpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 90, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/signup.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 510, 440));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plus.gif"))); // NOI18N
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 180, 190));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 180, 190));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAccountActionPerformed
+    private void btn_createnewaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_createnewaccActionPerformed
         // TODO add your handling code here:
 
         try {
-            String name = txtName.getText();
-            String userName = txtUserName.getText();
+            String name = text_personname.getText();
+            String userName = text_username.getText();
 
             //Getting the password
-            char[] passwordCharArray = passFld.getPassword();
+            char[] passwordCharArray = text_userpassword.getPassword();
             String password = String.valueOf(passwordCharArray);
 
-            char[] confirmPasswordCharArray = confirmPassFld.getPassword();
+            char[] confirmPasswordCharArray = text_confirmpswd.getPassword();
             String confirmPassword = String.valueOf(confirmPasswordCharArray);
 
             if (userName.equals("")) {
@@ -184,7 +181,7 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Unhandled Exception", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAddAccountActionPerformed
+    }//GEN-LAST:event_btn_createnewaccActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -195,18 +192,18 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddAccount;
     private javax.swing.JButton btnBack;
-    private javax.swing.JPasswordField confirmPassFld;
+    private javax.swing.JButton btn_createnewacc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lblConfirmPassword;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblUserName;
-    private javax.swing.JPasswordField passFld;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtUserName;
+    private javax.swing.JLabel label_confirmpswd;
+    private javax.swing.JLabel label_personname;
+    private javax.swing.JLabel label_title;
+    private javax.swing.JLabel label_username;
+    private javax.swing.JLabel label_userpassword;
+    private javax.swing.JPasswordField text_confirmpswd;
+    private javax.swing.JTextField text_personname;
+    private javax.swing.JTextField text_username;
+    private javax.swing.JPasswordField text_userpassword;
     // End of variables declaration//GEN-END:variables
 }

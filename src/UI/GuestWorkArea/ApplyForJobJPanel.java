@@ -23,10 +23,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author shalini
- */
+
 public class ApplyForJobJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

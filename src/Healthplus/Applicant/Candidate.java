@@ -5,10 +5,7 @@
  */
 package Healthplus.Applicant;
 
-/**
- *
- * @author shalini
- */
+
 public class Candidate {
     private String name;
     private int id;

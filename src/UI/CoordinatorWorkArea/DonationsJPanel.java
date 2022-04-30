@@ -12,10 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-/**
- *
- * @author Vardhana Bhatt
- */
+
 public class DonationsJPanel extends javax.swing.JPanel {
 
     /**
