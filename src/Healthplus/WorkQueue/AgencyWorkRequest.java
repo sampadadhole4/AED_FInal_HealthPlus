@@ -5,19 +5,19 @@
  */
 package Healthplus.WorkQueue;
 
-import Healthplus.Agency.Agency;
+import Healthplus.FundRaiser.FundRaiser;
 
 public class AgencyWorkRequest extends WorkRequest{
-    private Agency agency;
+    private FundRaiser agency;
 
     public AgencyWorkRequest(){
         super(WorkRequest.WorkRequestType.Agency.getValue());
     }
-    public Agency getAgency() {
+    public FundRaiser getAgency() {
         return agency;
     }
 
-    public void setAgency(Agency agency) {
+    public void setAgency(FundRaiser agency) {
         this.agency = agency;
     }
     

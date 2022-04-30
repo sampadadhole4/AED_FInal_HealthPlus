@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.ManagerWorkArea;
+package UI.DoctorWorkArea;
 
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
@@ -15,10 +15,10 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 
-public class ManagerHomeJPanel extends javax.swing.JPanel {
+public class DoctorHome_Page extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManagerHomeJPanel
+     * Creates new form VolunteerHomeJPanel
      */
     private JPanel mainContainer;
     private E_System system;
@@ -26,8 +26,8 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
     private UserAccount userAccount;
     private Org organization;
     private Enterprise enterprise;
-    
-    public ManagerHomeJPanel(JPanel mainContainer,E_System system, DB4OUtil dB4OUtil,UserAccount userAccount, Org organization, Enterprise enterprise) {
+
+    public DoctorHome_Page(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
         initComponents();
         this.mainContainer = mainContainer;
         this.system = system;
@@ -35,10 +35,10 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
-        
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManagerWorkAreaJPanel mawajp = new ManagerWorkAreaJPanel(userProcessContainer,system,userAccount,organization, enterprise);
-        userProcessContainer.add("ManagerWorkAreaJPanel",mawajp);
+
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        DoctorWorkArea_Page dwaj = new DoctorWorkArea_Page(userProcessContainer, system, userAccount, organization, enterprise);
+        userProcessContainer.add("CoordinatorWorkAreaJPanel", dwaj);
         cardLayout.next(userProcessContainer);
     }
 
@@ -53,15 +53,13 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
 
         splitPane = new javax.swing.JSplitPane();
         controlJPanel = new javax.swing.JPanel();
-        btn_logoutuser = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
         btn_work = new javax.swing.JButton();
         btn_view = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(900, 900));
-        setPreferredSize(new java.awt.Dimension(900, 900));
 
         splitPane.setBackground(new java.awt.Color(255, 255, 255));
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
@@ -70,13 +68,12 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         controlJPanel.setBackground(new java.awt.Color(113, 160, 160));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
-        controlJPanel.setPreferredSize(new java.awt.Dimension(200, 200));
 
-        btn_logoutuser.setBackground(new java.awt.Color(255, 255, 255));
-        btn_logoutuser.setText("Logout");
-        btn_logoutuser.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_logoutuserActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
@@ -103,34 +100,29 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_view, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addContainerGap(49, Short.MAX_VALUE)
+                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                    .addComponent(btn_view, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(btn_logoutuser, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(60, 60, 60)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btn_work)
                 .addGap(18, 18, 18)
                 .addComponent(btn_view)
-                .addGap(256, 256, 256)
-                .addComponent(btn_logoutuser)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addGap(238, 238, 238)
+                .addComponent(btnLogout)
+                .addContainerGap(302, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
@@ -138,8 +130,6 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
         userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
-        userProcessContainer.setOpaque(false);
-        userProcessContainer.setPreferredSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         splitPane.setRightComponent(userProcessContainer);
 
@@ -147,46 +137,42 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1072, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_logoutuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutuserActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
 
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
         mainContainer.remove(this);
         cardLayout.previous(mainContainer);
         dB4OUtil.storeSystem(system);
-    }//GEN-LAST:event_btn_logoutuserActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btn_workActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_workActionPerformed
         // TODO add your handling code here:
-
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManagerWorkAreaJPanel mawajp = new ManagerWorkAreaJPanel(userProcessContainer,system,userAccount,organization, enterprise);
-        userProcessContainer.add("ManagerWorkAreaJPanel",mawajp);
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        DoctorWorkArea_Page dwaj = new DoctorWorkArea_Page(userProcessContainer, system, userAccount, organization, enterprise);
+        userProcessContainer.add("CoordinatorWorkAreaJPanel", dwaj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_workActionPerformed
 
     private void btn_viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewActionPerformed
         // TODO add your handling code here:
-        
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         WorkerViewArea_Page evajp = new WorkerViewArea_Page(userProcessContainer, system, dB4OUtil, userAccount, organization, enterprise);
-        userProcessContainer.add("evajp",evajp);
+        userProcessContainer.add("evajp", evajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_viewActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_logoutuser;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btn_view;
     private javax.swing.JButton btn_work;
     private javax.swing.JPanel controlJPanel;

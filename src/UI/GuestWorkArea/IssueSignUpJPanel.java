@@ -12,7 +12,7 @@ import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Role.Applicant;
 import Healthplus.UserAccount.UserAccount;
-import UI.ApplicantWorkArea.ApplicantHomeJPanel;
+import UI.ApplicantWorkArea.ApplicantHome_Page;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -171,7 +171,7 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
 //                userProcessContainer.add("rijp", rijp);
 //                cardLayout.next(userProcessContainer);
                 CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-                ApplicantHomeJPanel ahjp = new ApplicantHomeJPanel(userProcessContainer, system, dB4OUtil, userAccount);
+                ApplicantHome_Page ahjp = new ApplicantHome_Page(userProcessContainer, system, dB4OUtil, userAccount);
                 userProcessContainer.add("ahjp", ahjp);
                 cardLayout.next(userProcessContainer);
             } else {

@@ -25,7 +25,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void intializeLogin(){
         
-        LoginJPanel loginJPanel = new LoginJPanel(mainContainer, system, dB4OUtil);
+        Login_Panel loginJPanel = new Login_Panel(mainContainer, system, dB4OUtil);
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
         mainContainer.add("loginJPanel",loginJPanel);
         cardLayout.next(mainContainer);

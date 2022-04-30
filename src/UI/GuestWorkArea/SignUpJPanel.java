@@ -16,7 +16,7 @@ import Healthplus.Org.Org;
 import Healthplus.Role.Applicant;
 import Healthplus.UserAccount.UserAccount;
 import Healthplus.WorkQueue.JobWorkRequest;
-import UI.ApplicantWorkArea.ApplicantHomeJPanel;
+import UI.ApplicantWorkArea.ApplicantHome_Page;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -217,7 +217,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Job applied Successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
 
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ApplicantHomeJPanel ahjp = new ApplicantHomeJPanel(userProcessContainer, system, dB4OUtil, userAccount);
+        ApplicantHome_Page ahjp = new ApplicantHome_Page(userProcessContainer, system, dB4OUtil, userAccount);
         userProcessContainer.add("ahjp", ahjp);
         cardLayout.next(userProcessContainer);
 

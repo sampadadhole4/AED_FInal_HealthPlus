@@ -6,7 +6,7 @@
 package UI.ManagerWorkArea;
 
 import Healthplus.Account.Account;
-import Healthplus.Agency.Agency;
+import Healthplus.FundRaiser.FundRaiser;
 import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.AdminOrg;
@@ -57,7 +57,7 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
                 }
             }
         }
-//        for (Agency agency : organization.getAgencyDirectory().getAgencyList()) {
+//        for (FundRaiser agency : organization.getAgencyDirectory().getAgencyList()) {
 //            if (agency.isStatus() == true) {
 //                Object[] row = new Object[3];
 //                row[0] = agency.getId();

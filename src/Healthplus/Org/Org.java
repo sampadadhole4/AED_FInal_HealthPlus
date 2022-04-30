@@ -6,7 +6,7 @@
 package Healthplus.Org;
 
 import Healthplus.Account.AccountDirectory;
-import Healthplus.Agency.AgencyDirectory;
+import Healthplus.FundRaiser.FundRaiserDirectory;
 import Healthplus.SeniorMedical.SeniorMedicalDirectory;
 import Healthplus.Worker.WorkerDirectory;
 import Healthplus.SeniorCare.SeniorCareDirectory;
@@ -25,7 +25,7 @@ public abstract class Org {
     private WorkerDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private ProjectDirectory projectDirectory;
-    private AgencyDirectory agencyDirectory;
+    private FundRaiserDirectory agencyDirectory;
     private AccountDirectory accountDirectory;
     private JobDirectory jobDirectory;
     private SeniorMedicalDirectory seniorMedicalDirectory;
@@ -58,7 +58,7 @@ public abstract class Org {
         userAccountDirectory = new UserAccountDirectory();
         projectDirectory = new ProjectDirectory();
         jobDirectory = new JobDirectory();
-        agencyDirectory = new AgencyDirectory();
+        agencyDirectory = new FundRaiserDirectory();
         accountDirectory = new AccountDirectory();
         seniorMedicalDirectory = new SeniorMedicalDirectory();
         seniorCareDirectory = new SeniorCareDirectory();
@@ -119,11 +119,11 @@ public abstract class Org {
         return organizationID;
     }
 
-    public AgencyDirectory getAgencyDirectory() {
+    public FundRaiserDirectory getAgencyDirectory() {
         return agencyDirectory;
     }
 
-    public void setAgencyDirectory(AgencyDirectory agencyDirectory) {
+    public void setAgencyDirectory(FundRaiserDirectory agencyDirectory) {
         this.agencyDirectory = agencyDirectory;
     }
 

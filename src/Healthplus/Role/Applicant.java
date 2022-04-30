@@ -10,7 +10,7 @@ import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
-import UI.ApplicantWorkArea.ApplicantHomeJPanel;
+import UI.ApplicantWorkArea.ApplicantHome_Page;
 import javax.swing.JPanel;
 
 
@@ -20,7 +20,7 @@ public class Applicant extends Roles{
     }
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
-       return new ApplicantHomeJPanel(userProcessContainer, business,dB4OUtil,userAccount);
+       return new ApplicantHome_Page(userProcessContainer, business,dB4OUtil,userAccount);
     }
     
 }

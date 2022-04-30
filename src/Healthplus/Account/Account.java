@@ -5,16 +5,16 @@
  */
 package Healthplus.Account;
 
-import Healthplus.Agency.Agency;
+import Healthplus.FundRaiser.FundRaiser;
 
 public class Account {
-        private Agency agency;
+        private FundRaiser agency;
 
-    public Agency getAgency() {
+    public FundRaiser getAgency() {
         return agency;
     }
 
-    public void setAgency(Agency agency) {
+    public void setAgency(FundRaiser agency) {
         this.agency = agency;
     }
 }

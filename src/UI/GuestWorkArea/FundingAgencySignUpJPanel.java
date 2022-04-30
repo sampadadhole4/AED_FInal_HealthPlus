@@ -5,7 +5,7 @@
  */
 package UI.GuestWorkArea;
 
-import Healthplus.Agency.Agency;
+import Healthplus.FundRaiser.FundRaiser;
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
@@ -245,7 +245,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         }
         int budget = Integer.parseInt(budgetStr);
 
-        Agency agency = new Agency();
+        FundRaiser agency = new FundRaiser();
         agency.setName(agencyName);
         agency.setAmount(budget);
         agency.setCountry(combo_country.getSelectedItem().toString());
