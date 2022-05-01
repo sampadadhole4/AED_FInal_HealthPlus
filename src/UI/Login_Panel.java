@@ -63,30 +63,36 @@ public class Login_Panel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
 
-        setBackground(new java.awt.Color(204, 248, 245));
+        setBackground(new java.awt.Color(255, 226, 212));
         setMaximumSize(new java.awt.Dimension(900, 900));
         setMinimumSize(new java.awt.Dimension(900, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblUserName.setText("User Name:");
         add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, -1, -1));
 
+        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblPassword.setText("Password:");
         add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, -1, -1));
 
         lblTitel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        lblTitel.setText("Health Plus");
+        lblTitel.setText("Health Plus Services");
         add(lblTitel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 280, 50));
 
+        txtFldUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         txtFldUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFldUserNameActionPerformed(evt);
             }
         });
         add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 120, -1));
+
+        passFld.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, 120, -1));
 
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +103,7 @@ public class Login_Panel extends javax.swing.JPanel {
         add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, 150, 30));
 
         btnGuestLogin.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuestLogin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnGuestLogin.setText("Guest Login");
         btnGuestLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -109,15 +116,16 @@ public class Login_Panel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Health-professional-team.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 470, 430));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login-icon.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/heartgif.gif"))); // NOI18N
         jLabel3.setMaximumSize(new java.awt.Dimension(235, 215));
         jLabel3.setMinimumSize(new java.awt.Dimension(235, 215));
         jLabel3.setPreferredSize(new java.awt.Dimension(200, 195));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 200, 200));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 270, 240));
 
         jTextArea2.setBackground(new java.awt.Color(250, 246, 227));
         jTextArea2.setColumns(20);
-        jTextArea2.setForeground(new java.awt.Color(0, 51, 255));
+        jTextArea2.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(255, 102, 102));
         jTextArea2.setRows(5);
         jTextArea2.setText("\n  Contact us:\n  Email address : medicaresystem@gmail.com");
         jTextArea2.setBorder(javax.swing.BorderFactory.createEtchedBorder());

@@ -122,8 +122,12 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
         label_apartment = new javax.swing.JLabel();
         text_apartment = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(255, 221, 212));
+
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setText("Country");
 
+        Btn_RaiseRequest.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         Btn_RaiseRequest.setText("Raise Emergency Service");
         Btn_RaiseRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,16 +135,22 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
             }
         });
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setText("State");
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setText("City");
 
+        countrybox.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         countrybox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        statebox.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         statebox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        citybox.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         citybox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        btn_back.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_back.setText("Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,17 +158,25 @@ public class RaiseEmergencyServices extends javax.swing.JPanel {
             }
         });
 
+        label_emailId.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_emailId.setText("Email:");
 
+        text_emailId.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         text_emailId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text_emailIdActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jLabel1.setText("Locality:");
 
+        text_locality.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
+        label_apartment.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_apartment.setText("Apartment:");
+
+        text_apartment.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

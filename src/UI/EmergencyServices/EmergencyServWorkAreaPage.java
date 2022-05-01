@@ -59,22 +59,23 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
         jPanel1.setMinimumSize(new java.awt.Dimension(700, 700));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_callEmergency.setBackground(new java.awt.Color(113, 160, 160));
+        btn_callEmergency.setBackground(new java.awt.Color(255, 255, 255));
+        btn_callEmergency.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_callEmergency.setText("Call Emergency");
         btn_callEmergency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_callEmergencyActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_callEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 200, 30));
+        jPanel1.add(btn_callEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 200, 40));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Emergency Services Work Area");
-        jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
+        jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 330, 26));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 280, 490));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.gif"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 820, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

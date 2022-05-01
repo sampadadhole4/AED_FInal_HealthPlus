@@ -124,54 +124,65 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblWarning = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 222, 212));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Sign Up As Funding Agency");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 250, 24));
 
+        label_budget.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_budget.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_budget.setText("Budget:");
         add(label_budget, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 96, 20));
 
+        label_fundraisername.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_fundraisername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_fundraisername.setText("Agency Name:");
         add(label_fundraisername, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 96, 20));
 
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_country.setText("Country:");
         add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 96, 27));
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_state.setText("State:");
         add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
 
-        btn_Submit.setBackground(new java.awt.Color(113, 160, 160));
+        btn_Submit.setBackground(new java.awt.Color(255, 255, 255));
+        btn_Submit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_Submit.setText("Submit");
+        btn_Submit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SubmitActionPerformed(evt);
             }
         });
-        add(btn_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        add(btn_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 70, 30));
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_city.setText("City:");
         add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 96, 27));
 
+        text_fundraisername.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         text_fundraisername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text_fundraisernameActionPerformed(evt);
             }
         });
         add(text_fundraisername, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 150, -1));
+
+        text_fundraisersBudget.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_fundraisersBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 150, -1));
 
+        combo_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_countryActionPerformed(evt);
@@ -179,6 +190,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         });
         add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 150, -1));
 
+        combo_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_stateActionPerformed(evt);
@@ -186,6 +198,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         });
         add(combo_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 150, -1));
 
+        combo_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_cityActionPerformed(evt);
@@ -193,19 +206,23 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         });
         add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 150, -1));
 
+        label_trustname.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_trustname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_trustname.setText("Trust Name:");
         add(label_trustname, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 80, 20));
+
+        combo_trust.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(combo_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
 
-        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_BackActionPerformed(evt);
             }
         });
-        add(btn_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 40, 40));
+        add(btn_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 110, 80));
 
+        lblWarning.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblWarning.setForeground(new java.awt.Color(255, 0, 51));
         lblWarning.setText("* Budget currency is considered to be in US Dollar");
         add(lblWarning, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 650, -1, -1));
@@ -259,6 +276,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
             if (organization instanceof ManagerOrg) {
                 organization.getWorkQueue().getWorkRequestList().add(request);
             }
+            
         }
 
         JOptionPane.showMessageDialog(null, "Sign up request successfully submitted", "Information", JOptionPane.INFORMATION_MESSAGE);

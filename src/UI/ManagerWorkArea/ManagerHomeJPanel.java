@@ -67,13 +67,15 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(113, 160, 160));
+        controlJPanel.setBackground(new java.awt.Color(255, 194, 184));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setPreferredSize(new java.awt.Dimension(200, 200));
 
         btn_logoutuser.setBackground(new java.awt.Color(255, 255, 255));
+        btn_logoutuser.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_logoutuser.setText("Logout");
+        btn_logoutuser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_logoutuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_logoutuserActionPerformed(evt);
@@ -81,7 +83,9 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         });
 
         btn_work.setBackground(new java.awt.Color(255, 255, 255));
+        btn_work.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_work.setText("Work Area");
+        btn_work.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_work.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_workActionPerformed(evt);
@@ -89,7 +93,9 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         });
 
         btn_view.setBackground(new java.awt.Color(255, 255, 255));
+        btn_view.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_view.setText("View Area");
+        btn_view.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewActionPerformed(evt);
@@ -108,15 +114,15 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_view, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_view, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
                         .addGap(44, 44, 44))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())))
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(btn_logoutuser, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_logoutuser, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         controlJPanelLayout.setVerticalGroup(
@@ -124,13 +130,13 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btn_work)
                 .addGap(18, 18, 18)
-                .addComponent(btn_view)
-                .addGap(256, 256, 256)
-                .addComponent(btn_logoutuser)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addComponent(btn_work, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_view, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(244, 244, 244)
+                .addComponent(btn_logoutuser, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(287, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);

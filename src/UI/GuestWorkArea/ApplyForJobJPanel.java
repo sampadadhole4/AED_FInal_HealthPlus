@@ -92,13 +92,13 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         btn_back = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 222, 205));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Apply For Job");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 450, 26));
@@ -132,25 +132,27 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 140));
 
-        btn_applyforJob.setBackground(new java.awt.Color(113, 160, 160));
+        btn_applyforJob.setBackground(new java.awt.Color(255, 255, 255));
+        btn_applyforJob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_applyforJob.setText("Apply");
+        btn_applyforJob.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_applyforJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_applyforJobActionPerformed(evt);
             }
         });
-        add(btn_applyforJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 250, 80, -1));
+        add(btn_applyforJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 138, 90, 40));
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
             }
         });
-        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 40, 40));
+        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 110, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/job-apply.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-300, 160, 1740, 750));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/job.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 950, 630));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_applyforJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_applyforJobActionPerformed

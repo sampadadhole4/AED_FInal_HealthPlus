@@ -105,7 +105,7 @@ public class ControlOrgPage extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, 150));
 
-        btn_deleteOrg.setBackground(new java.awt.Color(113, 160, 160));
+        btn_deleteOrg.setBackground(new java.awt.Color(255, 255, 255));
         btn_deleteOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_deleteOrg.setText("Delete Organization");
         btn_deleteOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class ControlOrgPage extends javax.swing.JPanel {
         label_OrganizationType.setText("Organization Type:");
         add(label_OrganizationType, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, -1));
 
-        btn_addOrg.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addOrg.setBackground(new java.awt.Color(255, 255, 255));
         btn_addOrg.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_addOrg.setText("Add Organization");
         btn_addOrg.addActionListener(new java.awt.event.ActionListener() {

@@ -70,18 +70,18 @@ public class OngoingProjects_Page extends javax.swing.JPanel {
         btn_assigntome = new javax.swing.JButton();
         btn_processapplication = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 226, 215));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_gobackActionPerformed(evt);
             }
         });
-        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 40, 40));
+        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 110, 80));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Ongoing Projects");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 270, 26));
@@ -106,23 +106,25 @@ public class OngoingProjects_Page extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 580, 230));
 
-        btn_assigntome.setBackground(new java.awt.Color(113, 160, 160));
+        btn_assigntome.setBackground(new java.awt.Color(255, 255, 255));
         btn_assigntome.setText("Assign to me");
+        btn_assigntome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_assigntome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_assigntomeActionPerformed(evt);
             }
         });
-        add(btn_assigntome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
+        add(btn_assigntome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 90, 30));
 
-        btn_processapplication.setBackground(new java.awt.Color(113, 160, 160));
+        btn_processapplication.setBackground(new java.awt.Color(255, 255, 255));
         btn_processapplication.setText("Process");
+        btn_processapplication.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_processapplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_processapplicationActionPerformed(evt);
             }
         });
-        add(btn_processapplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 90, -1));
+        add(btn_processapplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 100, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed

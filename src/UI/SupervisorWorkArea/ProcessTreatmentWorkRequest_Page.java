@@ -133,7 +133,7 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
         txtDescription = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 226, 208));
 
         btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btn_goback.addActionListener(new java.awt.event.ActionListener() {
@@ -142,46 +142,61 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
             }
         });
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Process Treatment Work Request");
 
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_country.setText("Country:");
 
+        combo_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_countryActionPerformed(evt);
             }
         });
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_state.setText("State:");
 
+        combo_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_stateActionPerformed(evt);
             }
         });
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_city.setText("City:");
 
+        combo_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_cityActionPerformed(evt);
             }
         });
 
+        label_trustName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_trustName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_trustName.setText("Trust Name:");
 
+        combo_trustname.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
+        label_NameOfPatient.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_NameOfPatient.setText("Name of the Patient:");
 
+        text_nameofPatient.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
+        label_patientillness.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_patientillness.setText("Does the patient have illness ? :");
 
-        btn_snedtoseniorcare.setBackground(new java.awt.Color(113, 160, 160));
+        btn_snedtoseniorcare.setBackground(new java.awt.Color(255, 255, 255));
+        btn_snedtoseniorcare.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_snedtoseniorcare.setText("Send to Senior Care");
+        btn_snedtoseniorcare.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_snedtoseniorcare.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_snedtoseniorcareActionPerformed(evt);
@@ -189,6 +204,7 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
         });
 
         txtDescription.setColumns(20);
+        txtDescription.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         txtDescription.setRows(5);
         jScrollPane1.setViewportView(txtDescription);
 
@@ -215,7 +231,6 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(label_NameOfPatient)
                                                 .addGap(29, 29, 29)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(text_nameofPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(checkbox_illiness)))
@@ -245,15 +260,14 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)))
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(334, 334, 334)
-                                .addComponent(btn_snedtoseniorcare))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(41, 41, 41)
+                        .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 1169, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(334, 334, 334)
+                .addComponent(btn_snedtoseniorcare)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,10 +307,10 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
                         .addGap(25, 25, 25)
                         .addComponent(jLabel3)))
                 .addGap(9, 9, 9)
-                .addComponent(btn_snedtoseniorcare)
-                .addGap(46, 46, 46)
+                .addComponent(btn_snedtoseniorcare, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
                 .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(291, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

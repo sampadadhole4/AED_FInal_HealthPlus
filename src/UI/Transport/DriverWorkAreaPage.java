@@ -55,12 +55,13 @@ public class DriverWorkAreaPage extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBackground(new java.awt.Color(255, 232, 215));
         jPanel17.setMaximumSize(new java.awt.Dimension(700, 700));
         jPanel17.setMinimumSize(new java.awt.Dimension(700, 700));
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_callEmergency.setBackground(new java.awt.Color(113, 160, 160));
+        btn_callEmergency.setBackground(new java.awt.Color(255, 255, 255));
+        btn_callEmergency.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_callEmergency.setText("View Emergencies");
         btn_callEmergency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,13 +70,13 @@ public class DriverWorkAreaPage extends javax.swing.JPanel {
         });
         jPanel17.add(btn_callEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 200, 30));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Driver's Work Area");
         jPanel17.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
-        jPanel17.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 280, 490));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance-ambulanceemoji.gif"))); // NOI18N
+        jPanel17.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 550, 490));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);

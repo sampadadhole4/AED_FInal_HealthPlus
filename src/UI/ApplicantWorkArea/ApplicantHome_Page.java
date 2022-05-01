@@ -64,7 +64,7 @@ public class ApplicantHome_Page extends javax.swing.JPanel {
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(113, 160, 160));
+        controlJPanel.setBackground(new java.awt.Color(255, 183, 183));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 

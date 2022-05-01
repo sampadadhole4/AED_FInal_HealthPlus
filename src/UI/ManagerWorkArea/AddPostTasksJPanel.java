@@ -67,21 +67,25 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         btn_goback = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 221, 212));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        label_trust.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_trust.setText("Trust:");
         add(label_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
 
+        text_trustvalue.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         text_trustvalue.setText("<value>");
         add(text_trustvalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
 
+        label_project.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_project.setText("Project:");
         add(label_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
+        combo_project.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_project.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         combo_project.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,28 +94,33 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         });
         add(combo_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
 
-        btn_posttask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_posttask.setBackground(new java.awt.Color(255, 255, 255));
         btn_posttask.setText("Post");
+        btn_posttask.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_posttask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_posttaskActionPerformed(evt);
             }
         });
-        add(btn_posttask, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 110, -1));
+        add(btn_posttask, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 110, 30));
 
+        label_task.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_task.setText("Task:");
         add(label_task, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+
+        text_task.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_task, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 206, -1));
 
-        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
+        btn_goback.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_gobackActionPerformed(evt);
             }
         });
-        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 40, 40));
+        add(btn_goback, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 100, 90));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Post a Task");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 270, 26));

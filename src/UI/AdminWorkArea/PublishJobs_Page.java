@@ -89,7 +89,7 @@ public class PublishJobs_Page extends javax.swing.JPanel {
         text_jobtitle = new javax.swing.JTextField();
         btn_postApplication = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 243, 221));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
@@ -148,7 +148,7 @@ public class PublishJobs_Page extends javax.swing.JPanel {
         });
         add(text_jobtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
-        btn_postApplication.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postApplication.setBackground(new java.awt.Color(255, 255, 255));
         btn_postApplication.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_postApplication.setText("Submit");
         btn_postApplication.addActionListener(new java.awt.event.ActionListener() {

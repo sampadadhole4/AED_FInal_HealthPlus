@@ -47,40 +47,43 @@ public class AttendantWorkArea_Page extends javax.swing.JPanel {
         btn_gotreat = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 208, 194));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("CareTaker Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 270, 26));
 
-        btn_manageSeniorCare.setBackground(new java.awt.Color(113, 160, 160));
+        btn_manageSeniorCare.setBackground(new java.awt.Color(255, 255, 255));
+        btn_manageSeniorCare.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_manageSeniorCare.setText("Manage Senior Care");
         btn_manageSeniorCare.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_manageSeniorCareActionPerformed(evt);
             }
         });
-        add(btn_manageSeniorCare, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 200, 40));
+        add(btn_manageSeniorCare, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 200, 40));
 
-        btn_viewSenior.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewSenior.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewSenior.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewSenior.setText("View Seniors");
         btn_viewSenior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewSeniorActionPerformed(evt);
             }
         });
-        add(btn_viewSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 200, 40));
+        add(btn_viewSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 200, 40));
 
-        btn_gotreat.setBackground(new java.awt.Color(113, 160, 160));
+        btn_gotreat.setBackground(new java.awt.Color(255, 255, 255));
+        btn_gotreat.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_gotreat.setText("Send Senior for Treatment");
         btn_gotreat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_gotreatActionPerformed(evt);
             }
         });
-        add(btn_gotreat, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 200, 40));
+        add(btn_gotreat, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 200, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/caretaker.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 550, 410));

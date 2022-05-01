@@ -46,25 +46,27 @@ public class SupervisorWorkArea_Page extends javax.swing.JPanel {
         btn_ongoingporj = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 224, 208));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Coordinator Work Area");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 270, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 270, 26));
 
-        btn_ongoingporj.setBackground(new java.awt.Color(113, 160, 160));
+        btn_ongoingporj.setBackground(new java.awt.Color(255, 255, 255));
+        btn_ongoingporj.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_ongoingporj.setText("Ongoing Projects");
+        btn_ongoingporj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_ongoingporj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_ongoingporjActionPerformed(evt);
             }
         });
-        add(btn_ongoingporj, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 180, 150, 40));
+        add(btn_ongoingporj, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 150, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/coordinators.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 730, 550));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/co.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 810, 550));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_ongoingporjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ongoingporjActionPerformed

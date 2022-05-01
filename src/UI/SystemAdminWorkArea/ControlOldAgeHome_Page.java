@@ -142,49 +142,62 @@ public class ControlOldAgeHome_Page extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 226, 210));
 
-        btnAddNGO.setBackground(new java.awt.Color(113, 160, 160));
+        btnAddNGO.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnAddNGO.setText("Add Home");
+        btnAddNGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddNGOActionPerformed(evt);
             }
         });
 
-        btnDeleteNGO.setBackground(new java.awt.Color(113, 160, 160));
+        btnDeleteNGO.setBackground(new java.awt.Color(255, 255, 255));
+        btnDeleteNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnDeleteNGO.setText("Delete Home");
+        btnDeleteNGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteNGOActionPerformed(evt);
             }
         });
 
+        lblCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCountry.setText("Select Country:");
 
+        cbCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCountryActionPerformed(evt);
             }
         });
 
+        cbEnterpriseType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbEnterpriseType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbEnterpriseTypeActionPerformed(evt);
             }
         });
 
+        lblEnterpriseType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblEnterpriseType.setText("Enterprise Type:");
 
+        lblState1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblState1.setText("Select State:");
 
+        cbState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbStateActionPerformed(evt);
             }
         });
 
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblName.setText("Name of the OldAgeHome:");
+
+        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
         tblOldAge.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -211,22 +224,24 @@ public class ControlOldAgeHome_Page extends javax.swing.JPanel {
             tblOldAge.getColumnModel().getColumn(3).setPreferredWidth(40);
         }
 
+        lblCity1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCity1.setText("Select City:");
 
+        cbCity.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCityActionPerformed(evt);
             }
         });
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Old Age Home");
 
@@ -262,9 +277,9 @@ public class ControlOldAgeHome_Page extends javax.swing.JPanel {
                         .addGap(279, 279, 279)
                         .addComponent(btnAddNGO, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
+                        .addGap(25, 25, 25)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(208, Short.MAX_VALUE))
         );
@@ -274,8 +289,8 @@ public class ControlOldAgeHome_Page extends javax.swing.JPanel {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(81, 81, 81)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(btnDeleteNGO)
@@ -301,7 +316,7 @@ public class ControlOldAgeHome_Page extends javax.swing.JPanel {
                     .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addComponent(btnAddNGO, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

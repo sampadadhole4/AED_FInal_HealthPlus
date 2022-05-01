@@ -56,20 +56,22 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         Btn_emergencyServ = new javax.swing.JButton();
         Btn_transportFacilities = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 219, 207));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Facilities for Guest");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 250, 27));
 
-        btn_trusts.setBackground(new java.awt.Color(113, 160, 160));
+        btn_trusts.setBackground(new java.awt.Color(255, 255, 255));
+        btn_trusts.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_trusts.setForeground(new java.awt.Color(0, 0, 0));
         btn_trusts.setText("Trusts");
+        btn_trusts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_trusts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_trustsActionPerformed(evt);
@@ -77,9 +79,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_trusts, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
 
-        btn_viewjobs.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewjobs.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewjobs.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewjobs.setForeground(new java.awt.Color(0, 0, 0));
         btn_viewjobs.setText("Jobs");
+        btn_viewjobs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_viewjobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewjobsActionPerformed(evt);
@@ -87,9 +91,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_viewjobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 251, -1));
 
-        btn_addfundraisers.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addfundraisers.setBackground(new java.awt.Color(255, 255, 255));
+        btn_addfundraisers.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_addfundraisers.setForeground(new java.awt.Color(0, 0, 0));
         btn_addfundraisers.setText("Sign up as fundraising company");
+        btn_addfundraisers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_addfundraisers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_addfundraisersActionPerformed(evt);
@@ -97,9 +103,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_addfundraisers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
 
-        btn_raiserequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_raiserequest.setBackground(new java.awt.Color(255, 255, 255));
+        btn_raiserequest.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_raiserequest.setForeground(new java.awt.Color(0, 0, 0));
         btn_raiserequest.setText("Raise A Request");
+        btn_raiserequest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_raiserequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_raiserequestActionPerformed(evt);
@@ -107,9 +115,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 251, -1));
 
-        btn_logout.setBackground(new java.awt.Color(113, 160, 160));
+        btn_logout.setBackground(new java.awt.Color(255, 255, 255));
+        btn_logout.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(0, 0, 0));
         btn_logout.setText("Logout");
+        btn_logout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_logoutActionPerformed(evt);
@@ -117,9 +127,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
 
-        btn_oldagehome.setBackground(new java.awt.Color(113, 160, 160));
+        btn_oldagehome.setBackground(new java.awt.Color(255, 255, 255));
+        btn_oldagehome.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_oldagehome.setForeground(new java.awt.Color(0, 0, 0));
         btn_oldagehome.setText("Old Age Home");
+        btn_oldagehome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_oldagehome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_oldagehomeActionPerformed(evt);
@@ -130,9 +142,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/guest_new.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 800, 630));
 
-        Btn_emergencyServ.setBackground(new java.awt.Color(113, 160, 160));
+        Btn_emergencyServ.setBackground(new java.awt.Color(255, 255, 255));
+        Btn_emergencyServ.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         Btn_emergencyServ.setForeground(new java.awt.Color(0, 0, 0));
         Btn_emergencyServ.setText("Raise Emergency Services");
+        Btn_emergencyServ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Btn_emergencyServ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_emergencyServActionPerformed(evt);
@@ -140,9 +154,11 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(Btn_emergencyServ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 250, -1));
 
-        Btn_transportFacilities.setBackground(new java.awt.Color(113, 160, 160));
+        Btn_transportFacilities.setBackground(new java.awt.Color(255, 255, 255));
+        Btn_transportFacilities.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         Btn_transportFacilities.setForeground(new java.awt.Color(0, 0, 0));
         Btn_transportFacilities.setText("Transport Facilities");
+        Btn_transportFacilities.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Btn_transportFacilities.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_transportFacilitiesActionPerformed(evt);

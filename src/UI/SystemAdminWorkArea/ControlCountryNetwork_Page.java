@@ -61,7 +61,7 @@ public class ControlCountryNetwork_Page extends javax.swing.JPanel {
 
         jLabel1.setText("jLabel1");
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 229, 219));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(375, 0));
@@ -92,28 +92,33 @@ public class ControlCountryNetwork_Page extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 180));
 
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblName.setText("Name Of the Country:");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+
+        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 150, -1));
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
+        btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
+        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 90, 40));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, 100, 90));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Country Network");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 380, 26));
