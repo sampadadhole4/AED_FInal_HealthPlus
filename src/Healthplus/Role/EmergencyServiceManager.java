@@ -10,17 +10,20 @@ import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
-import UI.ApplicantWorkArea.ApplicantHome_Page;
+import UI.AttendantWorkArea.AttendantHome_Page;
+import UI.EmergencyServices.EmergencyServicesHome_Panel;
 import javax.swing.JPanel;
 
-
-public class Applicant extends Roles{
-    public Applicant(){
-        super(Roles.RoleType.Applicant.getValue());
+/**
+ *
+ * @author sampadadhole
+ */
+public class EmergencyServiceManager extends Roles{
+    public EmergencyServiceManager(){
+        super(Roles.RoleType.EmergencyServiceManager.getValue());
     }
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
-       return new ApplicantHome_Page(userProcessContainer, business,dB4OUtil,userAccount);
+        return new EmergencyServicesHome_Panel(userProcessContainer, business, dB4OUtil, userAccount, organization, enterprise);
     }
-    
 }

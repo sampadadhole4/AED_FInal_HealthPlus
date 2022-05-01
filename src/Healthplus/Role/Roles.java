@@ -22,7 +22,8 @@ public abstract class Roles {
         System("System Type"),
         Applicant("Applicant Type"),
         CareTaker("CareTaker Type"),
-        Doctor("Doctor Type");
+        Doctor("Doctor Type"),
+        EmergencyServiceManager("EmergencyServiceManager Type");
         
         private String value;
         

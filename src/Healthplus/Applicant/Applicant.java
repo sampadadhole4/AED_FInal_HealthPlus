@@ -6,12 +6,12 @@
 package Healthplus.Applicant;
 
 
-public class Candidate {
+public class Applicant {
     private String name;
     private int id;
     private static int count = 1;
     
-     public Candidate() {
+     public Applicant() {
         id = count;
         count++;
     }

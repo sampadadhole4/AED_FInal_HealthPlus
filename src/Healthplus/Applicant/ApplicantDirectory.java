@@ -7,28 +7,28 @@ package Healthplus.Applicant;
 
 import java.util.ArrayList;
 
-public class CandidateDirectory {
-    private ArrayList <Candidate> applicantList;
+public class ApplicantDirectory {
+    private ArrayList <Applicant> applicantList;
     
-    public CandidateDirectory(){
+    public ApplicantDirectory(){
         this.applicantList = new ArrayList<>();
     }
 
-    public ArrayList<Candidate> getApplicantList() {
+    public ArrayList<Applicant> getApplicantList() {
         return applicantList;
     }
 
-    public void setApplicantList(ArrayList<Candidate> applicantList) {
+    public void setApplicantList(ArrayList<Applicant> applicantList) {
         this.applicantList = applicantList;
     }
-    public Candidate createApplicant(String name){
-        Candidate applicant = new Candidate();
+    public Applicant createApplicant(String name){
+        Applicant applicant = new Applicant();
         applicant.setName(name);
         applicantList.add(applicant);
         return applicant;
     }
     
-    public void removeApplicant (Candidate applicant){
+    public void removeApplicant (Applicant applicant){
         applicantList.remove(applicant);
     }
 }

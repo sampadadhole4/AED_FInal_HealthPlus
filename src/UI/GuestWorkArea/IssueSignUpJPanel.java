@@ -5,12 +5,12 @@
  */
 package UI.GuestWorkArea;
 
-import Healthplus.Applicant.Candidate;
-import Healthplus.Applicant.CandidateDirectory;
+import Healthplus.Applicant.Applicant;
+import Healthplus.Applicant.ApplicantDirectory;
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
-import Healthplus.Role.Applicant;
+import Healthplus.Role.ApplicantRole;
 import Healthplus.UserAccount.UserAccount;
 import UI.ApplicantWorkArea.ApplicantHome_Page;
 import java.awt.CardLayout;
@@ -160,8 +160,8 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
             }
 
             if (system.getUserAccountDirectory().checkIfUsernameIsUnique(userName)) {
-                UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(userName, password, null, new Applicant());
-                Candidate applicant = system.getApplicantDirectory().createApplicant(name);
+                UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(userName, password, null, new ApplicantRole());
+                Applicant applicant = system.getApplicantDirectory().createApplicant(name);
                 userAccount.setApplicant(applicant);
 
                 JOptionPane.showMessageDialog(null, "User account added successfully", "Information", JOptionPane.INFORMATION_MESSAGE);

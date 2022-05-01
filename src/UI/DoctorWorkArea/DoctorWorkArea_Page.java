@@ -83,7 +83,7 @@ public class DoctorWorkArea_Page extends javax.swing.JPanel {
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ManageTreatmentSenior_Page mtsj = new ManageTreatmentSenior_Page(userProcessContainer, system, userAccount, organization, enterprise);
-        userProcessContainer.add("OngoingProjectsJPanel", mtsj);
+        userProcessContainer.add("mtsj", mtsj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_manageSeniorPatientsActionPerformed
 
@@ -91,7 +91,7 @@ public class DoctorWorkArea_Page extends javax.swing.JPanel {
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         ViewTreatmentSenior_Page vtsj = new ViewTreatmentSenior_Page(userProcessContainer, system, userAccount, organization, enterprise);
-        userProcessContainer.add("OngoingProjectsJPanel", vtsj);
+        userProcessContainer.add("vtsj", vtsj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_viewSeniorPatientsActionPerformed
 

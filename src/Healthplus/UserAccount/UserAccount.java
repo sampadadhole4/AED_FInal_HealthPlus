@@ -5,7 +5,7 @@
  */
 package Healthplus.UserAccount;
 
-import Healthplus.Applicant.Candidate;
+import Healthplus.Applicant.Applicant;
 import Healthplus.Worker.Worker;
 import Healthplus.Role.Roles;
 import Healthplus.WorkQueue.WorkQueue;
@@ -14,7 +14,7 @@ public class UserAccount {
     private String username;
     private String password;
     private Worker employee;
-    private Candidate applicant;
+    private Applicant applicant;
     private Roles role;
     private WorkQueue workQueue;
 
@@ -58,11 +58,11 @@ public class UserAccount {
         return workQueue;
     }
 
-    public Candidate getApplicant() {
+    public Applicant getApplicant() {
         return applicant;
     }
 
-    public void setApplicant(Candidate applicant) {
+    public void setApplicant(Applicant applicant) {
         this.applicant = applicant;
     }
 

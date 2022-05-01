@@ -5,7 +5,7 @@
  */
 package Healthplus;
 
-import Healthplus.Applicant.CandidateDirectory;
+import Healthplus.Applicant.ApplicantDirectory;
 import Healthplus.Network.Country;
 import Healthplus.Org.Org;
 import Healthplus.Role.Roles;
@@ -18,13 +18,13 @@ public class E_System extends Org {
     private static E_System business;
     
     //Ecosystem has applicant directory for the entire network.
-    private CandidateDirectory applicantDirectory;
+    private ApplicantDirectory applicantDirectory;
     private ArrayList<Country> networkList;
     
     private E_System() {
         super(null);
         networkList = new ArrayList<>();
-        applicantDirectory = new CandidateDirectory();
+        applicantDirectory = new ApplicantDirectory();
     }
     
     public static E_System getInstance()
@@ -63,11 +63,11 @@ public class E_System extends Org {
         networkList.remove(country);
     }
 
-    public CandidateDirectory getApplicantDirectory() {
+    public ApplicantDirectory getApplicantDirectory() {
         return applicantDirectory;
     }
 
-    public void setApplicantDirectory(CandidateDirectory applicantDirectory) {
+    public void setApplicantDirectory(ApplicantDirectory applicantDirectory) {
         this.applicantDirectory = applicantDirectory;
     }
     

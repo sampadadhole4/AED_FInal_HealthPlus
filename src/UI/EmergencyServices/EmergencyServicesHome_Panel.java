@@ -3,44 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DoctorWorkArea;
+package UI.EmergencyServices;
 
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
-import UI.WorkerViewArea.WorkerViewArea_Page;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import UI.EmergencyServices.EmergencyServViewAreaPage;
 
+/**
+ *
+ * @author sampadadhole
+ */
+public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
 
-public class DoctorHome_Page extends javax.swing.JPanel {
-
-    /**
-     * Creates new form VolunteerHomeJPanel
-     */
+    
     private JPanel mainContainer;
     private E_System system;
     private DB4OUtil dB4OUtil;
     private UserAccount userAccount;
     private Org organization;
     private Enterprise enterprise;
-
-    public DoctorHome_Page(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
-        initComponents();
-        this.mainContainer = mainContainer;
+    
+   
+    public EmergencyServicesHome_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
+      initComponents();
+      this.mainContainer = mainContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
-
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        DoctorWorkArea_Page dwaj = new DoctorWorkArea_Page(userProcessContainer, system, userAccount, organization, enterprise);
-        userProcessContainer.add("CoordinatorWorkAreaJPanel", dwaj);
-        cardLayout.next(userProcessContainer);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,6 +49,7 @@ public class DoctorHome_Page extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         splitPane = new javax.swing.JSplitPane();
         controlJPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
@@ -59,7 +58,7 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         splitPane.setBackground(new java.awt.Color(255, 255, 255));
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
@@ -93,18 +92,16 @@ public class DoctorHome_Page extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.gif"))); // NOI18N
-
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(250, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                     .addComponent(btn_view, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
@@ -133,15 +130,36 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         userProcessContainer.setLayout(new java.awt.CardLayout());
         splitPane.setRightComponent(userProcessContainer);
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -157,15 +175,15 @@ public class DoctorHome_Page extends javax.swing.JPanel {
     private void btn_workActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_workActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        DoctorWorkArea_Page dwaj = new DoctorWorkArea_Page(userProcessContainer, system, userAccount, organization, enterprise);
-        userProcessContainer.add("CoordinatorWorkAreaJPanel", dwaj);
+        EmergencyServWorkAreaPage dwaj = new EmergencyServWorkAreaPage(userProcessContainer, system, userAccount, organization, enterprise);
+        userProcessContainer.add("dwaj", dwaj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_workActionPerformed
 
     private void btn_viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        WorkerViewArea_Page evajp = new WorkerViewArea_Page(userProcessContainer, system, dB4OUtil, userAccount, organization, enterprise);
+        EmergencyServViewAreaPage evajp = new EmergencyServViewAreaPage(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("evajp", evajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_viewActionPerformed
@@ -177,6 +195,7 @@ public class DoctorHome_Page extends javax.swing.JPanel {
     private javax.swing.JButton btn_work;
     private javax.swing.JPanel controlJPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables

@@ -44,10 +44,10 @@ public class OrgDirectory {
             organization = new MedicalOrg();
             organizationList.add(organization);
         } 
-//        else if (type.getValue().equals(OrgType.Applicant.getValue())){
-//            organization = new ApplicantOrganization();
-//            organizationList.add(organization);
-//        }
+        else if (type.getValue().equals(OrgType.EmergencyRequest.getValue())){
+            organization = new EmergencyServices();
+            organizationList.add(organization);
+        }
         return organization;
     }
     

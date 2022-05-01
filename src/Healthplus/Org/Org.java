@@ -6,6 +6,7 @@
 package Healthplus.Org;
 
 import Healthplus.Account.AccountDirectory;
+import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.FundRaiser.FundRaiserDirectory;
 import Healthplus.SeniorMedical.SeniorMedicalDirectory;
 import Healthplus.Worker.WorkerDirectory;
@@ -30,6 +31,7 @@ public abstract class Org {
     private JobDirectory jobDirectory;
     private SeniorMedicalDirectory seniorMedicalDirectory;
     private SeniorCareDirectory seniorCareDirectory;
+    private EmergencyRequestDirectory EmergencyRequestDirectory;
     private int organizationID;
     private static int counter = 1;
     
@@ -40,8 +42,9 @@ public abstract class Org {
         Campaign("Campaign Organization"), 
         Welfare("Welfare Organization"),
         SeniorCare("Senior Care Organization"),
-        Medical("Medical Organization");
-        //EmergencyServices("Emergency Services");
+        Medical("Medical Organization"),
+        EmergencyRequest("EmergencyRequest Organization");
+        
         
         private String value;
         private OrgType(String value) {
@@ -62,8 +65,17 @@ public abstract class Org {
         accountDirectory = new AccountDirectory();
         seniorMedicalDirectory = new SeniorMedicalDirectory();
         seniorCareDirectory = new SeniorCareDirectory();
+        EmergencyRequestDirectory = new EmergencyRequestDirectory();
         organizationID = counter;
         ++counter;
+    }
+
+    public EmergencyRequestDirectory getEmergencyRequestDirectory() {
+        return EmergencyRequestDirectory;
+    }
+
+    public void setEmergencyRequestDirectory(EmergencyRequestDirectory EmergencyRequestDirectory) {
+        this.EmergencyRequestDirectory = EmergencyRequestDirectory;
     }
     public abstract ArrayList<Roles> getSupportedRole();
 

@@ -5,10 +5,25 @@
  */
 package Healthplus.Org;
 
+import Healthplus.Role.Doctor;
+import Healthplus.Role.EmergencyServiceManager;
+import Healthplus.Role.Roles;
+import java.util.ArrayList;
+
 /**
  *
  * @author sampadadhole
  */
-public class EmergencyServices {
+public class EmergencyServices extends Org {
+ 
+     public EmergencyServices() {
+       super(Org.OrgType.EmergencyRequest.getValue());
+    }
     
+    @Override
+    public ArrayList<Roles> getSupportedRole() {
+        ArrayList<Roles> roles = new ArrayList();
+        roles.add(new EmergencyServiceManager());
+        return roles;
+    }
 }

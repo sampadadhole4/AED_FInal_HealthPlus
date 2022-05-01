@@ -167,6 +167,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
                 userProcessContainer.add("SignUpJPanel", sujp);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
+                
             } else {
                 try{
                 for (WorkRequest wr : userAccount.getWorkQueue().getWorkRequestList()) {

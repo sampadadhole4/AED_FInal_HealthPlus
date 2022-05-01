@@ -6,6 +6,7 @@
 package Healthplus.Enterprises;
 import Healthplus.Org.Org;
 import Healthplus.Org.OrgDirectory;
+
 import Healthplus.Enterprises.EmergencyServices;
 
 public abstract class Enterprise extends Org {
@@ -20,8 +21,8 @@ public abstract class Enterprise extends Org {
     
     public enum EnterpriseType{
         Trust("Trust"),
-        OldAgeHome("OldAgeHome");
-        //EmergencyServices("EmergencyServices");
+        OldAgeHome("OldAgeHome"),
+        EmergencyServices("EmergencyServices");
         private String value;
 
         private EnterpriseType(String value) {
