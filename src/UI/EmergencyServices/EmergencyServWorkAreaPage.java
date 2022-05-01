@@ -29,7 +29,7 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
     private Enterprise enterprise;
     ArrayList<Emergency> emergency;
      private EmergencyRequestDirectory EmergencyList;
-    public EmergencyServWorkAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise) {
+    public EmergencyServWorkAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise, EmergencyRequestDirectory EmergencyList) {
         initComponents();
        this.userProcessContainer = userProcessContainer;
         this.system = system;
@@ -37,7 +37,7 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
         this.organization = organization;
         this.enterprise = enterprise;
         this.emergency = emergency;
-        EmergencyList = new EmergencyRequestDirectory();
+      this.EmergencyList = EmergencyList;
     }
 
     /**

@@ -9,11 +9,13 @@ import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
 import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
+import Healthplus.EmergencyServices.Emergency;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import UI.EmergencyServices.EmergencyServViewAreaPage;
+import java.util.ArrayList;
 
 /**
  *
@@ -30,9 +32,11 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
     private Enterprise enterprise;
       private EmergencyRequestDirectory EmergencyList;
       private EmergencyServicesHome_Panel emerhome;
+       ArrayList<Emergency> emergency;
+
     
    
-    public EmergencyServicesHome_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList) {
+    public EmergencyServicesHome_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
       initComponents();
       this.mainContainer = mainContainer;
         this.system = system;
@@ -181,7 +185,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
     private void btn_workActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_workActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        EmergencyServWorkAreaPage dwaj = new EmergencyServWorkAreaPage(userProcessContainer, system, userAccount, organization, enterprise);
+        EmergencyServWorkAreaPage dwaj = new EmergencyServWorkAreaPage(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
         userProcessContainer.add("dwaj", dwaj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_workActionPerformed
@@ -189,7 +193,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
     private void btn_viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        EmergencyServViewAreaPage evajp = new EmergencyServViewAreaPage(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList,emerhome);
+        EmergencyServViewAreaPage evajp = new EmergencyServViewAreaPage(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
         userProcessContainer.add("evajp", evajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_viewActionPerformed

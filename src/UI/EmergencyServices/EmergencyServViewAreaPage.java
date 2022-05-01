@@ -30,7 +30,7 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
     private EmergencyRequestDirectory EmergencyList;
     private EmergencyServicesHome_Panel emerhome;
     ArrayList<Emergency> emergency;
-    public EmergencyServViewAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList,EmergencyServicesHome_Panel emerhome) {
+    public EmergencyServViewAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList) {
         initComponents();
          this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
@@ -38,7 +38,7 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
          this.EmergencyList=EmergencyList;
         this.enterprise = enterprise;
         this.system = system;
-        this.emerhome = emerhome;
+        //this.emerhome = emerhome;
         this.emergency = emergency;
         populatetransportTable();
     }

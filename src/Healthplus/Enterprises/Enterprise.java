@@ -22,7 +22,8 @@ public abstract class Enterprise extends Org {
     public enum EnterpriseType{
         Trust("Trust"),
         OldAgeHome("OldAgeHome"),
-        EmergencyServices("EmergencyServices");
+        EmergencyServices("EmergencyServices"),
+        Transport("Transport");
         private String value;
 
         private EnterpriseType(String value) {
