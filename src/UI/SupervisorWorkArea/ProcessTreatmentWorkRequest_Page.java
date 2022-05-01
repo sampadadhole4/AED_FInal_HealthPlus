@@ -332,6 +332,9 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
         if(checkbox_illiness.isSelected()){
             illness = true;
         }
+        else{
+             illness = true;
+        }
         
         if(name.equals("")){
             JOptionPane.showMessageDialog(null, "Please enter value name of the senior", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -356,7 +359,7 @@ public class ProcessTreatmentWorkRequest_Page extends javax.swing.JPanel {
         SeniorCareWorkRequest req = new SeniorCareWorkRequest();
         SeniorCare senior = new SeniorCare();
         senior.setName(name);
-        senior.setIllness(illness);
+        senior.setIllness(true);
         senior.setCountry(combo_country.getSelectedItem().toString());
         senior.setState(combo_state.getSelectedItem().toString());
         senior.setCity(combo_city.getSelectedItem().toString());

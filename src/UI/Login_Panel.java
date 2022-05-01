@@ -7,6 +7,7 @@ package UI;
 
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
+import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Network.City;
 import Healthplus.Network.Country;
@@ -31,12 +32,14 @@ public class Login_Panel extends javax.swing.JPanel {
     private JPanel mainContainer;
     private E_System system;
     private DB4OUtil dB4OUtil;
+    
+    private EmergencyRequestDirectory EmergencyList;
     public Login_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil) {
         initComponents();
         this.mainContainer = mainContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
-       
+        this.EmergencyList = new EmergencyRequestDirectory();
     }
 
     /**
@@ -199,7 +202,7 @@ public class Login_Panel extends javax.swing.JPanel {
             txtFldUserName.setText("");
             passFld.setText("");
             CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
-            mainContainer.add("workArea",userAccount.getRole().createWorkArea(mainContainer, system, dB4OUtil, userAccount, inOrganization, inEnterprise));
+            mainContainer.add("workArea",userAccount.getRole().createWorkArea(mainContainer, system, dB4OUtil, userAccount, inOrganization, inEnterprise, EmergencyList));
             cardLayout.next(mainContainer);   
         }
 

@@ -6,6 +6,7 @@
 package Healthplus.Role;
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
+import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
@@ -23,7 +24,8 @@ public abstract class Roles {
         Applicant("Applicant Type"),
         CareTaker("CareTaker Type"),
         Doctor("Doctor Type"),
-        EmergencyServiceManager("EmergencyServiceManager Type");
+        EmergencyServiceManager("EmergencyServiceManager Type"),
+        DriverRole("Driver Type");
         
         private String value;
         
@@ -54,7 +56,7 @@ public abstract class Roles {
     public void setName(String name) {
         this.name = name;
     }
-    public abstract JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise);
+    public abstract JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise, EmergencyRequestDirectory EmergencyList);
 
     @Override
     public String toString() {

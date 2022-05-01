@@ -27,7 +27,7 @@ public class EmergencyServiceManager extends Roles{
         super(Roles.RoleType.EmergencyServiceManager.getValue());
     }
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
+    public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList) {
         return new EmergencyServicesHome_Panel(userProcessContainer, business, dB4OUtil, userAccount, organization, enterprise);
     }
 }

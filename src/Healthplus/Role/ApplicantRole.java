@@ -7,6 +7,7 @@ package Healthplus.Role;
 
 import Healthplus.DB4OUtil.DB4OUtil;
 import Healthplus.E_System;
+import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
@@ -19,7 +20,7 @@ public class ApplicantRole extends Roles{
         super(Roles.RoleType.Applicant.getValue());
     }
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
+    public JPanel createWorkArea(JPanel userProcessContainer, E_System business, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList) {
        return new ApplicantHome_Page(userProcessContainer, business,dB4OUtil,userAccount);
     }
     

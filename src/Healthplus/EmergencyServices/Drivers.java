@@ -12,7 +12,7 @@ import java.util.Random;
  *
  * @author sampadadhole
  */
-public class Driver {
+public class Drivers {
        private static ArrayList<String>  driverslist = new ArrayList<String>(){
            {add("John");
             add("Ben");
@@ -25,7 +25,7 @@ public class Driver {
 
        };  
 
-       Driver(){
+       Drivers(){
        }
 
     
