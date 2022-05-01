@@ -6,6 +6,7 @@
 package Healthplus.Org;
 import Healthplus.Org.Org.OrgType;
 import java.util.ArrayList;
+import javax.mail.Transport;
 
 public class OrgDirectory {
     private ArrayList<Org> organizationList;
@@ -46,6 +47,10 @@ public class OrgDirectory {
         } 
         else if (type.getValue().equals(OrgType.EmergencyRequest.getValue())){
             organization = new EmergencyServices();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(OrgType.Transport.getValue())){
+            organization = new TransportOrg();
             organizationList.add(organization);
         }
         return organization;

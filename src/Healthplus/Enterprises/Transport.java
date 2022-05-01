@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Transport extends Enterprise {
     public Transport(String name) {
-        super(name, Enterprise.EnterpriseType.Trust);
+        super(name, Enterprise.EnterpriseType.Transport);
     }
 
     @Override

@@ -14,6 +14,7 @@ import Healthplus.SeniorCare.SeniorCareDirectory;
 import Healthplus.Project.ProjectDirectory;
 import Healthplus.Role.Roles;
 import Healthplus.Job.JobDirectory;
+import Healthplus.Transport.DriverDirectory;
 import Healthplus.UserAccount.UserAccountDirectory;
 import Healthplus.WorkQueue.WorkQueue;
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public abstract class Org {
     private SeniorMedicalDirectory seniorMedicalDirectory;
     private SeniorCareDirectory seniorCareDirectory;
     private EmergencyRequestDirectory EmergencyRequestDirectory;
+    private DriverDirectory DriverDirectory;
     private int organizationID;
     private static int counter = 1;
     
@@ -43,7 +45,8 @@ public abstract class Org {
         Welfare("Welfare Organization"),
         SeniorCare("Senior Care Organization"),
         Medical("Medical Organization"),
-        EmergencyRequest("EmergencyRequest Organization");
+        EmergencyRequest("EmergencyRequest Organization"),
+        Transport("Transport Organization");
         
         
         private String value;
@@ -66,8 +69,17 @@ public abstract class Org {
         seniorMedicalDirectory = new SeniorMedicalDirectory();
         seniorCareDirectory = new SeniorCareDirectory();
         EmergencyRequestDirectory = new EmergencyRequestDirectory();
+        DriverDirectory = new DriverDirectory();
         organizationID = counter;
         ++counter;
+    }
+
+    public DriverDirectory getDriverDirectory() {
+        return DriverDirectory;
+    }
+
+    public void setDriverDirectory(DriverDirectory DriverDirectory) {
+        this.DriverDirectory = DriverDirectory;
     }
 
     public EmergencyRequestDirectory getEmergencyRequestDirectory() {

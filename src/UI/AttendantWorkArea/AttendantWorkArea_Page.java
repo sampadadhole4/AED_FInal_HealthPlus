@@ -106,7 +106,7 @@ public class AttendantWorkArea_Page extends javax.swing.JPanel {
     private void btn_gotreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gotreatActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        SendSeniorForTreatment_Page efgh = new SendSeniorForTreatment_Page(userProcessContainer, system, userAccount, organization, enterprise);
+            SendSeniorForTreatment_Page efgh = new SendSeniorForTreatment_Page(userProcessContainer, system, userAccount, organization, enterprise);
         userProcessContainer.add("efgh", efgh);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_gotreatActionPerformed

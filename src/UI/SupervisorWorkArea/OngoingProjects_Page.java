@@ -46,8 +46,8 @@ public class OngoingProjects_Page extends javax.swing.JPanel {
                 Object[] row = new Object[5];
                 row[0] = (PostTaskWorkRequest)request;
                 row[1] = ((PostTaskWorkRequest) request).getTask();
-                row[2] = request.getSender().getEmployee().getName();
-                row[3] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+                row[2] = request.getSender().getUsername();
+                row[3] = request.getReceiver() == null ? null : request.getReceiver().getUsername();
                 row[4] = request.getStatus();
                 model.addRow(row);
             }
