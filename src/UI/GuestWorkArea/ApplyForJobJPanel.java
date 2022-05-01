@@ -188,7 +188,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
                 }
 
             }catch(ConcurrentModificationException ex){
-                
+                JOptionPane.showMessageDialog(this, ex.getMessage());
             }
             }
 

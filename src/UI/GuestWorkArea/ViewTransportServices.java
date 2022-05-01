@@ -38,18 +38,13 @@ public class ViewTransportServices extends javax.swing.JPanel {
     }
   public void populatetransportTable(){
        DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
-        //model.setRowCount(3);
-//        if(emergency.isEmpty())
-//        {
-//            JOptionPane.showMessageDialog(this,"Person Doesn't exist!");
-//
-//        }
+ 
          for(Emergency c : EmergencyList.getEmergencyList()){
             Object row[] = new Object[4];
             row[0] = c.getCountry();
             row[1] = c.getState();
             row[2] = c.getCity();
-            row[3] = c.getDrivername();
+            //row[3] = c.getDrivername();
             model.addRow(row);
    }
    }

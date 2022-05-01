@@ -6,11 +6,15 @@
 package UI.EmergencyServices;
 
 import Healthplus.E_System;
+import Healthplus.EmergencyServices.Emergency;
+import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,16 +27,39 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
     private Org organization;
     private Enterprise enterprise;
     private E_System system;
-    public EmergencyServViewAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise) {
+    private EmergencyRequestDirectory EmergencyList;
+    private EmergencyServicesHome_Panel emerhome;
+    ArrayList<Emergency> emergency;
+    public EmergencyServViewAreaPage(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList,EmergencyServicesHome_Panel emerhome) {
         initComponents();
          this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
         this.organization = organization;
+         this.EmergencyList=EmergencyList;
         this.enterprise = enterprise;
         this.system = system;
-        
+        this.emerhome = emerhome;
+        this.emergency = emergency;
+        populatetransportTable();
     }
 
+     public void populatetransportTable(){
+       DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
+        //model.setRowCount(3);
+//        if(emergency.isEmpty())
+//        {
+//            JOptionPane.showMessageDialog(this,"Person Doesn't exist!");
+//
+//        }
+         for(Emergency c : EmergencyList.getEmergencyList()){
+            Object row[] = new Object[4];
+            row[0] = c.getCountry();
+            row[1] = c.getState();
+            row[2] = c.getCity();
+            row[3] = c.getDrivername();
+            model.addRow(row);
+   }
+   }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,7 +73,7 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         btn_goback = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblViewVolunteers = new javax.swing.JTable();
+        table_transport = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -58,23 +85,23 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
             }
         });
 
-        tblViewVolunteers.setModel(new javax.swing.table.DefaultTableModel(
+        table_transport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Name", "Illness"
+                "Country", "City", "locality", "Driver's Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true
+                false, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblViewVolunteers);
+        jScrollPane1.setViewportView(table_transport);
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -160,6 +187,6 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JTable tblViewVolunteers;
+    private javax.swing.JTable table_transport;
     // End of variables declaration//GEN-END:variables
 }

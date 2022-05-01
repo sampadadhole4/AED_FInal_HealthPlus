@@ -16,6 +16,7 @@ import Healthplus.Network.State;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -37,6 +38,7 @@ public class CallEmergecyServices extends javax.swing.JPanel {
     private UserAccount userAccount;
     private Org organization;
     private Enterprise enterprise;
+    ArrayList<Emergency> emergency;
     private EmergencyRequestDirectory EmergencyList;
     public CallEmergecyServices(JPanel userProcessContainer, E_System system, UserAccount userAccount, Org organization, Enterprise enterprise, EmergencyRequestDirectory EmergencyList) {
         initComponents();
@@ -45,8 +47,9 @@ public class CallEmergecyServices extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
+        this.emergency = emergency;
         this.EmergencyList = EmergencyList;
-         populateCountry();
+       populateCountry();
        populateState();
        populateCity();
     }
