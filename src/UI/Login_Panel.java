@@ -60,8 +60,6 @@ public class Login_Panel extends javax.swing.JPanel {
         btnGuestLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 226, 212));
         setMaximumSize(new java.awt.Dimension(900, 900));
@@ -121,17 +119,6 @@ public class Login_Panel extends javax.swing.JPanel {
         jLabel3.setMinimumSize(new java.awt.Dimension(235, 215));
         jLabel3.setPreferredSize(new java.awt.Dimension(200, 195));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 270, 240));
-
-        jTextArea2.setBackground(new java.awt.Color(250, 246, 227));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(255, 102, 102));
-        jTextArea2.setRows(5);
-        jTextArea2.setText("\n  Contact us:\n  Email address : medicaresystem@gmail.com");
-        jTextArea2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane2.setViewportView(jTextArea2);
-
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 770, 360, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -237,8 +224,6 @@ public class Login_Panel extends javax.swing.JPanel {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblTitel;
     private javax.swing.JLabel lblUserName;

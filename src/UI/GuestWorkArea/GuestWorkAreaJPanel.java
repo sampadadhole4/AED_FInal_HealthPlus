@@ -53,8 +53,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         btn_logout = new javax.swing.JButton();
         btn_oldagehome = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        Btn_emergencyServ = new javax.swing.JButton();
-        Btn_transportFacilities = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 219, 207));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -141,30 +139,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/guest_new.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 800, 630));
-
-        Btn_emergencyServ.setBackground(new java.awt.Color(255, 255, 255));
-        Btn_emergencyServ.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        Btn_emergencyServ.setForeground(new java.awt.Color(0, 0, 0));
-        Btn_emergencyServ.setText("Raise Emergency Services");
-        Btn_emergencyServ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Btn_emergencyServ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_emergencyServActionPerformed(evt);
-            }
-        });
-        add(Btn_emergencyServ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 250, -1));
-
-        Btn_transportFacilities.setBackground(new java.awt.Color(255, 255, 255));
-        Btn_transportFacilities.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        Btn_transportFacilities.setForeground(new java.awt.Color(0, 0, 0));
-        Btn_transportFacilities.setText("Transport Facilities");
-        Btn_transportFacilities.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Btn_transportFacilities.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_transportFacilitiesActionPerformed(evt);
-            }
-        });
-        add(Btn_transportFacilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 250, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_trustsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_trustsActionPerformed
@@ -215,24 +189,8 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_oldagehomeActionPerformed
 
-    private void Btn_emergencyServActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_emergencyServActionPerformed
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        RaiseEmergencyServices emergencyServ = new RaiseEmergencyServices(userProcessContainer, system, EmergencyList);
-        userProcessContainer.add("oahj",emergencyServ);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_Btn_emergencyServActionPerformed
-
-    private void Btn_transportFacilitiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_transportFacilitiesActionPerformed
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ViewTransportServices transport = new ViewTransportServices(userProcessContainer, system,EmergencyList,raise);
-        userProcessContainer.add("oahj",transport);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_Btn_transportFacilitiesActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn_emergencyServ;
-    private javax.swing.JButton Btn_transportFacilities;
     private javax.swing.JButton btn_addfundraisers;
     private javax.swing.JButton btn_logout;
     private javax.swing.JButton btn_oldagehome;

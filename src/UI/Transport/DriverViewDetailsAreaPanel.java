@@ -13,6 +13,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -39,10 +40,10 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         this.system = system;
         this.emergency = emergency;
        
-        populatetransportTable();
+        populatetransportTable(EmergencyList.getEmergencyList());
     }
 
-      public void populatetransportTable(){
+      public void populatetransportTable(ArrayList<Emergency> emergencyList){
        DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
         //model.setRowCount(3);
 //        if(emergency.isEmpty())
@@ -113,6 +114,11 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         btn_accept.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_accept.setText("Accept");
         btn_accept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_accept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_acceptActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -213,6 +219,10 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btn_gobackActionPerformed
+
+    private void btn_acceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_acceptActionPerformed
+        JOptionPane.showMessageDialog(this, "Your request has been accepted");
+    }//GEN-LAST:event_btn_acceptActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

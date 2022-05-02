@@ -81,7 +81,12 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="btn_goback" min="-2" pref="104" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="257" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
@@ -119,14 +124,9 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="btn_getEmergency" min="-2" pref="185" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="btn_goback" min="-2" pref="104" max="-2" attributes="0"/>
-                              <EmptySpace pref="363" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jLabel1" min="-2" pref="694" max="-2" attributes="0"/>
@@ -176,9 +176,9 @@
                                   <Component id="label_emailId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="text_emailId" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="71" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                               <Component id="btn_getEmergency" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace pref="64" max="32767" attributes="0"/>
                               <Component id="btn_goback" min="-2" pref="77" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                           </Group>

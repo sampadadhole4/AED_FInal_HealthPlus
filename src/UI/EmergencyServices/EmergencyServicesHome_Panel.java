@@ -36,7 +36,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
 
     
    
-    public EmergencyServicesHome_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise) {
+    public EmergencyServicesHome_Panel(JPanel mainContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, Org organization, Enterprise enterprise,EmergencyRequestDirectory EmergencyList) {
       initComponents();
       this.mainContainer = mainContainer;
         this.system = system;
@@ -44,8 +44,8 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
-        //this.EmergencyList=EmergencyList;
-        EmergencyList = new EmergencyRequestDirectory();
+        this.EmergencyList=EmergencyList;
+        //EmergencyList = new EmergencyRequestDirectory();
         
     }
     
