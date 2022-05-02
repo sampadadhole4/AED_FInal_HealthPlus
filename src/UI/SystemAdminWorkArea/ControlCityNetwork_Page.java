@@ -102,7 +102,7 @@ public class ControlCityNetwork_Page extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 225, 205));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setName(""); // NOI18N
@@ -135,11 +135,15 @@ public class ControlCityNetwork_Page extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, 170));
 
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblName.setText("Name of the City:");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+
+        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 150, -1));
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
+        btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
+        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,9 +152,11 @@ public class ControlCityNetwork_Page extends javax.swing.JPanel {
         });
         add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, -1, -1));
 
+        lblState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblState.setText("Select State:");
         add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, 20));
 
+        cbCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCountry.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,21 +165,23 @@ public class ControlCityNetwork_Page extends javax.swing.JPanel {
         });
         add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 150, -1));
 
+        cbState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbState.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 150, -1));
 
+        labeL_countr.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         labeL_countr.setText("Select Country:");
         add(labeL_countr, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, -1, 20));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 560, 100, 80));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage City Network");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 450, 26));

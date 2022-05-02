@@ -50,14 +50,16 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 219, 203));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_managerfundraisers.setBackground(new java.awt.Color(113, 160, 160));
+        btn_managerfundraisers.setBackground(new java.awt.Color(255, 255, 255));
+        btn_managerfundraisers.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_managerfundraisers.setText("Manage Funding companies");
+        btn_managerfundraisers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_managerfundraisers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_managerfundraisersActionPerformed(evt);
@@ -65,8 +67,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_managerfundraisers, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 220, -1));
 
-        btn_posttask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_posttask.setBackground(new java.awt.Color(255, 255, 255));
+        btn_posttask.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_posttask.setText("Post Tasks");
+        btn_posttask.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_posttask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_posttaskActionPerformed(evt);
@@ -74,8 +78,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_posttask, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 217, -1));
 
-        btn_issues.setBackground(new java.awt.Color(113, 160, 160));
+        btn_issues.setBackground(new java.awt.Color(255, 255, 255));
+        btn_issues.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_issues.setText("View Issues");
+        btn_issues.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_issues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_issuesActionPerformed(evt);
@@ -83,8 +89,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_issues, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 217, -1));
 
-        btn_viewprojects.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewprojects.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewprojects.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewprojects.setText("Projects");
+        btn_viewprojects.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_viewprojects.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewprojectsActionPerformed(evt);
@@ -92,8 +100,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_viewprojects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 217, -1));
 
-        btn_acc.setBackground(new java.awt.Color(113, 160, 160));
+        btn_acc.setBackground(new java.awt.Color(255, 255, 255));
+        btn_acc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_acc.setText("Account");
+        btn_acc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_acc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_accActionPerformed(evt);
@@ -101,8 +111,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 217, -1));
 
-        btn_coord.setBackground(new java.awt.Color(113, 160, 160));
+        btn_coord.setBackground(new java.awt.Color(255, 255, 255));
+        btn_coord.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_coord.setText("View Coordinators");
+        btn_coord.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_coord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_coordActionPerformed(evt);
@@ -110,13 +122,13 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btn_coord, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 217, -1));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manager Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 220, 26));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manager.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 380, 430));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, 380, 430));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_managerfundraisersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_managerfundraisersActionPerformed

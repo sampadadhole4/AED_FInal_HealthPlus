@@ -47,36 +47,40 @@ public class DoctorWorkArea_Page extends javax.swing.JPanel {
         btn_viewSeniorPatients = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 218, 191));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_manageSeniorPatients.setBackground(new java.awt.Color(113, 160, 160));
+        btn_manageSeniorPatients.setBackground(new java.awt.Color(255, 255, 255));
+        btn_manageSeniorPatients.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_manageSeniorPatients.setText("Manage Senior Patients");
+        btn_manageSeniorPatients.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_manageSeniorPatients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_manageSeniorPatientsActionPerformed(evt);
             }
         });
-        add(btn_manageSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 200, 30));
+        add(btn_manageSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, 30));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Doctor Work Area");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 270, 26));
 
-        btn_viewSeniorPatients.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewSeniorPatients.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewSeniorPatients.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewSeniorPatients.setText("View Senior Patients");
+        btn_viewSeniorPatients.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_viewSeniorPatients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewSeniorPatientsActionPerformed(evt);
             }
         });
-        add(btn_viewSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 200, 30));
+        add(btn_viewSeniorPatients, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 200, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 280, 490));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 570, 540));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_manageSeniorPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_manageSeniorPatientsActionPerformed

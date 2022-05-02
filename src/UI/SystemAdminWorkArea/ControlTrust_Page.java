@@ -148,34 +148,40 @@ public class ControlTrust_Page extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 218, 212));
         setDoubleBuffered(false);
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setName(""); // NOI18N
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAddNGO.setBackground(new java.awt.Color(113, 160, 160));
+        btnAddNGO.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnAddNGO.setText("Add Trust");
+        btnAddNGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddNGOActionPerformed(evt);
             }
         });
-        add(btnAddNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 90, 30));
+        add(btnAddNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 120, 40));
 
-        btnDeleteNGO.setBackground(new java.awt.Color(113, 160, 160));
+        btnDeleteNGO.setBackground(new java.awt.Color(255, 255, 255));
+        btnDeleteNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnDeleteNGO.setText("Delete Trust");
+        btnDeleteNGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteNGOActionPerformed(evt);
             }
         });
-        add(btnDeleteNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, -1));
+        add(btnDeleteNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 305, 140, 30));
 
+        lblCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCountry.setText("Select Country:");
         add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, 20));
 
+        cbCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCountryActionPerformed(evt);
@@ -183,6 +189,7 @@ public class ControlTrust_Page extends javax.swing.JPanel {
         });
         add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 150, 30));
 
+        cbEnterpriseType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbEnterpriseType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbEnterpriseTypeActionPerformed(evt);
@@ -190,12 +197,15 @@ public class ControlTrust_Page extends javax.swing.JPanel {
         });
         add(cbEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 150, 30));
 
+        lblEnterpriseType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblEnterpriseType.setText("Enterprise Type:");
         add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, -1, 20));
 
+        lblState1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblState1.setText("Select State:");
         add(lblState1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, 20));
 
+        cbState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbStateActionPerformed(evt);
@@ -203,8 +213,11 @@ public class ControlTrust_Page extends javax.swing.JPanel {
         });
         add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, 150, 30));
 
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblName.setText("Name of the TRUST:");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, -1, 20));
+
+        txtFldName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 150, 30));
 
         tblTRUST.setModel(new javax.swing.table.DefaultTableModel(
@@ -233,9 +246,11 @@ public class ControlTrust_Page extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, 170));
 
+        lblCity1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCity1.setText("Select City:");
         add(lblCity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, 20));
 
+        cbCity.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCityActionPerformed(evt);
@@ -243,15 +258,15 @@ public class ControlTrust_Page extends javax.swing.JPanel {
         });
         add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 150, 30));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 110, 70));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage TRUST");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 450, 26));

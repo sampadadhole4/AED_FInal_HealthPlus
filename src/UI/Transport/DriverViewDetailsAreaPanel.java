@@ -13,6 +13,7 @@ import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -39,10 +40,10 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         this.system = system;
         this.emergency = emergency;
        
-        populatetransportTable();
+        populatetransportTable(EmergencyList.getEmergencyList());
     }
 
-      public void populatetransportTable(){
+      public void populatetransportTable(ArrayList<Emergency> emergencyList){
        DefaultTableModel model = (DefaultTableModel) table_transport.getModel();
         //model.setRowCount(3);
 //        if(emergency.isEmpty())
@@ -78,9 +79,9 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btn_accept = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 228, 217));
 
-        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_gobackActionPerformed(evt);
@@ -105,11 +106,19 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table_transport);
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Transport Details");
 
+        btn_accept.setBackground(new java.awt.Color(255, 255, 255));
+        btn_accept.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_accept.setText("Accept");
+        btn_accept.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_accept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_acceptActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -125,12 +134,12 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(218, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 504, Short.MAX_VALUE)
-                .addComponent(btn_accept)
-                .addGap(205, 205, 205))
+                .addGap(0, 541, Short.MAX_VALUE)
+                .addComponent(btn_accept, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(159, 159, 159))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,10 +149,10 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
                 .addGap(52, 52, 52)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
-                .addComponent(btn_accept)
-                .addGap(42, 42, 42)
-                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addComponent(btn_accept, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -174,7 +183,7 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 722, Short.MAX_VALUE)
+            .addGap(0, 725, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -195,7 +204,7 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 722, Short.MAX_VALUE)
+            .addGap(0, 725, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -210,6 +219,10 @@ public class DriverViewDetailsAreaPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btn_gobackActionPerformed
+
+    private void btn_acceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_acceptActionPerformed
+        JOptionPane.showMessageDialog(this, "Your request has been accepted");
+    }//GEN-LAST:event_btn_acceptActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

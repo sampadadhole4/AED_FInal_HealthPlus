@@ -41,7 +41,7 @@ public class ApplicantViewArea_Page extends javax.swing.JPanel {
         btn_showtrustlist = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 255, 255));
+        setBackground(new java.awt.Color(255, 224, 207));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N

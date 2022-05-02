@@ -128,19 +128,23 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         btnManageRehabilationAdmin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 226, 219));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTree.setBackground(new java.awt.Color(255, 239, 246));
+        jTree.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jTree.setMaximumSize(new java.awt.Dimension(200, 200));
         jTree.setMinimumSize(new java.awt.Dimension(200, 200));
         jScrollPane1.setViewportView(jTree);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 900));
 
-        btnManageState.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageState.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageState.setText("Manage State Network");
+        btnManageState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageStateActionPerformed(evt);
@@ -148,8 +152,10 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 251, -1));
 
-        btnManageCountry.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageCountry.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageCountry.setText("Manage Country Network");
+        btnManageCountry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCountryActionPerformed(evt);
@@ -157,8 +163,10 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 251, -1));
 
-        btnManageCity.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageCity.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageCity.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageCity.setText("Manage City Network");
+        btnManageCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCityActionPerformed(evt);
@@ -166,8 +174,10 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 251, -1));
 
-        btnManageNGO.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageNGO.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageNGO.setText("Manage Trust");
+        btnManageNGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageNGOActionPerformed(evt);
@@ -175,8 +185,10 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 251, -1));
 
-        btnManageNGOAdmin.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageNGOAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageNGOAdmin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageNGOAdmin.setText("Manage Trust Admin");
+        btnManageNGOAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageNGOAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageNGOAdminActionPerformed(evt);
@@ -184,13 +196,15 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageNGOAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 251, -1));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("System Admin Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 260, 26));
 
-        btnManageRehabilation.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageRehabilation.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageRehabilation.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageRehabilation.setText("Manage OldAgeHome");
+        btnManageRehabilation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageRehabilation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRehabilationActionPerformed(evt);
@@ -198,8 +212,10 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageRehabilation, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 251, -1));
 
-        btnManageRehabilationAdmin.setBackground(new java.awt.Color(113, 160, 160));
+        btnManageRehabilationAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageRehabilationAdmin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnManageRehabilationAdmin.setText("Manage OldAgeHome Admin");
+        btnManageRehabilationAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManageRehabilationAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageRehabilationAdminActionPerformed(evt);
@@ -207,8 +223,8 @@ public class SystemAdminWorkArea_Page extends javax.swing.JPanel {
         });
         add(btnManageRehabilationAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 251, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 460, 380));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sysadmin.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 580, 670));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCountryActionPerformed

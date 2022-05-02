@@ -60,33 +60,37 @@ public class Login_Panel extends javax.swing.JPanel {
         btnGuestLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
 
-        setBackground(new java.awt.Color(204, 248, 245));
+        setBackground(new java.awt.Color(255, 226, 212));
         setMaximumSize(new java.awt.Dimension(900, 900));
         setMinimumSize(new java.awt.Dimension(900, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblUserName.setText("User Name:");
         add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, -1, -1));
 
+        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblPassword.setText("Password:");
         add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, -1, -1));
 
         lblTitel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        lblTitel.setText("Health Plus");
+        lblTitel.setText("Health Plus Services");
         add(lblTitel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 280, 50));
 
+        txtFldUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         txtFldUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFldUserNameActionPerformed(evt);
             }
         });
         add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 120, -1));
+
+        passFld.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, 120, -1));
 
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +101,7 @@ public class Login_Panel extends javax.swing.JPanel {
         add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, 150, 30));
 
         btnGuestLogin.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuestLogin.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnGuestLogin.setText("Guest Login");
         btnGuestLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -109,21 +114,11 @@ public class Login_Panel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Health-professional-team.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 470, 430));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login-icon.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/heartgif.gif"))); // NOI18N
         jLabel3.setMaximumSize(new java.awt.Dimension(235, 215));
         jLabel3.setMinimumSize(new java.awt.Dimension(235, 215));
         jLabel3.setPreferredSize(new java.awt.Dimension(200, 195));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 200, 200));
-
-        jTextArea2.setBackground(new java.awt.Color(250, 246, 227));
-        jTextArea2.setColumns(20);
-        jTextArea2.setForeground(new java.awt.Color(0, 51, 255));
-        jTextArea2.setRows(5);
-        jTextArea2.setText("\n  Contact us:\n  Email address : medicaresystem@gmail.com");
-        jTextArea2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane2.setViewportView(jTextArea2);
-
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 770, 360, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 270, 240));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -229,8 +224,6 @@ public class Login_Panel extends javax.swing.JPanel {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblTitel;
     private javax.swing.JLabel lblUserName;

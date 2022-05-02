@@ -91,9 +91,9 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btn_back = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 222, 210));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 222, 210));
         jPanel1.setDoubleBuffered(false);
         jPanel1.setMaximumSize(new java.awt.Dimension(700, 700));
         jPanel1.setMinimumSize(new java.awt.Dimension(700, 700));
@@ -101,18 +101,22 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 700));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_submit.setBackground(new java.awt.Color(113, 160, 160));
+        btn_submit.setBackground(new java.awt.Color(255, 255, 255));
+        btn_submit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_submit.setText("Submit");
+        btn_submit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_submitActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, -1));
+        jPanel1.add(btn_submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, 30));
 
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setText("Country:");
         jPanel1.add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 20));
 
+        combo_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_countryActionPerformed(evt);
@@ -120,14 +124,18 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 150, -1));
 
+        combo_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jPanel1.add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 150, -1));
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setText("City:");
         jPanel1.add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, 20));
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setText("State:");
         jPanel1.add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, 20));
 
+        combo_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_stateActionPerformed(evt);
@@ -159,18 +167,18 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
 
         jPanel1.add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 340, 170));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Trust");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 250, -1));
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 40, 40));
+        jPanel1.add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 100, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

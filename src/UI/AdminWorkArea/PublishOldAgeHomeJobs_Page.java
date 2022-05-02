@@ -136,7 +136,7 @@ public class PublishOldAgeHomeJobs_Page extends javax.swing.JPanel {
 
         text_jobtitle.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
 
-        btn_postJob.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postJob.setBackground(new java.awt.Color(255, 255, 255));
         btn_postJob.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_postJob.setText("Submit");
         btn_postJob.addActionListener(new java.awt.event.ActionListener() {

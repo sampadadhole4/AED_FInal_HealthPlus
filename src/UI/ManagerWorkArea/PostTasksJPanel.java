@@ -75,31 +75,35 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_postTask.setBackground(new java.awt.Color(113, 160, 160));
+        btn_postTask.setBackground(new java.awt.Color(255, 255, 255));
+        btn_postTask.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_postTask.setText("Post Task");
+        btn_postTask.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_postTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_postTaskActionPerformed(evt);
             }
         });
-        add(btn_postTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 140, -1));
+        add(btn_postTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 150, 50));
 
-        btn_refreshview.setBackground(new java.awt.Color(113, 160, 160));
+        btn_refreshview.setBackground(new java.awt.Color(255, 255, 255));
+        btn_refreshview.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_refreshview.setText("Refresh");
+        btn_refreshview.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_refreshview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_refreshviewActionPerformed(evt);
             }
         });
-        add(btn_refreshview, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
+        add(btn_refreshview, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 75, 90, 40));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 110, 80));
 
         tblPostTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,7 +132,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 670, 210));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Tasks");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 290, 50));

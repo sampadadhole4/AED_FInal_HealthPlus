@@ -123,17 +123,20 @@ public class SystemAdminViewArea_Page extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 222, 222));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCountry.setText("Select Country:");
         add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 69, -1, -1));
 
+        lblState1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblState1.setText("Select State:");
         add(lblState1, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 109, -1, -1));
 
+        cbCountry.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCountryActionPerformed(evt);
@@ -141,9 +144,11 @@ public class SystemAdminViewArea_Page extends javax.swing.JPanel {
         });
         add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, 30));
 
+        lblCity1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblCity1.setText("Select City:");
         add(lblCity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 149, -1, -1));
 
+        cbCity.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCityActionPerformed(evt);
@@ -151,10 +156,14 @@ public class SystemAdminViewArea_Page extends javax.swing.JPanel {
         });
         add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 149, 150, 30));
 
+        lblEnterpriseType.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblEnterpriseType.setText("TRUST Name:");
         add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 189, -1, -1));
+
+        cbNGO.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(cbNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 190, 150, 30));
 
+        cbState.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         cbState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbStateActionPerformed(evt);
@@ -162,16 +171,18 @@ public class SystemAdminViewArea_Page extends javax.swing.JPanel {
         });
         add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, 30));
 
-        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
+        btnSubmit.setBackground(new java.awt.Color(255, 255, 255));
+        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 90, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 100, 30));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("System Admin View Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 350, 26));

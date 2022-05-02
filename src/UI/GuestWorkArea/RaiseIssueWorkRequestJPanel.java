@@ -134,14 +134,15 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         label_city = new javax.swing.JLabel();
         label_trust = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 229, 208));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Raise Issue");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 370, 26));
 
+        label_description.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_description.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_description.setText("Description:");
         add(label_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 109, 30));
@@ -155,8 +156,10 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 419, -1));
 
-        btn_sendrequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_sendrequest.setBackground(new java.awt.Color(255, 255, 255));
+        btn_sendrequest.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_sendrequest.setText("Request");
+        btn_sendrequest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_sendrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_sendrequestActionPerformed(evt);
@@ -164,17 +167,19 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         });
         add(btn_sendrequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 95, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 100, 80));
 
+        combo_trust.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_trust.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(combo_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 150, -1));
 
+        combo_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_country.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +188,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         });
         add(combo_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 150, -1));
 
+        combo_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_city.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,6 +197,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         });
         add(combo_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 150, -1));
 
+        combo_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_state.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,15 +206,19 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         });
         add(combo_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 150, -1));
 
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setText("Country:");
         add(label_country, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, 20));
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setText("State:");
         add(label_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, 20));
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setText("City:");
         add(label_city, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 20));
 
+        label_trust.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_trust.setText("Trust:");
         add(label_trust, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

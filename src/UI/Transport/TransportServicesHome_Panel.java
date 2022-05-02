@@ -61,7 +61,6 @@ public class TransportServicesHome_Panel extends javax.swing.JPanel {
         controlJPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
         btn_work = new javax.swing.JButton();
-        btn_view = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
@@ -91,23 +90,13 @@ public class TransportServicesHome_Panel extends javax.swing.JPanel {
             }
         });
 
-        btn_view.setBackground(new java.awt.Color(255, 255, 255));
-        btn_view.setText("View Area");
-        btn_view.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_viewActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addContainerGap(49, Short.MAX_VALUE)
-                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                    .addComponent(btn_view, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btn_work, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(31, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(controlJPanelLayout.createSequentialGroup()
@@ -122,9 +111,7 @@ public class TransportServicesHome_Panel extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_work)
-                .addGap(18, 18, 18)
-                .addComponent(btn_view)
-                .addGap(238, 238, 238)
+                .addGap(278, 278, 278)
                 .addComponent(btnLogout)
                 .addContainerGap(302, Short.MAX_VALUE))
         );
@@ -187,18 +174,9 @@ public class TransportServicesHome_Panel extends javax.swing.JPanel {
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_workActionPerformed
 
-    private void btn_viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewActionPerformed
-//        // TODO add your handling code here:
-//        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-//        EmergencyServViewAreaPage evajp = new EmergencyServViewAreaPage(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
-//        userProcessContainer.add("evajp", evajp);
-//        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_viewActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btn_view;
     private javax.swing.JButton btn_work;
     private javax.swing.JPanel controlJPanel;
     private javax.swing.JLabel jLabel1;

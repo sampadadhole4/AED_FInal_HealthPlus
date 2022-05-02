@@ -65,29 +65,33 @@ public class AccountJPanel extends javax.swing.JPanel {
         tblAccount = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 231, 224));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 100, 80));
 
+        label_total.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_total.setText("Total : ");
         add(label_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
+        label_totalvalue.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_totalvalue.setText("<TotalValue>");
         add(label_totalvalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 111, -1));
 
+        label_balance.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_balance.setText("Balance:");
         add(label_balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
 
+        label_balancevalue.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_balancevalue.setText("<BalanceValue>");
         add(label_balancevalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
 
@@ -115,7 +119,7 @@ public class AccountJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 476, 210));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Accounts");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 270, 26));

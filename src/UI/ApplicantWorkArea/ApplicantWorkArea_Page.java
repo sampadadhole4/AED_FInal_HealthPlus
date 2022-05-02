@@ -54,51 +54,57 @@ public class ApplicantWorkArea_Page extends javax.swing.JPanel {
         btn_viewApplStatus = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 217, 198));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Applicant Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 19, 670, 26));
 
-        lblHi.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblHi.setText("Hi,");
-        add(lblHi, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 77, 22, 30));
+        lblHi.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        lblHi.setText("Welcome,");
+        add(lblHi, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 90, 30));
 
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         lblName.setText("Applicant");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 150, 22));
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 150, 22));
 
-        btn_viewpostedjobs.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewpostedjobs.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewpostedjobs.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewpostedjobs.setText("View Jobs");
+        btn_viewpostedjobs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_viewpostedjobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewpostedjobsActionPerformed(evt);
             }
         });
-        add(btn_viewpostedjobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 125, 217, -1));
+        add(btn_viewpostedjobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 217, 30));
 
-        btn_raiserequest.setBackground(new java.awt.Color(113, 160, 160));
+        btn_raiserequest.setBackground(new java.awt.Color(255, 255, 255));
+        btn_raiserequest.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_raiserequest.setText("Raise A Request");
+        btn_raiserequest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_raiserequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_raiserequestActionPerformed(evt);
             }
         });
-        add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 224, 217, -1));
+        add(btn_raiserequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 217, 30));
 
-        btn_viewApplStatus.setBackground(new java.awt.Color(113, 160, 160));
+        btn_viewApplStatus.setBackground(new java.awt.Color(255, 255, 255));
+        btn_viewApplStatus.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_viewApplStatus.setText("View Application Status");
+        btn_viewApplStatus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_viewApplStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewApplStatusActionPerformed(evt);
             }
         });
-        add(btn_viewApplStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 175, 217, -1));
+        add(btn_viewApplStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 217, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/people.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 730, 360));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ApplicantWork.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 730, 360));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_viewpostedjobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_viewpostedjobsActionPerformed

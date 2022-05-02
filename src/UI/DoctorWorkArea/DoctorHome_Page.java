@@ -65,12 +65,14 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(113, 160, 160));
+        controlJPanel.setBackground(new java.awt.Color(255, 175, 177));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
         btnLogout.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
+        btnLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -78,7 +80,9 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         });
 
         btn_work.setBackground(new java.awt.Color(255, 255, 255));
+        btn_work.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_work.setText("Work Area");
+        btn_work.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_work.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_workActionPerformed(evt);
@@ -86,21 +90,23 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         });
 
         btn_view.setBackground(new java.awt.Color(255, 255, 255));
+        btn_view.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_view.setText("View Area");
+        btn_view.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_viewActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/JPanel.png"))); // NOI18N
 
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(250, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_work, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                     .addComponent(btn_view, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -117,12 +123,12 @@ public class DoctorHome_Page extends javax.swing.JPanel {
                 .addGap(60, 60, 60)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_work)
+                .addComponent(btn_work, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_view)
-                .addGap(238, 238, 238)
-                .addComponent(btnLogout)
-                .addContainerGap(302, Short.MAX_VALUE))
+                .addComponent(btn_view, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(305, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);

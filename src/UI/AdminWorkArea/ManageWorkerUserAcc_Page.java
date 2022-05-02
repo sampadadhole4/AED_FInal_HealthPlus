@@ -152,7 +152,7 @@ public class ManageWorkerUserAcc_Page extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 500, 170));
 
-        btn_deleteEmployee.setBackground(new java.awt.Color(113, 160, 160));
+        btn_deleteEmployee.setBackground(new java.awt.Color(255, 255, 255));
         btn_deleteEmployee.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_deleteEmployee.setText("Delete Account");
         btn_deleteEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -206,7 +206,7 @@ public class ManageWorkerUserAcc_Page extends javax.swing.JPanel {
         label_password.setText("Password");
         add(label_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 70, -1));
 
-        btn_addacoount.setBackground(new java.awt.Color(113, 160, 160));
+        btn_addacoount.setBackground(new java.awt.Color(255, 255, 255));
         btn_addacoount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_addacoount.setText("Add Account");
         btn_addacoount.addActionListener(new java.awt.event.ActionListener() {

@@ -66,7 +66,7 @@ public class ApplicationStatus_Page extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btn_backpage = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 217, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblJobWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
@@ -91,18 +91,18 @@ public class ApplicationStatus_Page extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 480, 178));
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Application Status");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 250, 27));
 
-        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backpageActionPerformed(evt);
             }
         });
-        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 40, 40));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 110, 80));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_backpageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backpageActionPerformed

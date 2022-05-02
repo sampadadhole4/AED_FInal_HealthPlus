@@ -62,12 +62,13 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label_title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        label_title.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         label_title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_title.setText("Create new account");
         add(label_title, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 310, 50));
 
         btn_createnewacc.setBackground(new java.awt.Color(113, 160, 160));
+        btn_createnewacc.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_createnewacc.setText("Add Account");
         btn_createnewacc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,34 +77,46 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
         });
         add(btn_createnewacc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 100, 80));
+
+        text_username.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 150, -1));
 
+        label_username.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_username.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_username.setText("User Name");
         add(label_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 90, -1));
 
+        label_confirmpswd.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_confirmpswd.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_confirmpswd.setText("Confirm Password");
         add(label_confirmpswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 140, -1));
+
+        text_personname.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_personname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 150, -1));
+
+        text_confirmpswd.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_confirmpswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 150, -1));
+
+        text_userpassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(text_userpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, -1));
 
+        label_personname.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_personname.setText("Name");
         add(label_personname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
 
+        label_userpassword.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_userpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_userpassword.setText("Password");
         add(label_userpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 90, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/signup.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sign.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 510, 440));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plus.gif"))); // NOI18N
@@ -179,7 +192,7 @@ public class IssueSignUpJPanel extends javax.swing.JPanel {
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Unhandled Exception", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"All set");
         }
     }//GEN-LAST:event_btn_createnewaccActionPerformed
 

@@ -65,6 +65,8 @@ public class ViewTransportServices extends javax.swing.JPanel {
         table_transport = new javax.swing.JTable();
         btn_back = new javax.swing.JButton();
 
+        jPanel1.setBackground(new java.awt.Color(255, 215, 201));
+
         table_transport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -86,7 +88,10 @@ public class ViewTransportServices extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table_transport);
 
+        btn_back.setBackground(new java.awt.Color(255, 255, 255));
+        btn_back.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_back.setText("Back");
+        btn_back.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
@@ -103,7 +108,7 @@ public class ViewTransportServices extends javax.swing.JPanel {
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_back)
+                .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -112,8 +117,8 @@ public class ViewTransportServices extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_back)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

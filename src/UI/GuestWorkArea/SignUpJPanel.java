@@ -68,54 +68,68 @@ public class SignUpJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 218, 211));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Sign Up");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 290, 26));
 
-        btnAddAccount.setBackground(new java.awt.Color(113, 160, 160));
+        btnAddAccount.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddAccount.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btnAddAccount.setText("Add Account");
+        btnAddAccount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddAccountActionPerformed(evt);
             }
         });
-        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
+        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 90, 30));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, 90, 80));
+
+        txtUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 150, -1));
 
+        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUserName.setText("User Name");
         add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 90, -1));
 
+        lblPassword1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblPassword1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword1.setText("Confirm Password");
         add(lblPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 140, -1));
 
+        lblUserName1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblUserName1.setText("Name");
         add(lblUserName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, -1));
+
+        txtName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 150, -1));
+
+        passFld.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 150, -1));
+
+        confirmPassFld.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         add(confirmPassFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 150, -1));
 
+        lblPassword2.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         lblPassword2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword2.setText("Password");
         add(lblPassword2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 90, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/signup.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sign.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, 510, 440));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plus.gif"))); // NOI18N

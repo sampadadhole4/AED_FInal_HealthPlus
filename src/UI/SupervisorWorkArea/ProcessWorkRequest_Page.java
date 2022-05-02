@@ -130,19 +130,20 @@ public class ProcessWorkRequest_Page extends javax.swing.JPanel {
         checkBox_medications = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 231, 214));
 
-        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_goback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_goback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_gobackActionPerformed(evt);
             }
         });
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Process Work Request");
 
+        label_medicationsreq.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_medicationsreq.setText("Medications Required :");
 
         text_medicationsreq.addActionListener(new java.awt.event.ActionListener() {
@@ -151,39 +152,52 @@ public class ProcessWorkRequest_Page extends javax.swing.JPanel {
             }
         });
 
+        label_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_country.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_country.setText("Country:");
 
+        combo_country.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_countryActionPerformed(evt);
             }
         });
 
+        label_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_state.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_state.setText("State:");
 
+        combo_state.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_state.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_stateActionPerformed(evt);
             }
         });
 
+        label_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_city.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_city.setText("City:");
 
+        combo_city.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         combo_city.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_cityActionPerformed(evt);
             }
         });
 
+        label_trustName.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_trustName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         label_trustName.setText("Trust Name:");
 
+        combo_trustname.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
+        label_nameofpatient.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_nameofpatient.setText("Name of the Patient:");
 
-        btn_snedMedications.setBackground(new java.awt.Color(113, 160, 160));
+        text_nameofptient.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+
+        btn_snedMedications.setBackground(new java.awt.Color(255, 255, 255));
+        btn_snedMedications.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_snedMedications.setText("Send Medications");
         btn_snedMedications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +216,6 @@ public class ProcessWorkRequest_Page extends javax.swing.JPanel {
                 .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
@@ -226,14 +239,15 @@ public class ProcessWorkRequest_Page extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(label_medicationsreq, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(label_nameofpatient))
-                                .addGap(14, 14, 14)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_snedMedications)
                             .addComponent(checkBox_medications)
@@ -278,16 +292,16 @@ public class ProcessWorkRequest_Page extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_medicationsreq, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(checkBox_medications))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_medicationsreq, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_medicationsreq, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(37, 37, 37)
                                 .addComponent(btn_snedMedications))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))))))
+                                .addComponent(btn_goback, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23))))))
         );
     }// </editor-fold>//GEN-END:initComponents
 

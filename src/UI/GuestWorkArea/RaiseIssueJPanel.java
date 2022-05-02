@@ -42,18 +42,19 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         btn_backpage = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 219, 198));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Raise A Request");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 180, 26));
 
-        btn_provideMedications.setBackground(new java.awt.Color(113, 160, 160));
+        btn_provideMedications.setBackground(new java.awt.Color(255, 255, 255));
+        btn_provideMedications.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_provideMedications.setForeground(new java.awt.Color(0, 0, 0));
         btn_provideMedications.setText("Provide Medications");
         btn_provideMedications.addActionListener(new java.awt.event.ActionListener() {
@@ -61,9 +62,10 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btn_provideMedicationsActionPerformed(evt);
             }
         });
-        add(btn_provideMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 182, -1));
+        add(btn_provideMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 182, 30));
 
-        btn_treatment.setBackground(new java.awt.Color(113, 160, 160));
+        btn_treatment.setBackground(new java.awt.Color(255, 255, 255));
+        btn_treatment.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_treatment.setForeground(new java.awt.Color(0, 0, 0));
         btn_treatment.setText("Provide Treatment");
         btn_treatment.addActionListener(new java.awt.event.ActionListener() {
@@ -71,9 +73,10 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btn_treatmentActionPerformed(evt);
             }
         });
-        add(btn_treatment, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 182, -1));
+        add(btn_treatment, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 182, 30));
 
-        btn_basicamenities.setBackground(new java.awt.Color(113, 160, 160));
+        btn_basicamenities.setBackground(new java.awt.Color(255, 255, 255));
+        btn_basicamenities.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         btn_basicamenities.setForeground(new java.awt.Color(0, 0, 0));
         btn_basicamenities.setText("Donation of Basic Amenities");
         btn_basicamenities.addActionListener(new java.awt.event.ActionListener() {
@@ -81,15 +84,15 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btn_basicamenitiesActionPerformed(evt);
             }
         });
-        add(btn_basicamenities, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 182, -1));
+        add(btn_basicamenities, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 210, 30));
 
-        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
+        btn_backpage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
         btn_backpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backpageActionPerformed(evt);
             }
         });
-        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 40, 40));
+        add(btn_backpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 110, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/request.jpg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 560, 310));
